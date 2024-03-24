@@ -151,6 +151,16 @@
       "fluid": true,
       "fontFamilies": [
         {
+          "fontFamily": "Helvetica, sans-serif",
+          "slug": "dch-helvetica",
+          "name": "Helvetica",
+          "fontWeights": "300, 600",
+          "src": [
+            "file:./assets/fonts/Helvetica/Helvetica-Light.ttf",
+            "file:./assets/fonts/Helvetica/Helvetica-Bold.ttf"
+          ]
+        },
+        {
           "fontFamily": "Nunito Sans, sans-serif",
           "slug": "dch-Nunito-Sans",
           "name": "Nunito Sans",
