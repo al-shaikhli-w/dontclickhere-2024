@@ -1,0 +1,92 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.btn a {
+    display: inline-block !important;
+    padding: 0.5rem 1.5rem !important;
+    color: var(--wp--preset--color--white);
+    text-decoration: none;
+    border: 1px solid var(--wp--preset--color--white) !important;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: .875rem !important;
+    line-height: 1.25rem !important;
+    transition: all 0.3s;
+    min-width: 100px;
+    text-align: center;
+}
+
+.btn:hover a {
+    text-decoration: none !important;
+    background: var(--wp--preset--color--green) !important;
+    border-color: var(--wp--preset--color--green) !important;
+    color: var(--wp--preset--color--black) !important;
+}
+
+.btn-contact {
+    margin-left: 3rem;
+}
+.is-menu-open {
+    background: var(--wp--preset--color--black) !important;
+    transition: all 0.3s;
+}
+.hero {
+    position: relative;
+    height: 100% !important;
+}
+.w-md {
+    max-width: 650px;
+}
+.w-lg{
+    max-width: 800px !important;
+}
+
+.hero-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+.hero-video {
+    position: relative;
+    z-index: 0;
+}
+
+/* portfolio */
+.portfolio h2 {
+    background: -webkit-linear-gradient(10deg, var(--wp--preset--color--black), var(--wp--preset--color--white) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: animateGradient s linear infinite alternate;
+    font-size: 2rem !important;
+    text-wrap: balance;
+}
+.portfolio h3 {
+    font-size: 1rem !important;
+}
+@media (min-width: 768px) {
+    .portfolio h2 {
+        font-size: 4rem !important;
+    }
+    .portfolio h3 {
+        font-size: 1.5rem !important;
+    }
+}
+
+
+  @keyframes animateGradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        100% {
+            background-position: 100% 50%;
+        }
+    }
