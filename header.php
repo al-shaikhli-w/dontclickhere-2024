@@ -1,7 +1,7 @@
 <?php
 header('Access-Control-Allow-Origin: *'); ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="font-body">
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
@@ -54,21 +54,32 @@ header('Access-Control-Allow-Origin: *'); ?>
 
     <?php wp_head(); ?>
 </head>
+<!-- 
+    TODO: Add overlay 
+      <div class="overlay first"></div>
+  <div class="overlay second"></div>
+  <div class="overlay third"></div>
+  https://codepen.io/chouaibblgn45/pen/ZEbaadr
 
-<body <?php body_class("bg-gray"); ?>>
+ -->
 
+<body <?php body_class("bg-black text-white font-body"); ?>>
     <?php wp_body_open(); ?>
-    <header class=" container flex justify-between items-center bg-metal">
+    <header class=" container flex justify-between items-center">
         <div class="logo">
             <a href="<?php bloginfo('url'); ?>">
                 <img src="<?php bloginfo('template_url'); ?>/assets/images/icons/fav-light.webp" alt="<?php bloginfo('name'); ?>">
             </a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="<?php bloginfo('url'); ?>">Home</a></li>
-                <li><a href="<?php bloginfo('url'); ?>/about">About</a></li>
-                <li><a href="<?php bloginfo('url'); ?>/contact">Contact</a></li>
-            </ul>
+        <nav class="header-menu">
+            <button class="burgermenu">
+                <span></span>
+            </button>
+            <?php
+            wp_nav_menu([
+                'theme_location' => 'header-menu',
+                'container' => false,
+            ]);
+            ?>
         </nav>
     </header>
