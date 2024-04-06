@@ -1,0 +1,40 @@
+.hero {
+    .container {
+        height: 90svh;
+        @apply flex items-center overflow-hidden rounded-[30px] shadow-lg relative text-gray;
+
+        &::before {
+            content: "";
+            @apply absolute inset-0;
+            background: radial-gradient(140% 130% at 50% 10%, transparent 37.41%, #00ffc2 99.27%);
+            filter: blur(50px);
+            //background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .hero__content {
+            @apply md:max-w-[58rem] relative z-[1];
+
+            h2 {
+                @apply font-BespokeStencil uppercase text-primary mb-3;
+            }
+
+            h1 {
+                @apply text-[2rem] sm:text-5xl md:text-[4rem] font-BespokeStencil mb-4;
+                line-height: 1.2;
+                background: radial-gradient(45% 100% at 50% 50%, #fff 30%, hsla(0, 0%, 100%, .35) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .hero__cta {
+                @apply flex gap-6;
+            }
+        }
+
+        .logo-big {
+            @apply absolute -z-[1] right-8 w-[300px] h-auto opacity-70;
+            filter: blur(5px);
+            transform: rotatey(calc(var(--mouse-x) * 1deg - 50deg)) rotatex(calc((var(--mouse-y) * -1deg + 50deg)));
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.btn {
+    @apply mt-10 inline-block font-helvetica font-bold text-lg py-3 px-12 rounded-[30px] shadow-lg cursor-pointer transition-all duration-500 ease-in-out;
+
+
+    &--primary {
+        @apply bg-primary text-black;
+
+        &:hover {
+            @apply shadow-xl shadow-primary;
+        }
+    }
+
+    &--secondary {
+        @apply text-white border;
+
+        &:hover {
+            @apply shadow-md shadow-white;
+        }
+    }
+}

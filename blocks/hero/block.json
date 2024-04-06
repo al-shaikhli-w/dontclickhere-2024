@@ -1,0 +1,22 @@
+{
+  "schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "version": "1.0.0",
+  "name": "acf-block-json/hero-block",
+  "title": "Hero Section",
+  "keywords": [ "hero", "section"],
+  "category": "layout",
+  "icon": "format-image",
+  "description":  "A custom hero section block.",
+  "acf":{
+      "mode": "preview",
+      "renderTemplate": "template.php"
+  },
+  "supports": {
+     "align": true,
+     "mode": true,
+     "multiple": true,
+     "reusable": true,
+     "html": false
+    }
+}

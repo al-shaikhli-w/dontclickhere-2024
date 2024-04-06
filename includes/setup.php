@@ -5,11 +5,15 @@ function dch_setup_theme()
 	add_theme_support('editor-styles');
 
 	add_editor_style([
-		'https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap',
-		'assets/public/index.css',
-		'assets/editor.css'
+		'assets/public/dist/main.css',
 	]);
 }
+function enqueue_gutenberg_editor_styles()
+{
+	add_theme_support('editor-styles');
+	add_editor_style(['assets/dist/css/main.css', 'assets/public/editor.css']);
+}
+add_action('enqueue_block_editor_assets', 'enqueue_gutenberg_editor_styles');
 
 // create custom navbar
 if (!function_exists('dch_register_menus')) {

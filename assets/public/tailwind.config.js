@@ -9,7 +9,7 @@ module.exports = {
                     DEFAULT: "15px",
                 },
                 screens: {
-                    xl: '1200px',
+                    //xl: '1400px',
                     sm: '90svw',
                 },
             },
@@ -20,10 +20,11 @@ module.exports = {
             white: "#ffffff",
             black: "#000000",
             primary: "#00FFC2",
+            gray: "#ececfb"
         },
         fontFamily: {
-
-            //helvetica: ["Helvetica", "sans-serif"],
+            BespokeStencil: ["BespokeStencil", "sans-serif"],
+            helvetica: ["Helvetica", "sans-serif"],
         },
     },
     plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
