@@ -1,0 +1,26 @@
+{
+  "schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "version": "1.0.0",
+  "name": "acf-block-json/ourclients",
+  "title": "Our Clients",
+  "keywords": [
+    "ourclients",
+    "clients",
+    "clients section"
+  ],
+  "category": "layout",
+  "icon": "admin-users",
+  "description":  "Our Clients Section",
+  "acf":{
+      "mode": "preview",
+      "renderTemplate": "template.php"
+  },
+  "supports": {
+     "align": true,
+     "mode": true,
+     "multiple": true,
+     "reusable": true,
+     "html": false
+    }
+}

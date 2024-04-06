@@ -1,3 +1,8 @@
+.body.js.block-editor-page{
+  background-color: black !important;
+  color: white;
+}
+
 .hero {
   background-color: aquamarine;
   color: black;
@@ -5,9 +10,23 @@
   text-align: center;
 }
 .hero .logo-big {
-    display: none !important;
-  }
-  .hero a {
-    text-decoration: none;
-    pointer-events: none;
-  }
+  display: none !important;
+}
+.hero a {
+  text-decoration: none;
+  pointer-events: none;
+}
+/* client-logos */
+.client-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;;
+  margin: 0 auto;
+  padding: 2svw;
+  width: 100%;
+  background-color:royalblue;
+}
+.client-logo {
+  flex: 1 1 100%;
+}

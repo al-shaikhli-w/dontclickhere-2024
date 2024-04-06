@@ -66,3 +66,23 @@
         transform: translateY(6px) rotate(0deg)
     }
 }
+
+// create an animation that move the item top and bottom with dealy and slowly and alite bit shiake it 
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0px);
+        transform: rotate3d(1, 1, 1, 10deg);
+
+    }
+
+    50% {
+        transform: translateY(-25px);
+        transform: rotate3d(1, 1, 1, -10deg);
+    }
+
+    100% {
+        transform: translateY(0px);
+        transform: rotate3d(1, 1, 1, 10deg);
+
+    }
+}
