@@ -15,7 +15,7 @@ export default defineConfig({
                 assetFileNames: "css/[name].css", // Fixed the assetFileNames configuration
                 sourcemap: false,
                 globals: {
-                    jQuery: "jQuery",
+                    //jQuery: "jQuery",
                 },
             },
         },

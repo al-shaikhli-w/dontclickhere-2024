@@ -1,11 +1,15 @@
 @import "./utilities/animation";
 
 .header {
-    @apply h-auto py-4 transition-colors;
-    background: rgba(22, 22, 23, .8);
+    @apply h-auto py-4 transition-all duration-500;
+
+    &.scroll {
+        @apply fixed top-0 left-0 w-full;
+    }
 
     .header-container {
-        @apply container flex justify-between items-center;
+        @apply container flex justify-between items-center border rounded-full border-white;
+        filter: blur(1);
     }
 
     &.opened {
@@ -15,17 +19,20 @@
     }
 
     .header-logo {
-        @apply w-8 h-8;
+        @apply w-12 relative overflow-hidden transition-all duration-1000 ease-linear;
 
-        & path:first-child {
-            @apply animate-pulse delay-200 duration-500;
+        &:hover {
+            @apply w-full;
         }
 
+        svg {
+            @apply w-80;
+        }
     }
 
     .header-menu {
         .burgermenu {
-            @apply border-0 bg-transparent w-8 h-8 absolute -ml-8 -mt-6 p-0 outline-none z-[11];
+            @apply border-0 bg-transparent w-8 h-8 absolute -ml-8 -mt-6 p-0 outline-none z-[11] lg:hidden;
 
             span {
                 @apply block h-[1px] absolute top-0 left-0 w-full border-t-[1px] transition-transform duration-500;
@@ -62,7 +69,7 @@
         }
 
         #menu-header {
-            @apply hidden opacity-0 transition-all duration-500;
+            @apply hidden opacity-0 transition-all duration-500 overflow-hidden lg:overflow-visible lg:flex justify-center items-center gap-2 lg:opacity-100 lg:gap-3;
 
             &.opened {
                 @apply pt-16 absolute left-0 top-0 z-10 flex flex-col opacity-100 w-full h-screen bg-black;
@@ -79,51 +86,62 @@
             }
 
             &>li {
-                @apply overflow-hidden pl-8;
+                @apply overflow-hidden pl-8 container lg:w-full lg:p-0 lg:overflow-visible;
 
                 &>a {
-                    @apply flex justify-between items-center -mb-2 text-[28px] py-1 font-headers;
-                    transform: translateY(100%);
+                    @apply flex justify-between items-center -mb-2 text-[28px] py-1 translate-y-full lg:mb-0 lg:px-2 lg:py-1 lg:text-base lg:translate-y-0 lg:m-0 lg:w-full lg:text-nowrap;
                     transition: 1.2s 0.1s cubic-bezier(0.35, 0, 0.07, 1);
                     letter-spacing: .007em;
                 }
             }
 
             & li.menu-item-has-children {
-                a {
-                    @apply pr-4;
+                &>a {
 
                     &::after {
                         content: "";
-                        width: 16px;
-                        height: 16px;
+                        @apply w-4 h-4 transition-all duration-500 lg:ml-1;
                         background-image: url("data:image/svg+xml,%3Csvg data-slot='icon' fill='none' stroke-width='1.5' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m8.25 4.5 7.5 7.5-7.5 7.5'%3E%3C/path%3E%3C/svg%3E");
                         filter: brightness(0) invert(1);
-                        transition: transform 5ms ease;
                     }
 
                     &:hover::after {
-                        animation: arrow-right 0.3s forwards;
+                        @media screen and (max-width: 1024px) {
+                            animation: arrow-right 0.3s forwards;
+                        }
+
+                        @apply rotate-90;
                     }
 
+                    @media screen and (min-width: 1024px) {
+
+                        &::before {
+                            content: "";
+                            width: 100%;
+                            height: 200%;
+                            position: absolute;
+                            background-color: red;
+                            z-index: -1;
+                            left: 0;
+                            right: 0;
+
+                        }
+                    }
+                }
+
+                a {
+                    @apply pr-4 lg:px-2 lg:py-1 lg:relative lg:flex;
+                }
+
+                .back-item {
+                    @apply lg:hidden;
                 }
             }
 
-            // submenu level 2
-            .sub-menu {
-                @apply hidden relative;
-            }
         }
-    }
-}
 
-@keyframes arrow-right {
-    0% {
-        transform: translateX(-40px);
+        // .menu-hover {
+        //     @apply absolute top-0 left-0 w-full h-full bg-black opacity-0 transition-opacity duration-500 z-10 lg:hidden;
+        // }
     }
-
-    100% {
-        transform: translateX(0);
-    }
-
 }

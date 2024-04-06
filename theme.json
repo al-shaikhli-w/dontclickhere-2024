@@ -150,48 +150,34 @@
     "typography": {
       "fluid": true,
       "fontFamilies": [
-        {
-          "fontFamily": "Helvetica, sans-serif",
-          "slug": "dch-helvetica",
-          "name": "Helvetica",
-          "fontWeights": "300, 600",
-          "src": [
-            "file:./assets/fonts/Helvetica/Helvetica-Light.ttf",
-            "file:./assets/fonts/Helvetica/Helvetica-Bold.ttf"
-          ]
-        },
-        {
-          "fontFamily": "Nunito Sans, sans-serif",
-          "slug": "dch-Nunito-Sans",
-          "name": "Nunito Sans",
-          "fontWeights": "100, 400, 900",
-          "src": [
-            "file:./assets/fonts/Nunito_Sans/NunitoSansLight.ttf",
-            "file:./assets/fonts/NunitoSans/NunitoSansMedium.ttf",
-            "file:./assets/fonts/NunitoSans/NunitoSansExtraBold.ttf"
-          ]
-        },
-        {
-          "fontFamily": "Roboto, sans-serif",
-          "slug": "dch-roboto",
-          "name": "Roboto",
-          "fontWeights": "400, 700",
-          "src": [
-            "file:./assets/fonts/Roboto/Roboto-Regular.ttf",
-            "file:./assets/fonts/Roboto/Roboto-Bold.ttf"
-          ]
+         {
+          "fontFace": [
+            {
+              "fontFamily": "BespokeStencil",
+              "src": [
+                "file:./assets/fonts/BespokeStencil/BespokeStencil-Bold.ttf",
+                "file:./assets/fonts/BespokeStencil/BespokeStencil-Bold.woff",
+                "file:./assets/fonts/BespokeStencil/BespokeStencil-Bold.woff2",
+                "file:./assets/fonts/BespokeStencil/BespokeStencil-Bold.eot"
+              ]
+            }
+          ],
+          "fontFamily": "BespokeStencil",
+          "slug": "dch-BespokeStencil",
+          "name": "Bespoke Stencil"
         }
+        
       ],
       "fontSizes": [
         {
           "fluid": false,
-          "name": "Small",
+          "name": "S",
           "size": "0.9rem",
           "slug": "small"
         },
         {
           "fluid": false,
-          "name": "Medium",
+          "name": "M",
           "size": "1.05rem",
           "slug": "medium"
         },
@@ -200,7 +186,7 @@
             "min": "1.39rem",
             "max": "1.85rem"
           },
-          "name": "Large",
+          "name": "L",
           "size": "1.85rem",
           "slug": "large"
         },
@@ -209,7 +195,7 @@
             "min": "1.85rem",
             "max": "2.5rem"
           },
-          "name": "Extra Large",
+          "name": "XL",
           "size": "2.5rem",
           "slug": "x-large"
         },
@@ -218,7 +204,7 @@
             "min": "2.5rem",
             "max": "3.27rem"
           },
-          "name": "Extra Extra Large",
+          "name": "XXL",
           "size": "3.27rem",
           "slug": "xx-large"
         },
@@ -227,27 +213,9 @@
             "min": "3.27rem",
             "max": "4.3rem"
           },
-          "name": "Extra Extra Extra Large",
+          "name": "XXXL",
           "size": "4.3rem",
           "slug": "xxx-large"
-        },
-        {
-          "fluid": {
-            "min": "4.3rem",
-            "max": "5.6rem"
-          },
-          "name": "Extra Extra Extra Extra Large",
-          "size": "5.6rem",
-          "slug": "xxxx-large"
-        },
-        {
-          "fluid": {
-            "min": "5.6rem",
-            "max": "7.3rem"
-          },
-          "name": "Extra Extra Extra Extra Extra Large",
-          "size": "7.3rem",
-          "slug": "xxxxx-large"
         }
       ],
       "writingMode": true

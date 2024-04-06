@@ -6,7 +6,11 @@ module.exports = {
             container: {
                 center: true,
                 padding: {
-                    DEFAULT: "2vw",
+                    DEFAULT: "15px",
+                },
+                screens: {
+                    xl: '1200px',
+                    sm: '90svw',
                 },
             },
         },
@@ -15,11 +19,11 @@ module.exports = {
             current: "currentColor",
             white: "#ffffff",
             black: "#000000",
-            primary: "#84CC16",
+            primary: "#00FFC2",
         },
         fontFamily: {
-            headers: ["Helvetica", "sans-serif"],
-            body: ["Roboto", "sans-serif"],
+
+            //helvetica: ["Helvetica", "sans-serif"],
         },
     },
     plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
