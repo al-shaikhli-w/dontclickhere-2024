@@ -31,7 +31,7 @@
         }
 
         .logo-big {
-            @apply hidden sm:block absolute -z-[1] right-8 w-[300px] h-auto opacity-70;
+            @apply hidden sm:block absolute -z-[1] right-8 w-[25svw] h-auto opacity-70;
             filter: blur(5px);
             // transform: rotatey(calc(var(--mouse-x) * 1deg - 50deg)) rotatex(calc((var(--mouse-y) * -1deg + 50deg)));
         }
