@@ -743,8 +743,8 @@ select {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .btn--primary:hover {
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   --tw-shadow-color: #00FFC2;
   --tw-shadow: var(--tw-shadow-colored);
@@ -878,7 +878,7 @@ select {
 @media (min-width: 768px) {
 
   .hero .header .header-container .hero__content {
-    max-width: 58rem;
+    max-width: 53rem;
   }
 }
 .hero .header .header-container .hero__content h2 {
@@ -920,18 +920,26 @@ select {
   position: absolute;
   right: 2rem;
   z-index: -1;
+  display: none;
   height: auto;
   width: 300px;
   opacity: 0.7;
+}
+@media (min-width: 640px) {
+
+  .hero .header .header-container .logo-big {
+    display: block;
+  }
+}
+.hero .header .header-container .logo-big {
   filter: blur(5px);
-  transform: rotatey(calc(var(--mouse-x) * 1deg - 50deg)) rotatex(calc(var(--mouse-y) * -1deg + 50deg));
 }
 .header .header-container {
   filter: blur(1);
 }
 .header.opened {
-  --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.9;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
           backdrop-filter: saturate(180%) blur(20px);
   animation: animate-menu 400ms forwards;
@@ -1047,8 +1055,8 @@ select {
   height: 100vh;
   width: 100%;
   flex-direction: column;
-  --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.9;
   padding-top: 4rem;
   opacity: 1;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -1114,7 +1122,7 @@ select {
 @media (min-width: 768px) {
 
   .hero .header .header-menu #menu-header > li .hero__content {
-    max-width: 58rem;
+    max-width: 53rem;
   }
 }
 .hero .header .header-menu #menu-header > li .hero__content h2 {
@@ -1156,11 +1164,19 @@ select {
   position: absolute;
   right: 2rem;
   z-index: -1;
+  display: none;
   height: auto;
   width: 300px;
   opacity: 0.7;
+}
+@media (min-width: 640px) {
+
+  .hero .header .header-menu #menu-header > li .logo-big {
+    display: block;
+  }
+}
+.hero .header .header-menu #menu-header > li .logo-big {
   filter: blur(5px);
-  transform: rotatey(calc(var(--mouse-x) * 1deg - 50deg)) rotatex(calc(var(--mouse-y) * -1deg + 50deg));
 }
 @media (min-width: 1024px) {
 
@@ -1201,6 +1217,38 @@ select {
 .header .header-menu #menu-header > li > a {
   transition: 1.2s 0.1s cubic-bezier(0.35, 0, 0.07, 1);
   letter-spacing: 0.007em;
+}
+@media (min-width: 1024px) {
+
+  .header .header-menu #menu-header > li:last-child {
+    margin-left: 4rem;
+  }
+}
+@media (min-width: 768px) {
+
+  .header .header-menu #menu-header > li:last-child > a:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 255 194 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+    --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-shadow-color: #00FFC2;
+    --tw-shadow: var(--tw-shadow-colored);
+  }
+}
+@media (min-width: 1024px) {
+
+  .header .header-menu #menu-header > li:last-child > a {
+    border-radius: 30px;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    --tw-bg-opacity: 0.1;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
 }
 .header .header-menu #menu-header li.menu-item-has-children > a::after {
   content: "";
@@ -1286,7 +1334,7 @@ select {
 @media (min-width: 768px) {
 
   .hero .container .hero__content {
-    max-width: 58rem;
+    max-width: 53rem;
   }
 }
 .hero .container .hero__content h2 {
@@ -1328,9 +1376,17 @@ select {
   position: absolute;
   right: 2rem;
   z-index: -1;
+  display: none;
   height: auto;
   width: 300px;
   opacity: 0.7;
+}
+@media (min-width: 640px) {
+
+  .hero .container .logo-big {
+    display: block;
+  }
+}
+.hero .container .logo-big {
   filter: blur(5px);
-  transform: rotatey(calc(var(--mouse-x) * 1deg - 50deg)) rotatex(calc(var(--mouse-y) * -1deg + 50deg));
 }

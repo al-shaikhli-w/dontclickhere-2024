@@ -8,11 +8,10 @@
             @apply absolute inset-0;
             background: radial-gradient(140% 130% at 50% 10%, transparent 37.41%, #00ffc2 99.27%);
             filter: blur(50px);
-            //background-color: rgba(255, 255, 255, 0.1);
         }
 
         .hero__content {
-            @apply md:max-w-[58rem] relative z-[1];
+            @apply md:max-w-[53rem] relative z-[1];
 
             h2 {
                 @apply font-BespokeStencil uppercase text-primary mb-3;
@@ -32,9 +31,9 @@
         }
 
         .logo-big {
-            @apply absolute -z-[1] right-8 w-[300px] h-auto opacity-70;
+            @apply hidden sm:block absolute -z-[1] right-8 w-[300px] h-auto opacity-70;
             filter: blur(5px);
-            transform: rotatey(calc(var(--mouse-x) * 1deg - 50deg)) rotatex(calc((var(--mouse-y) * -1deg + 50deg)));
+            // transform: rotatey(calc(var(--mouse-x) * 1deg - 50deg)) rotatex(calc((var(--mouse-y) * -1deg + 50deg)));
         }
     }
 }
