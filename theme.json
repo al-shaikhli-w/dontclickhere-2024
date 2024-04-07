@@ -72,12 +72,17 @@
           "slug": "base"
         },
         {
+          "color": "#00FFC2",
+          "name": "primary",
+          "slug": "primary"
+        },
+        {
           "color": "#ffffff",
           "name": "Base / Two",
           "slug": "base-2"
         },
         {
-          "color": "#000000",
+          "color": "#020617",
           "name": "Black",
           "slug": "black"
         },

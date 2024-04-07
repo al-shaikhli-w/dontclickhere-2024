@@ -93,6 +93,31 @@ window.addEventListener("DOMContentLoaded", () => {
   addEventListenerToElements(itemHasChildren, "mouseout", removeClassTohasChildrenWhenHover);
   addBackLink();
 });
+const workCard = document.querySelectorAll(".work-card");
+console.log(workCard);
+workCard.forEach((card) => {
+  const cardVideo = card.querySelector("video");
+  const windowWidth = window.innerWidth;
+  if (windowWidth <= 1024) {
+    console.log("windowWidth", windowWidth);
+    cardVideo.setAttribute("autoplay", "");
+  }
+  card.addEventListener("mouseover", () => {
+    workCard.forEach((el) => {
+      el.classList.remove("active");
+    });
+    card.classList.add("active");
+    if (cardVideo) {
+      cardVideo.play();
+    }
+  });
+  card.addEventListener("mouseleave", () => {
+    card.classList.remove("active");
+    if (cardVideo) {
+      cardVideo.pause();
+    }
+  });
+});
 window.addEventListener(
   "mousemove",
   (e) => {

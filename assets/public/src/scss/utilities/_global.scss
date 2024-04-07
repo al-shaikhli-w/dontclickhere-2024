@@ -4,8 +4,26 @@
     }
 }
 
+.wp-block-button {
+    position: relative;
+
+    a {
+        @apply inline-block font-helvetica text-lg py-3 px-12 rounded-[30px] shadow-lg cursor-pointer transition-all duration-500 ease-in-out bg-primary text-black;
+        font-family: Helvetica, sans-serif !important;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 12px 80px !important;
+
+        &:hover {
+            @apply shadow-md shadow-primary text-black;
+            background-color: var(--wp--preset--color--primary);
+        }
+
+    }
+}
+
 .btn {
-    @apply mt-10 inline-block font-helvetica font-bold text-lg py-3 px-12 rounded-[30px] shadow-lg cursor-pointer transition-all duration-500 ease-in-out;
+    @apply inline-block font-helvetica text-lg py-3 px-12 rounded-[30px] shadow-lg cursor-pointer transition-all duration-500 ease-in-out;
 
 
     &--primary {

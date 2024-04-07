@@ -1,4 +1,5 @@
 import "./navbar"
+import "./blocks"
 
 
 

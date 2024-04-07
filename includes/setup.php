@@ -26,3 +26,6 @@ if (!function_exists('dch_register_menus')) {
 	}
 	add_action('after_setup_theme', 'dch_register_menus');
 }
+
+
+add_theme_support('post-thumbnails');

@@ -9,7 +9,6 @@ module.exports = {
                     DEFAULT: "15px",
                 },
                 screens: {
-                    //xl: '1400px',
                     sm: '90svw',
                 },
             },
@@ -18,7 +17,7 @@ module.exports = {
             transparent: "transparent",
             current: "currentColor",
             white: "#ffffff",
-            black: "#000000",
+            black: "#020617",
             primary: "#00FFC2",
             gray: "#ececfb"
         },

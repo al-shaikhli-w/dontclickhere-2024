@@ -7,7 +7,7 @@
         @apply fixed top-0 left-0 w-full;
 
         .header-container {
-            @apply bg-primary bg-opacity-5;
+            @apply bg-[#020617] bg-opacity-90;
         }
     }
 
@@ -129,13 +129,8 @@
 
                         &::before {
                             content: "";
-                            width: 100%;
+                            @apply w-full absolute left-0 right-0 -z-[1] bg-black;
                             height: 200%;
-                            position: absolute;
-                            background-color: red;
-                            z-index: -1;
-                            left: 0;
-                            right: 0;
 
                         }
                     }
