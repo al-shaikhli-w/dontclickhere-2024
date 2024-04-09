@@ -37,6 +37,14 @@ div#OurServices {
             animation: moveToTopAndDown 10s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
         }
 
+        &::after {
+            content: "";
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 741 884"><path fill="url(%23a)" d="M209.177 765.61c-249.1319-36.385 14.444-338.497 135.416-437.705 255.602-199.954 386.603-190.338 458.228-191.963 373.289-8.466 615.369 412.39 340.059 413.065-511.871 1.254-684.199 253.042-933.703 216.603Z"/><g filter="url(%23b)"><circle cx="670.798" cy="446.309" r="243" fill="url(%23c)"/></g><defs><radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="rotate(-168.843 499.328551 226.989918) scale(1028.44 558.641)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><radialGradient id="c" cx="0" cy="0" r="1" gradientTransform="matrix(-368.999845 -376.534062 266.330504 -261.001393 908.424 647.645)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><filter id="b" width="850.481" height="850.481" x="245.558" y="21.0683" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_331_721" stdDeviation="91.1201"/></filter></defs></svg>');
+            @apply block -z-[1] bg-no-repeat absolute -bottom-72 -right-[80px] w-full max-w-lg h-full;
+            animation: moveFromDownToTop 10s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+            // animation-delay: 5s;
+        }
+
         .services-cards {
             .service {
                 @apply pb-8;
@@ -49,15 +57,13 @@ div#OurServices {
                 }
 
                 .learn-more-link {
-                    @apply text-lg text-primary mt-4 cursor-pointer shadow-lg inline-flex justify-center items-center gap-2 hover:gap-4 transition-all ease-linear;
+                    @apply text-lg text-primary mt-4 cursor-pointer inline-flex justify-center items-center gap-2 hover:gap-4 transition-all ease-linear;
 
                     &::after {
                         content: "";
                         @apply inline-block w-2 h-2 border-2 border-primary border-t-0 border-l-0 -rotate-[44deg];
                     }
                 }
-
-
             }
         }
 
@@ -84,6 +90,20 @@ div#OurServices {
 
     50% {
         transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveFromDownToTop {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-100px);
     }
 
     100% {

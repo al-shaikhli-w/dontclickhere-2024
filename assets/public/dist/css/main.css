@@ -2030,6 +2030,20 @@ div#OurServices #services-container::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 759 1193"><path fill="url(%23a)" d="M430.064 909.421c233.43-257.309 56.307-628.009-312.166-747.786-346.111-112.508-371.267 160.888-413.276 429.014-58.846 375.579 523.04 541.881 725.442 318.772Z"/><g filter="url(%23b)"><circle cx="275.5" cy="665.5" r="300.5" fill="url(%23c)"/></g><defs><radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="rotate(-100.829 592.286042 462.969263) scale(931.665 654.721)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><radialGradient id="c" cx="0" cy="0" r="1" gradientTransform="rotate(-134.421 476.784485 337.632982) scale(651.948 461.137)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><filter id="b" width="965.481" height="965.481" x="-207.24" y="182.76" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_331_724" stdDeviation="91.1201"/></filter></defs></svg>');
   animation: moveToTopAndDown 10s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
 }
+div#OurServices #services-container::after {
+  content: "";
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 741 884"><path fill="url(%23a)" d="M209.177 765.61c-249.1319-36.385 14.444-338.497 135.416-437.705 255.602-199.954 386.603-190.338 458.228-191.963 373.289-8.466 615.369 412.39 340.059 413.065-511.871 1.254-684.199 253.042-933.703 216.603Z"/><g filter="url(%23b)"><circle cx="670.798" cy="446.309" r="243" fill="url(%23c)"/></g><defs><radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="rotate(-168.843 499.328551 226.989918) scale(1028.44 558.641)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><radialGradient id="c" cx="0" cy="0" r="1" gradientTransform="matrix(-368.999845 -376.534062 266.330504 -261.001393 908.424 647.645)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><filter id="b" width="850.481" height="850.481" x="245.558" y="21.0683" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_331_721" stdDeviation="91.1201"/></filter></defs></svg>');
+  position: absolute;
+  bottom: -18rem;
+  right: -80px;
+  z-index: -1;
+  display: block;
+  height: 100%;
+  width: 100%;
+  max-width: 32rem;
+  background-repeat: no-repeat;
+  animation: moveFromDownToTop 10s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+}
 div#OurServices #services-container .services-cards .service {
   padding-bottom: 2rem;
   border-bottom: 0.83px solid transparent;
@@ -2055,9 +2069,6 @@ div#OurServices #services-container .services-cards .service .learn-more-link {
   line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(0 255 194 / var(--tw-text-opacity));
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -2089,6 +2100,17 @@ div#OurServices #services-container > div:last-child div {
   }
   50% {
     transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes moveFromDownToTop {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
   }
   100% {
     transform: translateY(0);

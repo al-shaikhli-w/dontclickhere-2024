@@ -30,7 +30,7 @@
 .client-logo {
   flex: 1 1 100%;
 }
-div.OurServices {
+.OurServices, .why-us {
    background: black !important;
     color: white;
 }
