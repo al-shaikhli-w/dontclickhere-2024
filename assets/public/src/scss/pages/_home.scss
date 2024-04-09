@@ -28,11 +28,16 @@ div#OurServices {
     @apply relative z-[1];
 
     #services-container {
-        @apply container p-12 bg-white bg-opacity-5 rounded-[30px];
+        @apply container p-12 rounded-[30px] border border-white border-opacity-60 relative bg-black backdrop-opacity-20;
+
+        &::before {
+            content: "";
+            @apply block -z-[1] bg-no-repeat absolute top-0 -left-[80px] w-full max-w-lg h-full;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 759 1193"><path fill="url(%23a)" d="M430.064 909.421c233.43-257.309 56.307-628.009-312.166-747.786-346.111-112.508-371.267 160.888-413.276 429.014-58.846 375.579 523.04 541.881 725.442 318.772Z"/><g filter="url(%23b)"><circle cx="275.5" cy="665.5" r="300.5" fill="url(%23c)"/></g><defs><radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="rotate(-100.829 592.286042 462.969263) scale(931.665 654.721)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><radialGradient id="c" cx="0" cy="0" r="1" gradientTransform="rotate(-134.421 476.784485 337.632982) scale(651.948 461.137)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><filter id="b" width="965.481" height="965.481" x="-207.24" y="182.76" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_331_724" stdDeviation="91.1201"/></filter></defs></svg>');
+            animation: moveToTopAndDown 10s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+        }
 
         .services-cards {
-
-
             .service {
                 @apply pb-8;
                 border-bottom: 0.83px solid transparent;
@@ -40,16 +45,27 @@ div#OurServices {
                 border-image-slice: 1;
 
                 .wp-block-heading {
-                    @apply text-3xl uppercase;
+                    @apply text-2xl uppercase font-helvetica font-bold;
                 }
 
                 .learn-more-link {
-                    @apply text-lg text-primary mt-4 cursor-pointer shadow-lg inline-block shadow-black;
+                    @apply text-lg text-primary mt-4 cursor-pointer shadow-lg inline-flex justify-center items-center gap-2 hover:gap-4 transition-all ease-linear;
 
-                    &::before {
-                        content: ">";
-                        @apply mr-2 bg-white text-black p-4 inline-block rounded-full;
+                    &::after {
+                        content: "";
+                        @apply inline-block w-2 h-2 border-2 border-primary border-t-0 border-l-0 -rotate-[44deg];
                     }
+                }
+
+
+            }
+        }
+
+        &>div {
+            &:last-child {
+                div {
+                    border-bottom: none !important;
+                    padding-bottom: 0 !important;
                 }
             }
         }
