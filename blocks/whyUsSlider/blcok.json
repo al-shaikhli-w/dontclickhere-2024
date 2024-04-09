@@ -1,0 +1,25 @@
+{
+  "schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "version": "1.0.0",
+  "name": "acf-block-json/why-choose-us-slider",
+    "title": "Why choose us slider",
+"keywords": [
+    "why choose us",
+    "slider"
+  ],
+  "category": "widgets",
+  "icon": "admin-comments",
+  "description":  "Why choose us slider",
+  "acf":{
+      "mode": "preview",
+      "renderTemplate": "template.php"
+  },
+  "supports": {
+     "align": true,
+     "mode": true,
+     "multiple": true,
+     "reusable": true,
+     "html": false
+    }
+}
