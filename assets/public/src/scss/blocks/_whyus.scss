@@ -1,78 +1,140 @@
-div#whyUs {
-    section {
-        &>div {
+.why-us-cards {
+    @apply container;
+
+    &>div div {
 
 
-            &>div {
-                @apply relative rounded-[30px] border hover:border-double hover:border-opacity-45 border-white border-opacity-25 px-6 pb-12;
 
+        @apply relative rounded-[30px] border hover:border-double hover:border-opacity-45 border-white border-opacity-25 px-6 pb-12 mb-4;
 
-                &:before {
-                    content: "";
-                    @apply absolute inset-0 w-full h-full bg-black -z-[1];
-                    filter: blur(10px);
-                }
-            }
-        }
-
-        .full-section {
-            @apply relative;
-
-
-            &>div {
-                border: none !important;
-                border-radius: 0 !important;
-                // background-color: rgba(0, 0, 0, 0.4);
-                // border-radius: 20px;
-                // box-sizing: border-box;
-                // color: #FFFFFF;
-                // display: flex;
-                // flex: 1 1 0;
-                // flex-direction: column;
-                // font-size: 18px;
-                // list-style: none;
-                // margin: 30px auto;
-                // max-width: 360px;
-                // padding: 75px 35px 55px;
-                position: relative;
-                text-align: center;
-
-            }
-
-            &::after {
-                content: "";
-
-                background-clip: border-box;
-                background-color: initial;
-                // how to animat the from in background image with animation
-                background-image: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, .2) 39%, var(--wp--preset--color--primary) 50%, rgba(255, 255, 255, .2) 61%);
-                background-origin: border-box;
-                border: 2px solid transparent;
-                rounded: 30px;
-                bottom: 0;
-                left: 0;
-                mask-clip: padding-box, border-box;
-                mask-composite: exclude;
-                mask-image: linear-gradient(#FFFFFF 0, #FFFFFF 0), linear-gradient(#FFFFFF 0, #FFFFFF 0);
-                pointer-events: none;
-                position: absolute;
-                right: 0;
-                top: 0;
-                //transform: rotate(30deg);
-                background-repeat: repeat-x; // or 'repeat' for both directions
-                animation: animateBackground 5s linear infinite;
-            }
+        &:before {
+            content: "";
+            @apply absolute inset-0 w-full h-full bg-black -z-[1];
+            filter: blur(10px);
         }
     }
+
 }
 
 
-@keyframes animateBorders {
-    0% {
-        background-position: 0 0;
+
+.why-us-wrapper {
+    @apply container relative flex w-full h-full;
+
+    &>div {
+
+        @apply flex relative flex-col justify-center items-center gap-3 text-center p-4;
+
+        &::after {
+            content: "";
+            border-radius: 30px;
+            background-clip: border-box;
+            background-color: initial;
+            // how to animat the from in background image with animation
+            background-image: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, .2) 39%, var(--wp--preset--color--primary) 50%, rgba(255, 255, 255, .2) 61%);
+            background-origin: border-box;
+            border: 2px solid transparent;
+            rounded: 30px;
+            bottom: 0;
+            left: 0;
+            mask-clip: padding-box, border-box;
+            mask-composite: exclude;
+            mask-image: linear-gradient(#FFFFFF 0, #FFFFFF 0), linear-gradient(#FFFFFF 0, #FFFFFF 0);
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            //transform: rotate(30deg);
+            background-repeat: repeat-x; // or 'repeat' for both directions
+            animation: animateBackground 5s linear infinite;
+        }
     }
 
-    100% {
-        background-position: 100% 0;
+
+
+}
+
+
+
+
+// div#whyUs {
+//     section {
+//         &>div {
+
+
+//             &>div {
+//                 @apply relative rounded-[30px] border hover:border-double hover:border-opacity-45 border-white border-opacity-25 px-6 pb-12;
+
+
+//                 &:before {
+//                     content: "";
+//                     @apply absolute inset-0 w-full h-full bg-black -z-[1];
+//                     filter: blur(10px);
+//                 }
+//             }
+//         }
+
+//         .full-section {
+//             @apply relative;
+
+
+//             &>div {
+//                 border: none !important;
+//                 border-radius: 0 !important;
+//                 // background-color: rgba(0, 0, 0, 0.4);
+//                 // border-radius: 20px;
+//                 // box-sizing: border-box;
+//                 // color: #FFFFFF;
+//                 // display: flex;
+//                 // flex: 1 1 0;
+//                 // flex-direction: column;
+//                 // font-size: 18px;
+//                 // list-style: none;
+//                 // margin: 30px auto;
+//                 // max-width: 360px;
+//                 // padding: 75px 35px 55px;
+//                 position: relative;
+//                 text-align: center;
+
+//             }
+
+//             &::after {
+//                 content: "";
+
+//                 background-clip: border-box;
+//                 background-color: initial;
+//                 // how to animat the from in background image with animation
+//                 background-image: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, .2) 39%, var(--wp--preset--color--primary) 50%, rgba(255, 255, 255, .2) 61%);
+//                 background-origin: border-box;
+//                 border: 2px solid transparent;
+//                 rounded: 30px;
+//                 bottom: 0;
+//                 left: 0;
+//                 mask-clip: padding-box, border-box;
+//                 mask-composite: exclude;
+//                 mask-image: linear-gradient(#FFFFFF 0, #FFFFFF 0), linear-gradient(#FFFFFF 0, #FFFFFF 0);
+//                 pointer-events: none;
+//                 position: absolute;
+//                 right: 0;
+//                 top: 0;
+//                 //transform: rotate(30deg);
+//                 background-repeat: repeat-x; // or 'repeat' for both directions
+//                 animation: animateBackground 5s linear infinite;
+//             }
+//         }
+//     }
+// }
+
+.why-us-full-section {
+    @apply px-8 py-12 relative;
+
+    &::after {
+        content: "";
+        @apply rounded-[30px] pointer-events-none bg-repeat-x bg-clip-border bg-origin-border border-2 border-transparent absolute inset-0;
+        background-image: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, .2) 39%, var(--wp--preset--color--primary) 50%, rgba(255, 255, 255, .2) 61%);
+        mask-clip: padding-box, border-box;
+        mask-composite: exclude;
+        mask-image: linear-gradient(#FFFFFF 0, #FFFFFF 0), linear-gradient(#FFFFFF 0, #FFFFFF 0);
+        animation: animateBackground 5s linear infinite;
     }
 }

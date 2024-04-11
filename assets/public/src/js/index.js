@@ -1,5 +1,5 @@
 import "./navbar"
-import "./blocks"
+import "./blocks";
 
 
 

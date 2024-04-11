@@ -2,15 +2,12 @@
   "schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
   "version": "1.0.0",
-  "name": "acf-block-json/why-choose-us-slider",
-    "title": "Why choose us slider",
-"keywords": [
-    "why choose us",
-    "slider"
-  ],
-  "category": "widgets",
-  "icon": "admin-comments",
-  "description":  "Why choose us slider",
+  "name": "acf-block-json/why-us-card",
+  "title": "Why us card",
+  "keywords": [ "why us", "why us card"],
+  "category": "layout",
+  "icon": "smiley ",
+  "description":  "A custom block for displaying a why us card",
   "acf":{
       "mode": "preview",
       "renderTemplate": "template.php"
