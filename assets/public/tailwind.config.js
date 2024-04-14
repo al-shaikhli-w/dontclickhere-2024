@@ -23,7 +23,7 @@ module.exports = {
         },
         fontFamily: {
             BespokeStencil: ["BespokeStencil", "sans-serif"],
-            helvetica: ["Helvetica", "sans-serif"],
+            helvetica: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
         },
     },
     plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],

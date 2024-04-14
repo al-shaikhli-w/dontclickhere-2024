@@ -34,3 +34,12 @@
    background: black !important;
     color: white;
 }
+.whyUsCards > div{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  overflow: hidden;
+}
+.whyUsCards > div img {
+  max-width: 20px;
+}

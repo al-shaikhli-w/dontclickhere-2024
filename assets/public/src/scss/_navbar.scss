@@ -1,10 +1,10 @@
 @import "./utilities/animation";
 
 .header {
-    @apply h-auto py-4 transition-all duration-500 text-white top-0;
+    @apply h-auto pt-1 transition-all duration-500 text-white top-0;
 
     &.scroll {
-        @apply fixed top-0 left-0 w-full;
+        @apply fixed top-0 left-[-13px] w-full;
 
         .header-container {
             @apply bg-[#020617] bg-opacity-90;
