@@ -1,6 +1,6 @@
 module.exports = {
     mode: "jit",
-    content: ["../**/*.php", "../../*.php"],
+    content: ["../**/*.php", "../../*.php", "../../**/*.php"],
     theme: {
         extend: {
             container: {

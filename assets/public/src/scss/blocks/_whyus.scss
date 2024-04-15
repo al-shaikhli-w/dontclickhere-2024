@@ -1,110 +1,93 @@
 .why_us_cards {
+  @apply relative;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
 
-    --angle: 90deg;
-    --gradX: 100%;
-    --gradY: 50%;
+  .swiper {
+    @apply w-full h-full flex mb-8;
 
-    .swiper {
-        @apply w-full h-full flex mb-4;
+    .why-us-wrapper {
+      @apply flex gap-6;
 
-        .why-us-wrapper {
-            @apply flex gap-4;
-
-
-            &>div {
-                @apply flex relative border border-black bg-white bg-opacity-40 backdrop-blur-md flex-col justify-center gap-4 p-4;
-
-                &:hover {
-                    // border: 1px solid;
-                    border-image: conic-gradient(from 90deg, var(--wp--preset--color--black), var(--wp--preset--color--primary) 0.1turn, var(--wp--preset--color--primary) 0.15turn, var(--wp--preset--color--black) 0.25turn) 30;
-                    animation: borderRotate 2500ms linear infinite forwards;
-                }
-
-                img {
-                    @apply max-w-16 border border-white rounded-xl p-2 relative;
-                    filter: drop-shadow(0mm 0mm 1rem var(--wp--preset--color--primary));
-                }
-            }
+      & > div {
+        @apply flex relative border border-white rounded-xl bg-white bg-opacity-5 backdrop-blur-md flex-col  gap-4 p-4;
+        .heading {
+          @apply text-2xl font-bold;
         }
-    }
 
+        img {
+          @apply max-w-16 border border-white rounded-xl p-2 relative;
+          filter: drop-shadow(0mm 0mm 1rem var(--wp--preset--color--primary));
+        }
+      }
+    }
+  }
+
+  .swiper-pagination {
+    @apply flex justify-center items-center gap-1 absolute -bottom-[30px] left-1/2 transform translate-x-[-50%];
+
+  }
+
+  .swiper-pagination-bullet {
+    @apply inline-block w-4 h-1 bg-white rounded-full bg-opacity-50 cursor-pointer;
+    transition: 0.3s;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply bg-primary bg-opacity-100 ;
+  }
 
 }
 
+
 @property --angle {
-    syntax: "<angle>";
-    initial-value: 90deg;
-    inherits: true;
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: true;
 }
 
 @property --gradX {
-    syntax: "<percentage>";
-    initial-value: 50%;
-    inherits: true;
+  syntax: "<percentage>";
+  initial-value: 50%;
+  inherits: true;
 }
 
 @property --gradY {
-    syntax: "<percentage>";
-    initial-value: 0%;
-    inherits: true;
-}
-
-.swiper-pagination {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: auto !important;
-    left: auto !important;
-    margin: 0;
-}
-
-.swiper-pagination-bullet {
-    padding: 5px 10px;
-    border-radius: 0;
-    width: auto;
-    height: 30px;
-    text-align: center;
-    line-height: 30px;
-    font-size: 12px;
-    color: #000;
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.swiper-pagination-bullet-active {
-    color: #fff;
-    background: #007aff;
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: true;
 }
 
 @keyframes borderRotate {
-    100% {
-        --angle: 420deg;
-    }
+  100% {
+    --angle: 420deg;
+  }
 }
 
 @keyframes borderRadial {
-    20% {
-        --gradX: 100%;
-        --gradY: 50%;
-    }
+  20% {
+    --gradX: 100%;
+    --gradY: 50%;
+  }
 
-    40% {
-        --gradX: 100%;
-        --gradY: 100%;
-    }
+  40% {
+    --gradX: 100%;
+    --gradY: 100%;
+  }
 
-    60% {
-        --gradX: 50%;
-        --gradY: 100%;
-    }
+  60% {
+    --gradX: 50%;
+    --gradY: 100%;
+  }
 
-    80% {
-        --gradX: 0%;
-        --gradY: 50%;
-    }
+  80% {
+    --gradX: 0%;
+    --gradY: 50%;
+  }
 
-    100% {
-        --gradX: 50%;
-        --gradY: 0%;
-    }
+  100% {
+    --gradX: 50%;
+    --gradY: 0%;
+  }
 }
