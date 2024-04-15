@@ -1,0 +1,22 @@
+{
+  "schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "version": "1.0.0",
+  "name": "acf-block-json/prices-section",
+  "title": "Prices Section",
+  "keywords": [ "prices", "section", "prices section"],
+  "category": "layout",
+  "icon": "money",
+  "description":  "A block to display prices section",
+  "acf":{
+      "mode": "preview",
+      "renderTemplate": "template.php"
+  },
+  "supports": {
+     "align": true,
+     "mode": true,
+     "multiple": true,
+     "reusable": true,
+     "html": false
+    }
+}

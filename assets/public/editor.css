@@ -30,7 +30,7 @@
 .client-logo {
   flex: 1 1 100%;
 }
-.our-services, .why-us, .our-works {
+.our-services, .why-us, .our-works,.prices-section {
   background: #020 !important;
   color: white !important;
   max-width: 90svw !important;
