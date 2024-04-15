@@ -33,7 +33,6 @@ if (!$query->have_posts()) {
         $underTitle = get_field('under_tilte', $post_id);
         $videoUrl   = get_field('video_url', $post_id);
     ?>
-        <!-- <div class="media"> -->
         <?php if (!empty($videoUrl)) : ?>
             <video muted loop playsinline src="<?php echo esc_url($videoUrl); ?>">
                 Your browser does not support the video tag.
@@ -41,9 +40,6 @@ if (!$query->have_posts()) {
         <?php else :
             echo get_the_post_thumbnail($post_id, 'full', array('class' => 'alignleft'));
         endif; ?>
-        <!-- </div> -->
-
-
         <div class="work-card__content">
             <div class="main">
                 <div class="heading">
@@ -57,6 +53,7 @@ if (!$query->have_posts()) {
                 </div>
             </div>
         </div>
+        <span class="light-border"></span>
     <?php endwhile; ?>
 </article>
 

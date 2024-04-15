@@ -23,14 +23,16 @@
   }
 
   .header-logo {
-    @apply w-12 relative overflow-hidden transition-all duration-1000 ease-linear;
+    @apply w-7 relative overflow-hidden transition-all duration-1000 ease-linear;
 
     &:hover {
       @apply w-full;
     }
 
     svg {
-      @apply w-80;
+      @apply w-40 relative;
+
+      & path:first-child {}
     }
   }
 
@@ -79,7 +81,7 @@
         @apply pt-16 absolute left-0 top-0 z-10 flex flex-col opacity-100 w-full h-screen bg-black bg-opacity-90;
         backdrop-filter: saturate(180%) blur(20px);
 
-        & > li > a {
+        &>li>a {
           @for $i from 1 through 4 {
             &:nth-child(#{$i}) {
               transition-delay: 1s + 0.08s * $i;
@@ -89,10 +91,10 @@
         }
       }
 
-      & > li {
+      &>li {
         @apply overflow-hidden pl-8 container lg:w-full lg:p-0 lg:overflow-visible;
 
-        & > a {
+        &>a {
           @apply flex justify-between items-center -mb-2 text-[28px] py-1 translate-y-full lg:mb-0 lg:px-2 lg:py-1 lg:text-base lg:translate-y-0 lg:m-0 lg:w-full lg:text-nowrap;
           transition: 1.2s 0.1s cubic-bezier(0.35, 0, 0.07, 1);
           letter-spacing: .007em;
@@ -101,14 +103,14 @@
         &:last-child {
           @apply lg:ml-16;
 
-          & > a {
+          &>a {
             @apply lg:bg-white lg:bg-opacity-10 lg:rounded-[30px] lg:px-12 lg:py-2 hover:md:text-black hover:md:shadow-sm hover:md:shadow-primary hover:md:bg-primary;
           }
         }
       }
 
       & li.menu-item-has-children {
-        & > a {
+        &>a {
 
           &::after {
             content: "";

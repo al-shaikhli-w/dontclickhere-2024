@@ -1,2 +1,2 @@
 import "./workCard"
-import "./whyus"
+import "./slider"

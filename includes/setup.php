@@ -38,3 +38,10 @@ function allow_svg_upload($mimes)
 	return $mimes;
 }
 add_filter('upload_mimes', 'allow_svg_upload');
+
+function wpacg_dch_admin_color_scheme()
+{
+	$theme_dir = get_stylesheet_directory_uri();
+	wp_admin_css_color('dch', __('dch'), $theme_dir . '/dch.css', array('#fff8f8', '#000000', '#d54e21', '#00ffc2'));
+}
+add_action('admin_init', 'wpacg_dch_admin_color_scheme');

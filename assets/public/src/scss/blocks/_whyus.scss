@@ -1,8 +1,5 @@
 .why_us_cards {
   @apply relative;
-  --angle: 90deg;
-  --gradX: 100%;
-  --gradY: 50%;
 
   .swiper {
     @apply w-full h-full flex mb-8;
@@ -10,14 +7,23 @@
     .why-us-wrapper {
       @apply flex gap-6;
 
-      & > div {
-        @apply flex relative border border-white rounded-xl bg-white bg-opacity-5 backdrop-blur-md flex-col  gap-4 p-4;
+      &>div {
+        @apply flex relative bg-black bg-opacity-100 rounded-xl flex-col z-[0] gap-6 p-6 hover:cursor-none;
+
+        &:hover .light-border {
+          @apply border border-primary;
+        }
+
         .heading {
           @apply text-2xl font-bold;
         }
 
+        .contents {
+          @apply h-full flex items-start pt-2;
+        }
+
         img {
-          @apply max-w-16 border border-white rounded-xl p-2 relative;
+          @apply max-w-12 relative;
           filter: drop-shadow(0mm 0mm 1rem var(--wp--preset--color--primary));
         }
       }
@@ -35,59 +41,41 @@
   }
 
   .swiper-pagination-bullet-active {
-    @apply bg-primary bg-opacity-100 ;
+    @apply bg-primary bg-opacity-100;
   }
+
 
 }
 
+.about-me {
+  @apply border relative bg-black bg-opacity-10 border-white rounded-xl hover:border-primary transition-colors border-opacity-20 p-4 block;
+  padding: 2rem !important;
 
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 90deg;
-  inherits: true;
-}
-
-@property --gradX {
-  syntax: "<percentage>";
-  initial-value: 50%;
-  inherits: true;
-}
-
-@property --gradY {
-  syntax: "<percentage>";
-  initial-value: 0%;
-  inherits: true;
-}
-
-@keyframes borderRotate {
-  100% {
-    --angle: 420deg;
-  }
-}
-
-@keyframes borderRadial {
-  20% {
-    --gradX: 100%;
-    --gradY: 50%;
+  .about-left {
+    @apply p-2
   }
 
-  40% {
-    --gradX: 100%;
-    --gradY: 100%;
+  .about-details {
+    @apply grid w-full justify-between items-start;
+
+    @media screen and (min-width: 1500px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
   }
 
-  60% {
-    --gradX: 50%;
-    --gradY: 100%;
+  &::before {
+    content: "";
+    @apply absolute -right-[130%] -top-72 w-[180%] h-[229%] bg-no-repeat -z-10;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 1920 2260'%3E%3Cg filter='url(%23a)' opacity='.3'%3E%3Cpath fill='url(%23b)' d='M2020.57 726.356C1640.15 188.31 875.031 369.641 496.227 1008.06c-355.817 599.68-29.5 609.16 451.984 794.94C1622.65 2063.23 2350.41 1192.88 2020.57 726.356Z'/%3E%3C/g%3E%3Cdefs%3E%3CradialGradient id='b' cx='0' cy='0' r='1' gradientTransform='matrix(-1714.28714 54.712243 -37.627985 -1178.989696 2271.08 1050.2)' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300FFC2'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='0'/%3E%3C/radialGradient%3E%3Cfilter id='a' width='2574.85' height='2259.58' x='-63.2032' y='.099487' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_331_730' stdDeviation='204.545'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
   }
 
-  80% {
-    --gradX: 0%;
-    --gradY: 50%;
+  &::after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 726 769'%3E%3Cpath fill='url(%23a)' d='M436.092 214.843C298.624 145.675 223.847 367.268-96.0273 372.409-294.62 375.601-129.76 544.574 59.8686 587.371 570.214 702.549 604.89 299.774 436.092 214.843Z'/%3E%3Cg filter='url(%23b)'%3E%3Ccircle cx='370.87' cy='355.279' r='172.673' fill='url(%23c)'/%3E%3C/g%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='0' r='1' gradientTransform='matrix(-548.500175 -186.500385 116.228106 -341.828445 498.5 561.255)' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300FFC2'/%3E%3Cstop offset='.630667' stop-color='%236BFFDB' stop-opacity='.580914'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='0' cy='0' r='1' gradientTransform='matrix(-262.206664 -267.560384 189.250864 -185.46407 539.724 498.346)' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300FFC2'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='0'/%3E%3C/radialGradient%3E%3Cfilter id='b' width='709.826' height='709.826' x='15.957' y='.366165' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_352_811' stdDeviation='91.1201'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+    @apply absolute top-0 w-full max-w-3xl -left-16 -z-10 bg-no-repeat;
+    animation: moveFromDownToTop 10s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
   }
 
-  100% {
-    --gradX: 50%;
-    --gradY: 0%;
-  }
 }

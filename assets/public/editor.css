@@ -30,9 +30,11 @@
 .client-logo {
   flex: 1 1 100%;
 }
-.OurServices, .why-us {
-   background: black !important;
-    color: white;
+.our-services, .why-us, .our-works {
+  background: #020 !important;
+  color: white !important;
+  max-width: 90svw !important;
+  margin: 0 auto !important;
 }
 .whyUsCards > div{
   display: grid;

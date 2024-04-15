@@ -1,10 +1,10 @@
 import { Swiper } from "swiper";
-import { Pagination } from 'swiper/modules';
+import { Pagination, Mousewheel } from 'swiper/modules';
 
 window.addEventListener("DOMContentLoaded", () => {
     const postsSliderConfig = {
-        modules: [Pagination],
-
+        modules: [Pagination, Mousewheel],
+        mousewheel: true,
         slidesPerView: 1,
         spaceBetween: 0,
         pagination: {

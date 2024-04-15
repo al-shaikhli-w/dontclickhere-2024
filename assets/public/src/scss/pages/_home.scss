@@ -24,7 +24,7 @@
   }
 }
 
-div#OurServices {
+.our-services {
   @apply relative z-[1];
 
   #services-container {
@@ -67,7 +67,7 @@ div#OurServices {
       }
     }
 
-    & > div {
+    &>div {
       &:last-child {
         div {
           border-bottom: none !important;
