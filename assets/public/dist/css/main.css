@@ -2318,6 +2318,129 @@ body .wpforms-form::after {
   width: 480px;
   background-repeat: no-repeat;
 }
+.accordion {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.accordion .accordion-item {
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 1px;
+  border-image-slice: 1;
+  border-width: 0 0 1px 0;
+  border-image-source: linear-gradient(120deg, rgba(255, 231, 231, 0.46) 0%, rgba(255, 255, 255, 0.47) 20%, rgba(0, 0, 0, 0) 40%, rgba(255, 255, 255, 0.3) 60%, rgba(115, 129, 255, 0.45) 80%, rgba(0, 7, 73, 0.31) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffe7e7", endColorstr="#000749", GradientType=1);
+}
+.accordion .accordion-item button[aria-expanded=true] {
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 255 194 / var(--tw-border-opacity));
+}
+.accordion button {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-style: none;
+  background-image: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: left;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.accordion button:hover, .accordion button:focus {
+  cursor: pointer;
+  --tw-text-opacity: 1;
+  color: rgb(0 255 194 / var(--tw-text-opacity));
+}
+.accordion button:hover::after, .accordion button:focus::after {
+  cursor: pointer;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(236 236 251 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 255 194 / var(--tw-text-opacity));
+}
+.accordion button .accordion-title {
+  padding-top: 1rem;
+  padding-right: 1.5rem;
+  padding-left: 0px;
+  padding-bottom: 0px;
+}
+.accordion button .icon {
+  position: absolute;
+  top: 18px;
+  right: 0px;
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+}
+.accordion button .icon::before, .accordion button .icon::after {
+  position: absolute;
+  display: block;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.accordion button .icon::before {
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+.accordion button[aria-expanded=true] {
+  --tw-text-opacity: 1;
+  color: rgb(0 255 194 / var(--tw-text-opacity));
+}
+.accordion button[aria-expanded=true] .icon::after {
+  width: 0px;
+}
+.accordion button[aria-expanded=true] + .accordion-content {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  max-height: 9rem;
+  opacity: 1;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  max-height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0px;
+  margin-right: 0px;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 #ourWorks {
   position: relative;
 }

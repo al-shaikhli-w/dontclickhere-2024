@@ -1,0 +1,22 @@
+{
+  "schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "version": "1.0.0",
+    "name": "acf-block-json/faqs",
+  "title": "Faqs Block",
+    "description": "A block to display FAQs",
+    "category": "widgets",
+    "icon": "editor-help",
+    "keywords": [
+        "faq",
+        "faqs",
+        "question",
+        "answer"
+    ],
+    "acf": {
+      "mode": "preview",
+      "renderTemplate": "template.php"
+    }
+
+
+}
