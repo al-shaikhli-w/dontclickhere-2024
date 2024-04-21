@@ -1,0 +1,85 @@
+.pricing-cards {
+    @apply relative grid gap-6 lg:grid-cols-3 items-start container transition-colors;
+
+    .pricing-card {
+        @apply relative text-white flex flex-col p-10 rounded-xl bg-opacity-40 hover:bg-white hover:bg-opacity-5 hover:cursor-pointer shadow transition-colors;
+        box-shadow: inset 0px 0px 40px 4px rgba(255, 255, 255, 0.2);
+
+        &-header {
+            @apply mb-5;
+
+            &__heading {
+                @apply font-bold font-BespokeStencil uppercase text-4xl mb-1 text-center;
+            }
+
+            &__paragraph {
+                @apply text-center;
+                font-size: 12px !important;
+            }
+
+            &__pricing {
+                @apply my-8 text-center
+            }
+
+            &__cta {
+                @apply btn btn--primary w-full text-center font-helvetica font-bold;
+            }
+        }
+
+        .includes {
+            @apply my-8;
+
+
+
+            &__lists {
+                @apply text-sm space-y-3 grow;
+
+                &__item {
+                    @apply flex items-center gap-6;
+
+                    .icon {
+                        @apply flex justify-center items-center w-4 h-4 bg-white rounded-full;
+
+                        svg {
+                            @apply w-2 h-2 fill-black shrink-0;
+                        }
+                    }
+
+                    &__content {
+                        @apply flex-grow;
+                    }
+                }
+
+                &--hide {
+                    @apply hidden;
+
+                }
+            }
+
+            button {
+                @apply text-white border-0 outline-none shadow-none mb-6;
+            }
+        }
+
+        &:hover {
+            box-shadow: inset 0px 0px 60px 4px rgba(255, 255, 255, 0.40);
+
+            hr {
+                @apply border-opacity-100;
+            }
+        }
+
+        hr {
+            @apply border border-white border-opacity-20 rounded-full;
+        }
+
+        .popular {
+            @apply absolute -top-5 left-[35%] bg-primary text-black px-4 py-2 rounded-full text-xs;
+        }
+    }
+
+    & .popular-card {
+        @apply min-h-[600px] -mt-7;
+        box-shadow: inset 0px 0px 60px 4px rgba(255, 255, 255, 0.40);
+    }
+}

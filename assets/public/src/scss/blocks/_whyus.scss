@@ -1,5 +1,5 @@
 .why_us_cards {
-  @apply relative;
+  @apply relative overflow-hidden;
 
   .swiper {
     @apply w-full h-full flex mb-8;

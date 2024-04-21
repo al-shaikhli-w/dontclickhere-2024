@@ -30,7 +30,7 @@
 .client-logo {
   flex: 1 1 100%;
 }
-.our-services, .why-us, .our-works,.prices-section {
+.our-services, .why-us, .our-works,.prices-section, .contacts {
   background: #020 !important;
   color: white !important;
   max-width: 90svw !important;
@@ -44,4 +44,12 @@
 }
 .whyUsCards > div img {
   max-width: 20px;
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    max-width: 90vw;
+    margin: 0 auto;
 }

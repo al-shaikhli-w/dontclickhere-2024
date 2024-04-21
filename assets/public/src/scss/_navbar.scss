@@ -4,15 +4,11 @@
   @apply h-auto pt-1 transition-all duration-500 text-white top-0;
 
   &.scroll {
-    @apply fixed top-0 left-0 w-full;
-
-    .header-container {
-      @apply bg-[#020617] bg-opacity-90;
-    }
+    @apply fixed top-0 left-0 w-full bg-[#020617] bg-opacity-90 py-3;
   }
 
   .header-container {
-    @apply container flex justify-between items-center border rounded-full border-white;
+    @apply container flex justify-between items-center;
     filter: blur(1);
   }
 

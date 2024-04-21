@@ -13,12 +13,10 @@
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     z-index: -1;
-    border-radius: calc(1rem + 1rem);
 
     &:before {
         content: "";
-        @apply absolute left-1/2 top-1/2 -z-[2] translate-x-[-50%] translate-y-[-50%] w-full h-full rounded-xl;
-        display: block;
+        @apply block absolute left-1/2 top-1/2 -z-[2] translate-x-[-50%] translate-y-[-50%] w-full h-full rounded-xl;
         background: var(--border-bg);
         box-shadow: 0 0 40px 20px --var(--border-bg);
         width: calc(100% * 1.41421356237);
