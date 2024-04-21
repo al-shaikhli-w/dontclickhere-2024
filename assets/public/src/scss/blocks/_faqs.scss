@@ -6,7 +6,7 @@
         border-image-slice: 1;
         border-width: 0 0 1px 0;
         border-image-source: linear-gradient(120deg, rgba(255, 231, 231, 0.46) 0%, rgba(255, 255, 255, 0.47) 20%, rgba(0, 0, 0, 0) 40%, rgba(255, 255, 255, 0.3) 60%, rgba(115, 129, 255, 0.45) 80%, rgba(0, 7, 73, 0.31) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffe7e7", endColorstr="#000749", GradientType=1);
+
 
         button[aria-expanded='true'] {
             @apply border-b border-primary;

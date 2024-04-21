@@ -2,16 +2,15 @@
   "schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
   "version": "1.0.0",
-    "name": "acf-block-json/faqs",
-  "title": "Faqs",
-    "description": "A block to display FAQs",
+    "name": "acf-block-json/footer",
+  "title": "footer",
+    "description": "A block to display a footer for the site",
     "category": "widgets",
-    "icon": "editor-help",
+    "icon": "admin-comments",
     "keywords": [
-        "faq",
-        "faqs",
-        "question",
-        "answer"
+        "footer",
+        "site",
+        "footer block"
     ],
     "acf": {
       "mode": "preview",
