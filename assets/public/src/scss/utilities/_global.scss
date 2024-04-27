@@ -46,4 +46,28 @@ p {
             @apply shadow-md shadow-white;
         }
     }
+
+    &--glass {
+        background: rgb(47, 194, 179);
+        background: -moz-linear-gradient(168deg, rgba(47, 194, 179, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+        background: -webkit-linear-gradient(168deg, rgba(47, 194, 179, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+        background: linear-gradient(168deg, rgba(47, 194, 179, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2fc2b3", endColorstr="#ffffff", GradientType=1);
+
+        &:hover {
+            background: rgb(47, 194, 179);
+            background: -moz-linear-gradient(311deg, rgba(47, 194, 179, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+            background: -webkit-linear-gradient(311deg, rgba(47, 194, 179, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+            background: linear-gradient(311deg, rgba(47, 194, 179, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2fc2b3", endColorstr="#ffffff", GradientType=1);
+        }
+    }
+
+    &--small {
+        @apply text-sm py-2 px-8;
+    }
+
+    &--full {
+        @apply w-full text-center;
+    }
 }

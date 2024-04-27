@@ -9,7 +9,7 @@ export default defineConfig({
                 main: resolve(__dirname, "src/entry.js"),
                 mainStyle: resolve(__dirname, "src/scss/main.scss"),
             },
-            external: ["jQuery"],
+            //external: ["jQuery"],
             output: {
                 entryFileNames: "js/[name].js",
                 assetFileNames: "css/[name].css", // Fixed the assetFileNames configuration

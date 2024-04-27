@@ -5162,3 +5162,13 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   items.forEach((item) => item.addEventListener("click", toggleAccordion));
 });
+const selectThePriceOptionOnMobile = () => {
+  const priceOptions = document.querySelector("#price-packet");
+  if (!priceOptions) {
+    return;
+  }
+  priceOptions.addEventListener("change", (event2) => {
+    console.log(event2.target.value);
+  });
+};
+document.addEventListener("DOMContentLoaded", selectThePriceOptionOnMobile);

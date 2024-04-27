@@ -1,14 +1,11 @@
 .hero {
     .container {
-        height: 90svh;
-
-        @apply flex items-center overflow-hidden rounded-[30px] shadow-lg relative text-gray md:px-12;
+        @apply flex items-center h-[50svh] pt-16 md:h-[70svh] md:pt-0 overflow-hidden rounded-[30px] shadow-lg relative text-gray md:px-12;
 
         &::before {
             content: "";
             @apply absolute inset-0;
             background: radial-gradient(140% 130% at 50% 10%, transparent 37.41%, #00ffc2 99.27%);
-            //filter: blur(50px);
         }
 
         .hero__content {
