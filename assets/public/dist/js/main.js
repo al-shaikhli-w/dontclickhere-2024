@@ -9880,21 +9880,28 @@ _forEachName("x,y,z,top,right,bottom,left,width,height,fontSize,padding,margin,p
 gsap.registerPlugin(CSSPlugin);
 var gsapWithCSS = gsap.registerPlugin(CSSPlugin) || gsap;
 gsapWithCSS.core.Tween;
-gsapWithCSS.to(".first", {
-  duration: 1.5,
-  delay: 0.7,
-  top: "-100%",
-  ease: "expo.inOut"
-});
-gsapWithCSS.to(".second", {
-  duration: 1.5,
-  delay: 0.8,
-  top: "-100%",
-  ease: "expo.inOut"
-});
-gsapWithCSS.to(".third", {
-  duration: 1.5,
-  delay: 0.9,
-  top: "-100%",
-  ease: "expo.inOut"
+window.addEventListener("DOMContentLoaded", () => {
+  gsapWithCSS.to(".first", {
+    duration: 1.5,
+    delay: 0.7,
+    top: "-100%",
+    ease: "expo.inOut"
+  });
+  gsapWithCSS.to(".second", {
+    duration: 1.5,
+    delay: 0.8,
+    top: "-100%",
+    ease: "expo.inOut"
+  });
+  gsapWithCSS.to(".third", {
+    duration: 1.5,
+    delay: 0.9,
+    top: "-100%",
+    ease: "expo.inOut"
+  });
+  setTimeout(function() {
+    if (document.body.classList.contains("overflow-hidden")) {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, 2e3);
 });

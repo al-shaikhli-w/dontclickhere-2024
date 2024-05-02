@@ -749,6 +749,9 @@ select {
 .max-w-\[100svw\] {
   max-width: 100svw;
 }
+.overflow-hidden {
+  overflow: hidden;
+}
 .overflow-x-hidden {
   overflow-x: hidden;
 }

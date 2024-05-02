@@ -9,10 +9,7 @@
 $workId = get_field('work_id');
 $workSize = get_field('card_size');
 
-if (empty($workSize)) {
-    echo 'Please select a card size';
-    return;
-}
+
 $query = new WP_Query([
     'post_type' => 'work',
     'post__in' => [$workId],
@@ -24,7 +21,7 @@ if (!$query->have_posts()) {
 }
 ?>
 
-<article class="work-card">
+<article class="work-card <?php echo $workSize ? "big-card" : "small-card"; ?>">
     <?php
     // Loop through the posts
     while ($query->have_posts()) : $query->the_post();

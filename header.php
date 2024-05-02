@@ -64,7 +64,7 @@ header('Access-Control-Allow-Origin: *'); ?>
 
 
 
-<body <?php body_class("bg-[#020617] max-w-[100svw] !text-white overflow-x-hidden"); ?>>
+<body <?php body_class("bg-[#020617] max-w-[100svw] !text-white overflow-x-hidden overflow-hidden"); ?>>
     <?php wp_body_open(); ?>
     <header class="header absolute w-full z-10">
         <section class="header-container" name="header-container">
