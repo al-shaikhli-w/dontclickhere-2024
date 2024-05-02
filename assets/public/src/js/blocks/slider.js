@@ -72,7 +72,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    initializeSwiper(".swiper-slider", workSliderConfig);
+    initializeSwiper(".work-slider", workSliderConfig);
     initializeSwiper(".whyUsCards", postsSliderConfig);
 
 });

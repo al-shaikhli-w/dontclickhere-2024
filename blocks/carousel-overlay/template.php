@@ -1,6 +1,6 @@
 <section class="section slider-section mt-40">
     <div class="container slider-column">
-        <div class="swiper swiper-slider">
+        <div class="swiper work-slider">
             <div class="swiper-wrapper flex">
                 <?php
                 $args = array(

@@ -2,7 +2,7 @@
     @apply relative grid gap-6 lg:grid-cols-3 items-start container transition-colors;
 
     .pricing-card {
-        @apply relative text-white flex flex-col p-10 rounded-xl bg-opacity-40 hover:bg-white hover:bg-opacity-5 hover:cursor-pointer shadow transition-colors;
+        @apply relative text-white flex justify-between flex-col p-10 rounded-xl bg-opacity-40 hover:bg-white hover:bg-opacity-5 hover:cursor-pointer shadow transition-colors;
         box-shadow: inset 0px 0px 40px 4px rgba(255, 255, 255, 0.2);
 
         &-header {
@@ -23,13 +23,12 @@
 
             &__cta {
                 @apply btn btn--primary w-full text-center font-helvetica font-bold;
+                //absolute bottom-4 left-0 right-0 mx-4 max-w-[93%]
             }
         }
 
         .includes {
             @apply my-8;
-
-
 
             &__lists {
                 @apply text-sm space-y-3 grow;
@@ -58,6 +57,32 @@
 
             button {
                 @apply text-white border-0 outline-none shadow-none mb-6;
+            }
+
+            .not-includes {
+                @apply line-through opacity-100;
+
+                svg {
+                    @apply opacity-0 invisible;
+                }
+
+                .includes__lists__item__content {
+                    @apply opacity-50;
+                }
+
+                .icon {
+                    @apply bg-[#dc2626];
+
+                    &::before {
+
+                        content: "";
+                        background-image: url('data:image/svg+xml,<svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path></svg>');
+                        position: absolute;
+                        filter: invert(1);
+                        @apply text-black text-sm w-3 h-3;
+                    }
+                }
+
             }
         }
 

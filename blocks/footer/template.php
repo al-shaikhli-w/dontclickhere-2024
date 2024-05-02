@@ -414,9 +414,8 @@
     </div>
     <div class="under__footer">
         <div class="logo">
-            <?php $logo_image_id = get_field("logo");
-            echo wp_get_attachment_image($logo_image_id, "full")
-            ?>
+            <?php $logo_image_id = get_field("logo"); ?>
+            <img src="<?php echo wp_get_attachment_image_url($logo_image_id, 'full'); ?>" alt="logo" width="180px">
         </div>
         <nav class="footer__nav">
             <ul class="footer__nav__items">

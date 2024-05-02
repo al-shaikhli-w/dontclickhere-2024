@@ -1,6 +1,6 @@
 import "./navbar"
 import "./blocks";
-
+import "./animation"
 
 
 // // Mouse move effect

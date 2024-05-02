@@ -1,4 +1,4 @@
-.swiper {
+.work-slider {
     @apply mx-auto relative list-none p-0;
 
     .swiper-wrapper {
@@ -20,8 +20,6 @@
                 image-rendering: -moz-crisp-edges;
                 image-rendering: crisp-edges;
             }
-
-
         }
     }
 
@@ -44,7 +42,6 @@
 
             &-active {
                 @apply opacity-100 w-24;
-
                 transition-delay: 0s;
             }
         }

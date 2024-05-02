@@ -54,14 +54,15 @@ header('Access-Control-Allow-Origin: *'); ?>
 
     <?php wp_head(); ?>
 </head>
-<!-- 
-    TODO: Add overlay 
-      <div class="overlay first"></div>
-  <div class="overlay second"></div>
-  <div class="overlay third"></div>
-  https://codepen.io/chouaibblgn45/pen/ZEbaadr
 
- -->
+<div class="overlays">
+    <div class="overlay first"> Dont</div>
+    <div class="overlay second">click</div>
+    <div class="overlay third">here</div>
+</div>
+
+
+
 
 <body <?php body_class("bg-[#020617] max-w-[100svw] !text-white overflow-x-hidden"); ?>>
     <?php wp_body_open(); ?>
