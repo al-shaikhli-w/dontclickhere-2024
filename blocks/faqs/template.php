@@ -1,4 +1,4 @@
-<section class="accordion">
+<section class="accordion mt-12">
     <?php
     if (have_rows('faqs')) :
         while (have_rows('faqs')) : the_row();

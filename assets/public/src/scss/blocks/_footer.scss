@@ -1,5 +1,6 @@
 footer {
-    @apply relative min-h-[440px];
+    @apply relative mt-12;
+
 
     .footer {
 
@@ -7,17 +8,16 @@ footer {
 
         &__bg {
             @apply absolute inset-0 -z-[1] w-full h-full;
-
-            svg {
-                @apply h-full w-full;
-            }
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 250 973"><g filter="url(%23a)"><path fill="url(%23b)" fill-opacity=".4" d="M.8125 0h124.406v973H.8125z"/></g><g filter="url(%23c)"><path fill="url(%23d)" fill-opacity=".4" d="M125.219 0h124.406v973H125.219z"/></g><defs><linearGradient id="b" x1="125.219" x2=".807356" y1="455.113" y2="455.485" gradientUnits="userSpaceOnUse"><stop stop-color="%23161618"/><stop offset=".166667"/><stop offset="1" stop-color="%231A1A1D" stop-opacity=".01"/></linearGradient><linearGradient id="d" x1="249.625" x2="125.214" y1="455.113" y2="455.485" gradientUnits="userSpaceOnUse"><stop stop-color="%23161618"/><stop offset=".166667"/><stop offset="1" stop-color="%231A1A1D" stop-opacity=".01"/></linearGradient><filter id="a" width="324.406" height="1173" x="-99.1875" y="-100" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImageFix" stdDeviation="50"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_592_1131"/><feBlend in="SourceGraphic" in2="effect1_backgroundBlur_592_1131" result="shape"/><feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dy="2"/><feGaussianBlur stdDeviation="2"/><feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic"/><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.16 0"/><feBlend in2="shape" result="effect2_innerShadow_592_1131"/></filter><filter id="c" width="324.406" height="1173" x="25.2188" y="-100" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImageFix" stdDeviation="50"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_592_1131"/><feBlend in="SourceGraphic" in2="effect1_backgroundBlur_592_1131" result="shape"/><feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dy="2"/><feGaussianBlur stdDeviation="2"/><feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic"/><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.16 0"/><feBlend in2="shape" result="effect2_innerShadow_592_1131"/></filter></defs></svg>');
+            bottom: -160px;
+            min-height: 440px;
         }
 
         &__content {
             @apply relative top-28 left-0 w-full;
 
             .wrapper {
-                @apply container flex justify-between items-start gap-6 text-left;
+                @apply container flex flex-col md:flex-row justify-between items-start gap-6 text-left;
 
             }
 
@@ -50,13 +50,13 @@ footer {
 
     .under__footer {
 
-        @apply pt-6 container border-t border-l-0 border-r-0 border-b-0 relative -bottom-[130px] left-0 right-0 w-full flex justify-between items-start gap-6 text-white;
+        @apply py-6 container border-t border-l-0 border-r-0 border-b-0 relative -bottom-[130px] left-0 right-0 w-full flex flex-col md:flex-row justify-between items-start gap-6 text-white;
         border-image-slice: 1;
         border-width: 1px 0 0 0;
         border-image-source: linear-gradient(120deg, rgba(255, 231, 231, 0.46) 0%, rgba(255, 255, 255, 0.47) 20%, rgba(0, 0, 0, 0) 40%, rgba(255, 255, 255, 0.3) 60%, rgba(115, 129, 255, 0.45) 80%, rgba(0, 7, 73, 0.31) 100%);
 
         img {
-            @apply w-full max-w-44
+            @apply w-full max-w-44 h-8;
         }
 
         .footer__nav {

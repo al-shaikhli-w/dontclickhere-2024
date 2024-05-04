@@ -5,20 +5,29 @@
     @apply container;
   }
 
+  .first-columns,
+  .last-columns {
+    @media screen and (max-width: 991px) {
+      &>div {
+        flex-basis: 50% !important;
+      }
+    }
+  }
+
   .first-columns {
     &::before {
-      content: "";
+      // content: "";
       background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 679 890"><g filter="url(%23a)"><circle cx="252.819" cy="464" r="243" fill="url(%23b)"/></g><path fill="url(%23c)" d="M313.896 188.015c31.701 37.687 53.298 60.059 89.799 124.619 37.622 64.259 88.746 169.955 54.95 231.949-33.796 61.995-153.632 80.588-281.352 69.757-127.7206-10.832-262.7624-48.988-320.586-139.372-58.661-89.034-41.224-229.996 28.673-309.548 69.8975-79.5528 193.0927-99.0465 275.452-82.8184 81.24 16.5282 122.483 67.4274 153.064 105.4134Z"/><defs><radialGradient id="b" cx="0" cy="0" r="1" gradientTransform="matrix(-368.999845 -376.534062 266.330504 -261.001393 490.445 665.336)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><radialGradient id="c" cx="0" cy="0" r="1" gradientTransform="matrix(-1063.222724 -304.87421 215.685404 -752.184393 442.041 511.877)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset=".473934" stop-color="%23D4FFF5" stop-opacity=".168359"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><filter id="a" width="850.481" height="850.481" x="-172.421" y="38.7597" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_319_388" stdDeviation="91.1201"/></filter></defs></svg>');
-      @apply bg-no-repeat absolute top-0 left-0 w-full max-w-lg h-full;
+      @apply bg-no-repeat absolute top-0 left-0 w-full -z-30 max-w-lg h-full;
       animation: moveToTopAndDown 20s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
     }
   }
 
   .last-columns {
     &::before {
-      content: "";
+      // content: "";
       background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1008 1102"><g filter="url(%23a)"><circle cx="549.251" cy="552.453" r="250.5" fill="%232FC2B3" fill-opacity=".5" transform="rotate(129.21 549.251 552.453)"/></g><path fill="url(%23b)" d="M1095.88 114.992c209.87 9.38 76.28 321.642 4.72 427.641C946.905 757.461 839.022 761.53 781.824 770.265c-298.095 45.522-602.126-328.246-380.827-356.551 411.458-52.627 484.707-308.117 694.883-298.722Z" opacity=".7"/><defs><radialGradient id="b" cx="0" cy="0" r="1" gradientTransform="matrix(833.999817 40.999945 -29.288986 595.781502 488.298 510)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><filter id="a" width="1097.82" height="1097.82" x=".34317" y="3.54532" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_319_773" stdDeviation="149.2"/></filter></defs></svg>');
-      @apply bg-no-repeat absolute -bottom-[780px] right-0 w-full max-w-6xl h-full;
+      @apply bg-no-repeat absolute -bottom-[780px] -z-30 right-0 w-full max-w-6xl h-full;
       animation: moveToTopAndDown 10s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
     }
   }
@@ -30,20 +39,20 @@
   #services-container {
     @apply container p-12 rounded-xl border border-white border-opacity-60 relative bg-white bg-opacity-5 backdrop-blur-md drop-shadow-lg z-[1];
 
-    &::before {
-      content: "";
-      @apply block -z-[1] bg-no-repeat absolute top-0 -left-[80px] w-full max-w-lg h-full;
-      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 759 1193"><path fill="url(%23a)" d="M430.064 909.421c233.43-257.309 56.307-628.009-312.166-747.786-346.111-112.508-371.267 160.888-413.276 429.014-58.846 375.579 523.04 541.881 725.442 318.772Z"/><g filter="url(%23b)"><circle cx="275.5" cy="665.5" r="300.5" fill="url(%23c)"/></g><defs><radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="rotate(-100.829 592.286042 462.969263) scale(931.665 654.721)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><radialGradient id="c" cx="0" cy="0" r="1" gradientTransform="rotate(-134.421 476.784485 337.632982) scale(651.948 461.137)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><filter id="b" width="965.481" height="965.481" x="-207.24" y="182.76" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_331_724" stdDeviation="91.1201"/></filter></defs></svg>');
-      animation: moveToTopAndDown 10s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
-    }
+    // &::before {
+    //   //content: "";
+    //   @apply block -z-[1] bg-no-repeat absolute top-0 -left-[80px] w-full max-w-lg h-full;
+    //   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 759 1193"><path fill="url(%23a)" d="M430.064 909.421c233.43-257.309 56.307-628.009-312.166-747.786-346.111-112.508-371.267 160.888-413.276 429.014-58.846 375.579 523.04 541.881 725.442 318.772Z"/><g filter="url(%23b)"><circle cx="275.5" cy="665.5" r="300.5" fill="url(%23c)"/></g><defs><radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="rotate(-100.829 592.286042 462.969263) scale(931.665 654.721)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><radialGradient id="c" cx="0" cy="0" r="1" gradientTransform="rotate(-134.421 476.784485 337.632982) scale(651.948 461.137)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><filter id="b" width="965.481" height="965.481" x="-207.24" y="182.76" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_331_724" stdDeviation="91.1201"/></filter></defs></svg>');
+    //   animation: moveToTopAndDown 10s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+    // }
 
-    &::after {
-      content: "";
-      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 741 884"><path fill="url(%23a)" d="M209.177 765.61c-249.1319-36.385 14.444-338.497 135.416-437.705 255.602-199.954 386.603-190.338 458.228-191.963 373.289-8.466 615.369 412.39 340.059 413.065-511.871 1.254-684.199 253.042-933.703 216.603Z"/><g filter="url(%23b)"><circle cx="670.798" cy="446.309" r="243" fill="url(%23c)"/></g><defs><radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="rotate(-168.843 499.328551 226.989918) scale(1028.44 558.641)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><radialGradient id="c" cx="0" cy="0" r="1" gradientTransform="matrix(-368.999845 -376.534062 266.330504 -261.001393 908.424 647.645)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><filter id="b" width="850.481" height="850.481" x="245.558" y="21.0683" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_331_721" stdDeviation="91.1201"/></filter></defs></svg>');
-      @apply block -z-[1] bg-no-repeat absolute -bottom-96 -right-[80px] w-full max-w-lg h-full;
-      animation: moveFromDownToTop 10s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
-      // animation-delay: 5s;
-    }
+    // &::after {
+    //   //content: "";
+    //   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 741 884"><path fill="url(%23a)" d="M209.177 765.61c-249.1319-36.385 14.444-338.497 135.416-437.705 255.602-199.954 386.603-190.338 458.228-191.963 373.289-8.466 615.369 412.39 340.059 413.065-511.871 1.254-684.199 253.042-933.703 216.603Z"/><g filter="url(%23b)"><circle cx="670.798" cy="446.309" r="243" fill="url(%23c)"/></g><defs><radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="rotate(-168.843 499.328551 226.989918) scale(1028.44 558.641)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><radialGradient id="c" cx="0" cy="0" r="1" gradientTransform="matrix(-368.999845 -376.534062 266.330504 -261.001393 908.424 647.645)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><filter id="b" width="850.481" height="850.481" x="245.558" y="21.0683" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_331_721" stdDeviation="91.1201"/></filter></defs></svg>');
+    //   @apply block -z-[1] bg-no-repeat absolute -bottom-96 -right-[80px] w-full max-w-lg h-full;
+    //   animation: moveFromDownToTop 10s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+    //   // animation-delay: 5s;
+    // }
 
     .services-cards {
       .service {

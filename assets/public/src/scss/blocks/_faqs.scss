@@ -11,10 +11,14 @@
         button[aria-expanded='true'] {
             @apply border-b border-primary;
         }
+
+        &:last-child {
+            @apply border-b-0;
+        }
     }
 
     button {
-        @apply relative block text-left w-full py-4 text-white font-helvetica text-xl border-none bg-none outline-none;
+        @apply relative block text-left w-full py-4 text-white font-helvetica text-base md:text-xl border-none bg-none outline-none;
 
         &:hover,
         &:focus {

@@ -17,7 +17,7 @@
 
             h1 {
                 @apply font-BespokeStencil mb-4;
-                font-size: clamp(2rem, 3.8vw + 1rem, 8rem);
+                font-size: clamp(2rem, 3.8vw + 1rem, 4rem);
                 line-height: 1.2;
                 background: radial-gradient(49% 100% at 50% 50%, #fff 50%, hsla(0, 0%, 100%, 0.55) 100%);
                 -webkit-background-clip: text;

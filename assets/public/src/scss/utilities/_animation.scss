@@ -120,3 +120,20 @@
         transform: rotate3d(1, 1, 1, 10deg);
     }
 }
+
+// first inimation for the dontclickhere
+.overlay {
+    @apply absolute w-svw h-svh top-0 z-50 overflow-hidden flex items-center font-BespokeStencil font-semibold text-center text-[10vw] text-white bg-black uppercase;
+
+    .first {
+        @apply text-primary;
+    }
+
+    .second {
+        left: 33.33%;
+    }
+
+    .third {
+        left: 66.66%;
+    }
+}

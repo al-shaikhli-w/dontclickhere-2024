@@ -14,7 +14,7 @@
         background: linear-gradient(0deg, rgba(0, 0, 0, .9), transparent);
 
         .main {
-            @apply flex flex-wrap justify-between items-center w-full;
+            @apply flex flex-col gap-8 justify-start items-start w-full;
 
             .heading {
                 @apply flex flex-col w-full md:w-auto;
@@ -33,6 +33,21 @@
             }
         }
 
+    }
+
+    @media screen and (max-width: 768px) {
+        .main {
+            @apply gap-8;
+        }
+
+        img {
+            animation: imageScale 5s ease-out;
+        }
+
+        .work-card__content {
+            @apply opacity-100 visible;
+
+        }
     }
 
     &:hover {

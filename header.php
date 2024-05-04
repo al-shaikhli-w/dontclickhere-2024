@@ -51,20 +51,15 @@ header('Access-Control-Allow-Origin: *'); ?>
     <meta property="og:image" content="<?php bloginfo('template_url'); ?>/assets/images/icons/fav-light.webp">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
-
     <?php wp_head(); ?>
 </head>
-
-<div class="overlays">
-    <div class="overlay first"> Dont</div>
-    <div class="overlay second">click</div>
-    <div class="overlay third">here</div>
+<div class="overlay flex items-center">
+    <div class="absolute bg-black first"> Dont</div>
+    <div class="absolute bg-black second">click</div>
+    <div class="absolute bg-black third">here</div>
 </div>
 
-
-
-
-<body <?php body_class("bg-[#020617] max-w-[100svw] !text-white overflow-x-hidden overflow-hidden"); ?>>
+<body <?php body_class("bg-black max-w-[100svw] !text-white overflow-x-hidden overflow-hidden"); ?>>
     <?php wp_body_open(); ?>
     <header class="header absolute w-full z-10">
         <section class="header-container" name="header-container">

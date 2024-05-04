@@ -15,7 +15,7 @@ p {
     a {
         @apply inline-block font-helvetica text-lg py-3 px-12 rounded-[30px] shadow-lg cursor-pointer transition-all duration-500 ease-in-out bg-primary text-black;
         font-family: Helvetica, sans-serif !important;
-        font-size: 16px;
+        font-size: 16px !important;
         font-weight: 600;
         padding: 12px 80px !important;
 
@@ -70,26 +70,4 @@ p {
     &--full {
         @apply w-full text-center;
     }
-}
-
-.overlay {
-    @apply absolute w-svw h-svh top-0 z-50 overflow-hidden flex items-center font-BespokeStencil font-semibold text-center text-[10vw] text-white bg-black uppercase;
-    /*
-    white-space: pre-wrap;
-        min-width: 1px;
-        writing-mode: vertical-rl;*/
-
-    &.first {
-        @apply text-primary;
-    }
-
-    &.second {
-        left: 33.33%;
-    }
-
-    &.third {
-        left: 66.66%;
-    }
-
-
 }

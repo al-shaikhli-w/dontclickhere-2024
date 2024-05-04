@@ -1,5 +1,5 @@
 .pricing-cards {
-    @apply relative grid gap-6 lg:grid-cols-3 items-start container transition-colors;
+    @apply relative px-0 grid gap-6 md:grid-cols-3 items-start container transition-colors;
 
     .pricing-card {
         @apply relative text-white flex justify-between flex-col p-10 rounded-xl bg-opacity-40 hover:bg-white hover:bg-opacity-5 hover:cursor-pointer shadow transition-colors;
@@ -28,7 +28,7 @@
         }
 
         .includes {
-            @apply my-8;
+            @apply mt-0 mb-8 lg:my-8;
 
             &__lists {
                 @apply text-sm space-y-3 grow;
@@ -75,7 +75,7 @@
 
                     &::before {
 
-                        content: "";
+                        //content: "";
                         background-image: url('data:image/svg+xml,<svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path></svg>');
                         position: absolute;
                         filter: invert(1);
@@ -99,12 +99,12 @@
         }
 
         .popular {
-            @apply absolute -top-5 left-[35%] bg-primary text-black px-4 py-2 rounded-full text-xs;
+            @apply absolute -top-5 left-[30%] lg:left-[39%] bg-primary text-black px-4 py-2 rounded-full text-xs;
         }
     }
 
     & .popular-card {
-        @apply min-h-[600px] -mt-7;
+        @apply min-h-[600px] mt-2 lg:-mt-7;
         box-shadow: inset 0px 0px 60px 4px rgba(255, 255, 255, 0.40);
     }
 }

@@ -9880,28 +9880,37 @@ _forEachName("x,y,z,top,right,bottom,left,width,height,fontSize,padding,margin,p
 gsap.registerPlugin(CSSPlugin);
 var gsapWithCSS = gsap.registerPlugin(CSSPlugin) || gsap;
 gsapWithCSS.core.Tween;
+document.body.scrollTop = 0;
 window.addEventListener("DOMContentLoaded", () => {
   gsapWithCSS.to(".first", {
     duration: 1.5,
-    delay: 0.7,
-    top: "-100%",
+    delay: 0.8,
+    right: "-100%",
     ease: "expo.inOut"
   });
   gsapWithCSS.to(".second", {
     duration: 1.5,
-    delay: 0.8,
-    top: "-100%",
+    delay: 0.9,
+    right: "-100%",
     ease: "expo.inOut"
   });
   gsapWithCSS.to(".third", {
     duration: 1.5,
-    delay: 0.9,
-    top: "-100%",
+    delay: 1,
+    right: "-100%",
     ease: "expo.inOut"
   });
   setTimeout(function() {
     if (document.body.classList.contains("overflow-hidden")) {
       document.body.classList.remove("overflow-hidden");
+      document.querySelector(".overlay").remove();
+      gsapWithCSS.to(".third", {
+        duration: 1,
+        delay: 1,
+        // display: "none",
+        opacity: 0,
+        ease: "expo.inOut"
+      });
     }
   }, 2e3);
 });
