@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
         modules: [Pagination, Mousewheel],
         mousewheel: true,
         slidesPerView: 1,
-        spaceBetween: 0,
+        spaceBetween: 20,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -15,11 +15,11 @@ window.addEventListener("DOMContentLoaded", () => {
         breakpoints: {
             640: {
                 slidesPerView: 2,
-                spaceBetween: 0,
+                spaceBetween: 20,
             },
-            768: {
+            991: {
                 slidesPerView: 3,
-                spaceBetween: 0,
+                spaceBetween: 20,
             }
         },
     }

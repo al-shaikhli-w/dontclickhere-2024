@@ -1,119 +1,129 @@
-body .wpforms-form {
-    @apply relative max-w-5xl mx-auto;
-
-    .wpforms-head-container {
-        .wpforms-title {
-            @apply text-3xl font-helvetica font-bold text-center;
-        }
-
+body {
+    .wpforms-container {
+        @apply flex justify-center items-center;
     }
 
-    .wpforms-field-container {
-        @apply flex flex-col sm:grid gap-8 sm:grid-cols-2;
+    .wpforms-form {
+        @apply relative max-w-5xl mx-auto;
 
-        .told-us-about-your-projects,
-        .wish-budget,
-        .privacy {
-            @apply col-start-1 col-end-3;
-        }
-
-        .privacy {
-            @apply mb-5;
-        }
-
-        .told-us-about-your-projects {
-
-            // TODO: for later :)
-            &::after {
-                content: ""
-            }
-        }
-
-
-        & div {
-            @apply m-0 p-0 text-opacity-70;
-
-            label {
-                @apply m-0 p-0 mb-4;
-                color: rgba(255, 255, 255, 0.7);
-
+        .wpforms-head-container {
+            .wpforms-title {
+                @apply text-3xl font-helvetica font-bold text-center;
             }
 
-            input,
-            textarea {
-                @apply transition-all delay-300 pl-6;
+        }
 
+        .wpforms-field-container {
+            @apply flex flex-col sm:grid gap-8 sm:grid-cols-2;
+
+            .told-us-about-your-projects,
+            .wish-budget,
+            .privacy {
+                @apply col-start-1 col-end-3;
             }
 
-            textarea,
-            input:not(input[type=range]) {
-                @apply border-t-0 border-x-0 p-0 m-0 rounded-none;
-                border-color: rgba(255, 255, 255, 0.7);
+            .privacy {
+                @apply mb-5;
+            }
 
-                &:hover,
-                &:focus,
-                &:active {
-                    outline: none !important;
-                    border-bottom: 1px solid var(--wp--preset--color--primary);
+            .told-us-about-your-projects {
+
+                &::after {
+                    content: ""
                 }
             }
 
-            input[type=range] {
-                border-color: rgba(255, 255, 255, 0.7);
+            textarea {
+                height: 100px !important;
             }
 
-        }
+
+            & div {
+                @apply m-0 p-0 text-opacity-70;
+
+                label {
+                    @apply m-0 p-0 mb-4;
+                    color: rgba(255, 255, 255, 0.7);
+
+                }
+
+                input,
+                textarea {
+                    @apply transition-all delay-300 pl-6;
+
+                }
+
+                textarea,
+                input:not(input[type=range]) {
+                    @apply border-t-0 border-x-0 p-0 m-0 rounded-none;
+                    border-color: rgba(255, 255, 255, 0.7);
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        outline: none !important;
+                        border-bottom: 1px solid var(--wp--preset--color--primary);
+                    }
+                }
+
+                input[type=range] {
+                    border-color: rgba(255, 255, 255, 0.7);
+                }
+
+            }
 
 
 
-        .wpforms-field-number-slider-hint {
-            margin-top: 1.5rem !important;
+            .wpforms-field-number-slider-hint {
+                margin-top: 1.5rem !important;
 
-            b {
-                @apply text-3xl;
+                b {
+                    @apply text-3xl;
+                }
             }
         }
-    }
 
 
-    .wpforms-submit-container {
-        @apply flex justify-center items-center;
+        .wpforms-submit-container {
+            @apply flex justify-center items-center;
 
-        .submit {
-            @apply w-full max-w-60 text-center shadow-primary transition-shadow hover:shadow-md;
+            .submit {
+                @apply w-full max-w-60 text-center shadow-primary transition-shadow hover:shadow-md;
+            }
         }
+
+        // &::before {
+        //     //content: "";
+        //     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 1012 1745'%3E%3Cg filter='url(%23a)' opacity='.3'%3E%3Cpath fill='url(%23b)' d='M632.87 560.766C339.186 145.389-251.496 285.378-543.937 778.246-818.631 1241.2-566.711 1248.53-195 1391.95c520.677 200.89 1082.516-471.021 827.87-831.184Z'/%3E%3C/g%3E%3Cdefs%3E%3CradialGradient id='b' cx='0' cy='0' r='1' gradientTransform='matrix(-1323.446143 42.238377 -29.04914 -910.19056 826.271 810.78)' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300FFC2'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='0'/%3E%3C/radialGradient%3E%3Cfilter id='a' width='1987.81' height='1744.42' x='-975.823' y='.088348' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_331_717' stdDeviation='157.911'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+        //     @apply block absolute -bottom-[28rem] -left-[30vw] -z-[1] max-w-[320px] w-full h-full bg-no-repeat;
+        // }
+
+        // &::after {
+        //     //content: "";
+        //     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 485 1173'%3E%3Cpath fill='url(%23a)' d='M123.996 449.373c19.339-89.962 90.351-148.297 173.023-161.357 82.519-11.396 177.382 23.665 288.692 94.931 111.311 71.265 239.07 178.737 269.133 290.608 30.063 111.871-38.406 228.622-124.006 307.987-86.282 78.178-189.695 118.978-285.77 79.888-96.909-38.61-186.327-158.759-247.202-279.631-60.876-120.872-93.209-242.463-73.87-332.426Z'/%3E%3Cg filter='url(%23b)'%3E%3Ccircle cx='400.48' cy='355.48' r='172.673' fill='url(%23c)' transform='rotate(165 400.48 355.48)'/%3E%3C/g%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='0' r='1' gradientTransform='rotate(74.5345 -3.130576 461.702479) scale(759.715 402.172)' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300FFC2'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='0' cy='0' r='1' gradientTransform='matrix(-262.206664 -267.560384 189.250864 -185.46407 569.334 498.547)' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300FFC2'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='0'/%3E%3C/radialGradient%3E%3Cfilter id='b' width='709.911' height='709.911' x='45.5244' y='.524368' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_331_736' stdDeviation='91.1201'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+        //     @apply block absolute top-0 -right-[9vw] -z-[1] max-w-[320px] w-full h-full bg-no-repeat;
+
+        //     @media screen and (min-width: 1024px) {
+        //         right: -17vw
+        //     }
+
+        //     @media screen and (min-width: 1550px) {
+        //         right: -23vw
+        //     }
+
+        //     @media screen and (min-width: 1700px) {
+        //         right: -25vw
+        //     }
+
+        //     @media screen and (min-width: 1940px) {
+        //         right: -30vw
+        //     }
+
+        //     @media screen and (min-width: 2200px) {
+        //         right: -35vw
+        //     }
+        // }
+
     }
-
-    // &::before {
-    //     //content: "";
-    //     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 1012 1745'%3E%3Cg filter='url(%23a)' opacity='.3'%3E%3Cpath fill='url(%23b)' d='M632.87 560.766C339.186 145.389-251.496 285.378-543.937 778.246-818.631 1241.2-566.711 1248.53-195 1391.95c520.677 200.89 1082.516-471.021 827.87-831.184Z'/%3E%3C/g%3E%3Cdefs%3E%3CradialGradient id='b' cx='0' cy='0' r='1' gradientTransform='matrix(-1323.446143 42.238377 -29.04914 -910.19056 826.271 810.78)' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300FFC2'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='0'/%3E%3C/radialGradient%3E%3Cfilter id='a' width='1987.81' height='1744.42' x='-975.823' y='.088348' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_331_717' stdDeviation='157.911'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
-    //     @apply block absolute -bottom-[28rem] -left-[30vw] -z-[1] max-w-[320px] w-full h-full bg-no-repeat;
-    // }
-
-    // &::after {
-    //     //content: "";
-    //     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 485 1173'%3E%3Cpath fill='url(%23a)' d='M123.996 449.373c19.339-89.962 90.351-148.297 173.023-161.357 82.519-11.396 177.382 23.665 288.692 94.931 111.311 71.265 239.07 178.737 269.133 290.608 30.063 111.871-38.406 228.622-124.006 307.987-86.282 78.178-189.695 118.978-285.77 79.888-96.909-38.61-186.327-158.759-247.202-279.631-60.876-120.872-93.209-242.463-73.87-332.426Z'/%3E%3Cg filter='url(%23b)'%3E%3Ccircle cx='400.48' cy='355.48' r='172.673' fill='url(%23c)' transform='rotate(165 400.48 355.48)'/%3E%3C/g%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='0' r='1' gradientTransform='rotate(74.5345 -3.130576 461.702479) scale(759.715 402.172)' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300FFC2'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='0' cy='0' r='1' gradientTransform='matrix(-262.206664 -267.560384 189.250864 -185.46407 569.334 498.547)' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300FFC2'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='0'/%3E%3C/radialGradient%3E%3Cfilter id='b' width='709.911' height='709.911' x='45.5244' y='.524368' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_331_736' stdDeviation='91.1201'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
-    //     @apply block absolute top-0 -right-[9vw] -z-[1] max-w-[320px] w-full h-full bg-no-repeat;
-
-    //     @media screen and (min-width: 1024px) {
-    //         right: -17vw
-    //     }
-
-    //     @media screen and (min-width: 1550px) {
-    //         right: -23vw
-    //     }
-
-    //     @media screen and (min-width: 1700px) {
-    //         right: -25vw
-    //     }
-
-    //     @media screen and (min-width: 1940px) {
-    //         right: -30vw
-    //     }
-
-    //     @media screen and (min-width: 2200px) {
-    //         right: -35vw
-    //     }
-    // }
 
 }

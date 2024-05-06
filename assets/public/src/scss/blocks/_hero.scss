@@ -1,22 +1,26 @@
 .hero {
     .container {
-        @apply flex items-center h-[50svh] pt-16 md:h-[70svh] md:pt-0 overflow-hidden rounded-[30px] shadow-lg relative text-gray md:px-12;
+        @apply flex items-center h-[60svh] pt-16 md:h-[70svh] md:pt-0 overflow-hidden rounded-[30px] shadow-lg relative text-gray md:px-12;
 
         &::before {
             content: "";
-            @apply absolute inset-0;
+            @apply absolute inset-0 opacity-0 transition-opacity;
             background: radial-gradient(140% 130% at 50% 10%, transparent 37.41%, #00ffc2 99.27%);
+        }
+
+        &.animate::before {
+            opacity: 1; // Change the opacity when the 'animate' class is added
         }
 
         .hero__content {
             @apply md:max-w-[53rem] relative z-[1];
 
             h2 {
-                @apply font-BespokeStencil uppercase text-primary mb-3;
+                @apply font-BespokeStencil uppercase text-primary opacity-0;
             }
 
             h1 {
-                @apply font-BespokeStencil mb-4;
+                @apply font-BespokeStencil mb-4 opacity-0;
                 font-size: clamp(2rem, 3.8vw + 1rem, 4rem);
                 line-height: 1.2;
                 background: radial-gradient(49% 100% at 50% 50%, #fff 50%, hsla(0, 0%, 100%, 0.55) 100%);
@@ -25,86 +29,19 @@
             }
 
             .hero__cta {
-                @apply flex gap-6 mt-7;
+                @apply flex gap-6 mt-7 opacity-0;
+            }
+
+            .hero__text {
+                @apply opacity-0;
             }
         }
 
         .logo-big {
-            @apply hidden sm:block absolute -z-[1] right-8 w-[20rem] h-auto opacity-70;
+            @apply hidden sm:block absolute -z-[1] right-28 w-[20rem] h-auto opacity-0;
             filter: blur(5px);
             animation: moveUpDown 5s infinite ease-in-out;
             // transform: rotatey(calc(var(--mouse-x) * 1deg - 50deg)) rotatex(calc((var(--mouse-y) * -1deg + 50deg)));
         }
     }
 }
-
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-
-//     --color: #1e293b;
-//     --c1: #fbda61;
-//     --c2: #ff5acd;
-//     --c3: #2563eb;
-//     --gradient: linear-gradient(60deg,
-//             var(--c3),
-//             var(--c2),
-//             var(--c1),
-//             var(--c2),
-//             var(--c3));
-//     --scale-start: 0.5;
-//     --scale-end: 1.001;
-//     --hover-offset: 5%;
-
-//     --ease-elastic: linear(0, 0.186 2.1%, 0.778 7.2%, 1.027 9.7%, 1.133, 1.212, 1.264, 1.292 15.4%,
-//             1.296, 1.294, 1.285, 1.269 18.9%, 1.219 20.9%, 1.062 25.8%, 0.995 28.3%,
-//             0.944 31.1%, 0.93, 0.921, 0.92 35.7%, 0.926, 0.94 39.7%, 1.001 47%, 1.014,
-//             1.021 52.4%, 1.02 56.4%, 1 65.5%, 0.994 70.7%, 1.001 88.4%, 1);
-//     --ease-bounce-out: cubic-bezier(0.34, 1.56, 0.64, 1);
-
-//     @media (prefers-reduced-motion) {
-
-//         & {
-//             --scale-start: var(--scale-end);
-//             --ease-elastic: ease-out;
-//             --ease-bounce-out: ease-out;
-//             --hover-offset: 0;
-//         }
-//     }
-
-//     margin-block-start: calc(50vh - 1ex);
-
-//     .text {
-//         margin-inline: auto;
-//         padding-block: 0.2em;
-//         max-inline-size: 15ch;
-//         text-wrap: balance;
-//         background-image: var(--gradient);
-//         background-size: 400%;
-//         background-clip: text;
-//         -webkit-background-clip: text;
-//         color: transparent;
-//     }
-
-//     @supports (animation-timeline: view()) {
-//         .box {
-//             animation: trigger steps(1) both, fade linear both;
-//             animation-timeline: view();
-//             animation-range: entry 80% contain 40%;
-//         }
-
-//         .text {
-//             animation: pop-back 300ms var(--ease-bounce-out) forwards;
-//         }
-
-//         @container style(--animate: true) {
-//             .text {
-//                 animation: pop 600ms var(--ease-elastic) forwards,
-//                     text-gradient 1s cubic-bezier(0, 0.55, 0.45, 1) forwards;
-//             }
-//         }
-//     }
-// }

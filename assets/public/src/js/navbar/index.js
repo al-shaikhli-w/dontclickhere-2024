@@ -29,7 +29,6 @@ const menuhandler = () => {
     toggleClass(burgermenu, 'opened');
     toggleClass(menuHeader, 'opened');
     toggleClass(header, 'opened');
-
     selectAll('.header .header-menu .sub-menu.opened').forEach(item => removeClass(item, 'opened'));
 };
 const addClassWhenScrollToHeader = () => {
@@ -41,19 +40,20 @@ const addClassWhenScrollToHeader = () => {
     }
 }
 
-const addBackLink = () => {
-    itemHasChildren.forEach(item => {
-        const submenu = item.querySelector('.sub-menu');
-        if (submenu) {
-            submenu.insertAdjacentHTML('afterbegin', backLink);
-        }
-    });
-};
+// const addBackLink = () => {
+//     itemHasChildren.forEach(item => {
+//         const submenu = item.querySelector('.sub-menu');
+//         if (submenu) {
+//             submenu.insertAdjacentHTML('afterbegin', backLink);
+//         }
+//     });
+// };
 
 const closeSubmenu = (event) => {
     event.preventDefault();
     const parent = event.target.parentElement.parentElement;
     const parentSubmenu = parent.parentElement;
+
 
     if (parentSubmenu.classList.contains('opened')) {
         removeClass(parentSubmenu, 'opened');
@@ -65,19 +65,20 @@ const closeSubmenu = (event) => {
 };
 
 const addClassToHasChildren = (event) => {
-    event.preventDefault();
     const target = event.target;
     const parent = target.parentElement;
     const submenu = parent.querySelector('.sub-menu');
     const allSubmenu = selectAll('.header .header-menu .sub-menu');
-
     if (submenu) {
+
         allSubmenu.forEach(item => {
             if (item !== submenu) {
                 removeClass(item, 'opened');
+                removeClass(parent, 'opened-children');
             }
         });
         toggleClass(submenu, 'opened');
+        toggleClass(parent, 'opened-children');
     }
 };
 const addClassTohasChildrenWhenHover = (event) => {
@@ -98,6 +99,12 @@ const removeClassTohasChildrenWhenHover = (event) => {
         removeClass(submenu, 'menu-hover');
     }
 }
+// add all links innerText to data-value attribute
+const addDataValueToLinks = () => {
+    firstAnchorsLink.forEach(link => {
+        link.setAttribute('data-value', link.innerText);
+    });
+}
 
 window.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', addClassWhenScrollToHeader);
@@ -108,5 +115,6 @@ window.addEventListener("DOMContentLoaded", () => {
     addEventListenerToElements(backLinks, 'click', closeSubmenu);
     addEventListenerToElements(itemHasChildren, 'mouseover', addClassTohasChildrenWhenHover);
     addEventListenerToElements(itemHasChildren, 'mouseout', removeClassTohasChildrenWhenHover);
-    addBackLink();
+    addDataValueToLinks();
+    // addBackLink();
 });

@@ -3,8 +3,9 @@
         <div class="swiper work-slider">
             <div class="swiper-wrapper flex">
                 <?php
+                $post_type = get_field("post_type") ? get_field("post_type") : 'work';
                 $args = array(
-                    'post_type' => 'work',
+                    'post_type' => $post_type,
                     'posts_per_page' => -1,
                 );
                 $query = new WP_Query($args);

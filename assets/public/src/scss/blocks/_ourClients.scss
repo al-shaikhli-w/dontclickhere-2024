@@ -2,7 +2,7 @@
     @apply container my-20 flex justify-center items-center flex-wrap gap-9 md:flex-nowrap;
 
     .client-logo {
-        @apply flex items-center justify-center md:flex-1 max-w-24 max-h-24;
+        @apply flex items-center justify-center md:flex-1 max-w-24 max-h-24 opacity-0;
 
         img {
             @apply block;
