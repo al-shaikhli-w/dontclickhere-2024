@@ -662,9 +662,6 @@ select{
 .items-center{
   align-items: center;
 }
-.overflow-hidden{
-  overflow: hidden;
-}
 .overflow-x-hidden{
   overflow-x: hidden;
 }
@@ -861,13 +858,33 @@ p {
   width: 100%;
   text-align: center;
 }
+body .wp-block-media-text{
+  margin-top: 3rem;
+  gap: 2rem;
+}
+@media (min-width: 640px){
+  body .wp-block-media-text{
+    margin-top: 0px;
+  }
+}
+body .wp-block-media-text__content {
+  padding: 0 !important;
+}
+body .wp-block-media-text figure img{
+  border-radius: 1.5rem;
+}
+body .wp-block-group figure img,
+body .wp-block-group figure video,
+body .wp-block-group img{
+  border-radius: 1.5rem;
+}
 .light-border {
   content: "";
   position: absolute;
   inset: 0px;
   display: inline-block;
   overflow: hidden;
-  border-radius: 0.75rem;
+  border-radius: 1.5rem;
   padding: 1px;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1055,7 +1072,7 @@ p {
   height: 60svh;
   align-items: center;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 1.5rem;
   padding-top: 4rem;
   --tw-text-opacity: 1;
   color: rgb(236 236 251 / var(--tw-text-opacity));
@@ -1310,7 +1327,7 @@ p {
   height: 60svh;
   align-items: center;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 1.5rem;
   padding-top: 4rem;
   --tw-text-opacity: 1;
   color: rgb(236 236 251 / var(--tw-text-opacity));
@@ -1582,8 +1599,19 @@ p {
   display: block;
   opacity: 1;
 }
+@media (min-width: 1024px){
+  .header .header-menu .opened-children .sub-menu{
+    position: absolute;
+    display: none;
+  }
+}
 .header .header-menu .opened-children .sub-menu li{
   margin-bottom: 0.5rem;
+}
+@media (min-width: 1024px){
+  .header .header-menu .opened-children .sub-menu li{
+    margin-bottom: 0px;
+  }
 }
 #menu-header .active-page a{
   --tw-text-opacity: 1;
@@ -1595,7 +1623,7 @@ p {
   height: 60svh;
   align-items: center;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 1.5rem;
   padding-top: 4rem;
   --tw-text-opacity: 1;
   color: rgb(236 236 251 / var(--tw-text-opacity));
@@ -1709,7 +1737,7 @@ p {
   height: 60svh;
   align-items: center;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 1.5rem;
   padding-top: 4rem;
   --tw-text-opacity: 1;
   color: rgb(236 236 251 / var(--tw-text-opacity));
@@ -2091,7 +2119,7 @@ p {
   height: 60svh;
   align-items: center;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 1.5rem;
   padding-top: 4rem;
   --tw-text-opacity: 1;
   color: rgb(236 236 251 / var(--tw-text-opacity));
@@ -2183,7 +2211,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 0.75rem;
+  border-radius: 1.5rem;
   --tw-bg-opacity: 0.4;
   padding: 2.5rem;
   --tw-text-opacity: 1;
@@ -2706,7 +2734,7 @@ footer .footer__content .wrapper{
   height: 60svh;
   align-items: center;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 1.5rem;
   padding-top: 4rem;
   --tw-text-opacity: 1;
   color: rgb(236 236 251 / var(--tw-text-opacity));
@@ -2894,7 +2922,7 @@ footer .under__footer{
   height: 60svh;
   align-items: center;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 1.5rem;
   padding-top: 4rem;
   --tw-text-opacity: 1;
   color: rgb(236 236 251 / var(--tw-text-opacity));
@@ -3119,7 +3147,7 @@ footer .under__footer .footer__nav ul li a:hover{
   height: 60svh;
   align-items: center;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 1.5rem;
   padding-top: 4rem;
   --tw-text-opacity: 1;
   color: rgb(236 236 251 / var(--tw-text-opacity));
@@ -3250,7 +3278,7 @@ footer .under__footer .footer__nav ul li a:hover{
 .our-services #services-container{
   position: relative;
   z-index: 1;
-  border-radius: 0.75rem;
+  border-radius: 1.5rem;
   border-width: 1px;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
   --tw-border-opacity: 0.6;
@@ -3269,7 +3297,7 @@ footer .under__footer .footer__nav ul li a:hover{
   height: 60svh;
   align-items: center;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 1.5rem;
   padding-top: 4rem;
   --tw-text-opacity: 1;
   color: rgb(236 236 251 / var(--tw-text-opacity));
@@ -3503,6 +3531,8 @@ footer .under__footer .footer__nav ul li a:hover{
 }
 .single-post .wp-block-group{
   overflow: hidden;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 @media screen and (min-width: 2000px) {
   .single-post .wp-block-group {
@@ -3515,7 +3545,7 @@ footer .under__footer .footer__nav ul li a:hover{
   height: 60svh;
   align-items: center;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 1.5rem;
   padding-top: 4rem;
   --tw-text-opacity: 1;
   color: rgb(236 236 251 / var(--tw-text-opacity));

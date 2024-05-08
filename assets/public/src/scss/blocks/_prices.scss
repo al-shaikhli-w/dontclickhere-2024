@@ -2,7 +2,7 @@
     @apply relative px-0 grid gap-6 md:grid-cols-3 items-start container transition-colors;
 
     .pricing-card {
-        @apply relative text-white flex justify-between flex-col p-10 rounded-xl bg-opacity-40 hover:bg-white hover:bg-opacity-5 hover:cursor-pointer shadow transition-colors;
+        @apply relative text-white flex justify-between flex-col p-10 rounded-3xl bg-opacity-40 hover:bg-white hover:bg-opacity-5 hover:cursor-pointer shadow transition-colors;
         box-shadow: inset 0px 0px 40px 4px rgba(255, 255, 255, 0.2);
 
         &-header {

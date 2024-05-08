@@ -53,13 +53,13 @@ header('Access-Control-Allow-Origin: *'); ?>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
     <?php wp_head(); ?>
 </head>
-<div class="overlay flex items-center">
+<!-- <div class="overlay flex items-center">
     <div class="absolute bg-black first"> Dont</div>
     <div class="absolute bg-black second">click</div>
     <div class="absolute bg-black third">here</div>
-</div>
+</div> -->
 
-<body <?php body_class("bg-black max-w-[100svw] !text-white overflow-x-hidden overflow-hidden"); ?>>
+<body <?php body_class("bg-black max-w-[100svw] !text-white overflow-x-hidden"); ?>>
     <?php wp_body_open(); ?>
     <header class="header absolute w-full z-10">
         <section class="header-container" name="header-container">

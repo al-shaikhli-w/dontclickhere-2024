@@ -12052,9 +12052,6 @@ ScrollTrigger.core = {
 };
 _getGSAP2() && gsap.registerPlugin(ScrollTrigger);
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
-function getDefaultExportFromCjs(x) {
-  return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;
-}
 var rellax = { exports: {} };
 (function(module) {
   (function(root, factory) {
@@ -12064,8 +12061,8 @@ var rellax = { exports: {} };
       root.Rellax = factory();
     }
   })(typeof window !== "undefined" ? window : commonjsGlobal, function() {
-    var Rellax2 = function(el, options) {
-      var self2 = Object.create(Rellax2.prototype);
+    var Rellax = function(el, options) {
+      var self2 = Object.create(Rellax.prototype);
       var posY = 0;
       var screenY = 0;
       var posX = 0;
@@ -12395,62 +12392,183 @@ var rellax = { exports: {} };
       self2.refresh = init4;
       return self2;
     };
-    return Rellax2;
+    return Rellax;
   });
 })(rellax);
-var rellaxExports = rellax.exports;
-const Rellax = /* @__PURE__ */ getDefaultExportFromCjs(rellaxExports);
 gsapWithCSS.registerPlugin(ScrollTrigger);
 window.addEventListener("DOMContentLoaded", () => {
-  gsapWithCSS.to(".hero__subheading", {
-    duration: 1,
-    delay: 0.2,
-    opacity: 1,
-    ease: "expo.inOut"
-  });
-  gsapWithCSS.to(".hero__heading", {
-    duration: 1,
-    delay: 0.4,
-    opacity: "1",
-    ease: "expo.inOut"
-  });
-  gsapWithCSS.to(".hero__text", {
-    duration: 1,
-    delay: 0.6,
-    opacity: 1,
-    ease: "expo.inOut"
-  });
-  gsapWithCSS.to(".hero__cta", {
-    duration: 1,
-    delay: 0.8,
-    opacity: "1",
-    ease: "expo.inOut"
-  });
-  gsapWithCSS.to(".logo-big", {
-    duration: 1,
-    delay: 1,
-    opacity: "0.7",
-    ease: "expo.inOut"
-  });
-  gsapWithCSS.to(".hero .container", {
-    duration: 1,
-    delay: 1.2,
-    ease: "expo.inOut",
-    onStart: function() {
-      this.targets().forEach(function(target) {
-        target.classList.add("animate");
+  const scrollFromLeft = document.querySelectorAll(".scrollFromLeft");
+  if (scrollFromLeft) {
+    scrollFromLeft.forEach((scroll) => {
+      gsapWithCSS.set(scroll, {
+        opacity: 0,
+        x: -50
+      });
+      ScrollTrigger.create({
+        trigger: scroll,
+        start: "top bottom-=150",
+        onEnter: () => {
+          gsapWithCSS.to(scroll, {
+            duration: 1,
+            delay: 0.2,
+            opacity: 1,
+            x: 0,
+            ease: "expo.inOut"
+          });
+        }
+      });
+    });
+  }
+  const scrollFromRight = document.querySelectorAll(".scrollFromRight");
+  if (scrollFromRight) {
+    scrollFromRight.forEach((scroll) => {
+      gsapWithCSS.set(scroll, {
+        opacity: 0,
+        x: 50
+      });
+      ScrollTrigger.create({
+        trigger: scroll,
+        start: "top bottom-=150",
+        onEnter: () => {
+          gsapWithCSS.to(scroll, {
+            duration: 1,
+            delay: 0.2,
+            opacity: 1,
+            x: 0,
+            ease: "expo.inOut"
+          });
+        }
+      });
+    });
+  }
+  const scrollFromTop = document.querySelectorAll(".scrollFromTop");
+  if (scrollFromTop) {
+    scrollFromTop.forEach((scroll) => {
+      gsapWithCSS.set(scroll, {
+        opacity: 0,
+        y: -50
+      });
+      ScrollTrigger.create({
+        trigger: scroll,
+        start: "top bottom-=150",
+        onEnter: () => {
+          gsapWithCSS.to(scroll, {
+            duration: 1,
+            delay: 0.2,
+            opacity: 1,
+            y: 0,
+            ease: "expo.inOut"
+          });
+        }
+      });
+    });
+  }
+  const scrollFromBottom = document.querySelectorAll(".scrollFromBottom");
+  if (scrollFromBottom) {
+    scrollFromBottom.forEach((scroll) => {
+      gsapWithCSS.set(scroll, {
+        opacity: 0,
+        y: 50
+      });
+      ScrollTrigger.create({
+        trigger: scroll,
+        start: "top bottom-=150",
+        onEnter: () => {
+          gsapWithCSS.to(scroll, {
+            duration: 1,
+            delay: 0.2,
+            opacity: 1,
+            y: 0,
+            ease: "expo.inOut"
+          });
+        }
+      });
+    });
+  }
+  const pricingCards = document.querySelectorAll(".pricing-card");
+  if (!pricingCards)
+    return;
+  pricingCards.forEach(
+    (pricingCard, index) => {
+      gsapWithCSS.set(pricingCard, {
+        opacity: 0,
+        y: 50
+      });
+      ScrollTrigger.create({
+        trigger: pricingCard,
+        start: "top bottom-=150",
+        onEnter: () => {
+          gsapWithCSS.to(pricingCard, {
+            duration: 1,
+            delay: 0.5 + index * 0.2,
+            opacity: 1,
+            y: 0,
+            ease: "expo.inOut"
+          });
+        }
       });
     }
-  });
-  const clientLogos = document.querySelectorAll(".client-logos .client-logo");
-  clientLogos.forEach((clientLogo, index) => {
-    gsapWithCSS.to(clientLogo, {
+  );
+});
+gsapWithCSS.registerPlugin(ScrollTrigger);
+window.addEventListener("DOMContentLoaded", () => {
+});
+gsapWithCSS.registerPlugin(ScrollTrigger);
+window.addEventListener("DOMContentLoaded", () => {
+  const hero = document.querySelector(".hero__subheading");
+  if (hero) {
+    gsapWithCSS.to(".hero__subheading", {
       duration: 1,
-      delay: 1 + index * 0.2,
+      delay: 0.2,
+      opacity: 1,
+      ease: "expo.inOut"
+    });
+    gsapWithCSS.to(".hero__heading", {
+      duration: 1,
+      delay: 0.4,
       opacity: "1",
       ease: "expo.inOut"
     });
-  });
+    gsapWithCSS.to(".hero__text", {
+      duration: 1,
+      delay: 0.6,
+      opacity: 1,
+      ease: "expo.inOut"
+    });
+    gsapWithCSS.to(".hero__cta", {
+      duration: 1,
+      delay: 0.8,
+      opacity: "1",
+      ease: "expo.inOut"
+    });
+    gsapWithCSS.to(".logo-big", {
+      duration: 1,
+      delay: 1,
+      opacity: "0.7",
+      ease: "expo.inOut"
+    });
+    gsapWithCSS.to(".hero .container", {
+      duration: 1,
+      delay: 1.2,
+      ease: "expo.inOut",
+      onStart: function() {
+        this.targets().forEach(function(target) {
+          target.classList.add("animate");
+        });
+      }
+    });
+    const clientLogos = document.querySelectorAll(".client-logos .client-logo");
+    if (clientLogos) {
+      clientLogos.forEach((clientLogo, index) => {
+        gsapWithCSS.to(clientLogo, {
+          duration: 1,
+          delay: 1 + index * 0.2,
+          opacity: "1",
+          ease: "expo.inOut"
+        });
+      });
+    }
+  }
   const burgermenu2 = document.querySelector(".burgermenu");
   const menuItems = document.querySelectorAll(".menu > li");
   burgermenu2.addEventListener(
@@ -12473,41 +12591,4 @@ window.addEventListener("DOMContentLoaded", () => {
       );
     }
   );
-  localStorage.setItem("run", "true");
-  const run = localStorage.getItem("run");
-  if (run === "true") {
-    gsapWithCSS.to(".first", {
-      duration: 1.5,
-      delay: 0.8,
-      right: "-100%",
-      ease: "expo.inOut"
-    });
-    gsapWithCSS.to(".second", {
-      duration: 1.5,
-      delay: 0.9,
-      right: "-100%",
-      ease: "expo.inOut"
-    });
-    gsapWithCSS.to(".third", {
-      duration: 1.5,
-      delay: 1,
-      right: "-100%",
-      ease: "expo.inOut"
-    });
-    setTimeout(function() {
-      if (document.body.classList.contains("overflow-hidden")) {
-        document.body.classList.remove("overflow-hidden");
-        document.querySelector(".overlay").remove();
-      }
-    }, 2e3);
-    localStorage.setItem("run", "false");
-  }
-  new Rellax("#services-container", {
-    speed: -1,
-    center: true,
-    wrapper: null,
-    round: true,
-    vertical: true,
-    horizontal: false
-  });
 });

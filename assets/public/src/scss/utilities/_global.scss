@@ -115,3 +115,27 @@ p {
         @apply w-full text-center;
     }
 }
+
+body {
+
+    .wp-block-media-text {
+        @apply gap-8 mt-12 sm:mt-0;
+
+        &__content {
+            padding: 0 !important;
+        }
+
+        figure img {
+            @apply rounded-3xl;
+        }
+    }
+
+    .wp-block-group {
+
+        figure img,
+        figure video,
+        img {
+            @apply rounded-3xl;
+        }
+    }
+}

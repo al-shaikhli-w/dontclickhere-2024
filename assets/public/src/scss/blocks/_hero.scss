@@ -1,6 +1,6 @@
 .hero {
     .container {
-        @apply flex items-center h-[60svh] pt-16 md:h-[70svh] md:pt-0 overflow-hidden rounded-[30px] shadow-lg relative text-gray md:px-12;
+        @apply flex items-center h-[60svh] pt-16 md:h-[70svh] md:pt-0 overflow-hidden rounded-3xl shadow-lg relative text-gray md:px-12;
 
         &::before {
             content: "";

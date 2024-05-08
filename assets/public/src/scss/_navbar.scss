@@ -202,10 +202,10 @@
 
     .opened-children {
       .sub-menu {
-        @apply block opacity-100 visible;
+        @apply block opacity-100 visible lg:absolute lg:hidden;
 
         li {
-          @apply mb-2;
+          @apply mb-2 lg:mb-0;
         }
       }
     }

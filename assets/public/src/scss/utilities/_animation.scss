@@ -1,6 +1,6 @@
 .light-border {
     content: "";
-    @apply absolute inset-0 overflow-hidden z-0 p-[1px] rounded-xl inline-block transition-all;
+    @apply absolute inset-0 overflow-hidden z-0 p-[1px] rounded-3xl inline-block transition-all;
     --border-size: 1px;
     --padding: 1px;
     --border-bg: conic-gradient(from 180deg at 50% 50%, rgba(255, 231, 231, .46) 0deg, rgba(255, 255, 255, .47) 112.5deg, rgba(0, 0, 0, 0) 228.75deg, rgba(115, 125, 225, .45) 360deg);

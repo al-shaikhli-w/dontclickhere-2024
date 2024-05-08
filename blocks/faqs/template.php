@@ -7,7 +7,7 @@
             $page_link = get_sub_field('page_link');
             //echo $page_link;
     ?>
-            <article class="accordion-item">
+            <article class="accordion-item scrollFromBottom">
                 <button id="accordion-button-1" aria-expanded="false">
                     <span class="accordion-title"><?php echo $heading; ?></span>
                     <span class="icon" aria-hidden="false"></span>
