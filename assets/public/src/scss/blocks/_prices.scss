@@ -9,7 +9,11 @@
             @apply mb-5;
 
             &__heading {
-                @apply font-bold font-BespokeStencil uppercase text-4xl mb-1 text-center;
+                @apply font-bold font-BespokeStencil uppercase mb-1 text-center;
+
+                @media screen and (min-width: 1700px) {
+                    @apply text-4xl;
+                }
             }
 
             &__paragraph {
@@ -23,7 +27,6 @@
 
             &__cta {
                 @apply btn btn--primary w-full text-center font-helvetica font-bold;
-                //absolute bottom-4 left-0 right-0 mx-4 max-w-[93%]
             }
         }
 

@@ -5,7 +5,6 @@
             $heading = get_sub_field('heading');
             $body_content = get_sub_field('body_content');
             $page_link = get_sub_field('page_link');
-            //echo $page_link;
     ?>
             <article class="accordion-item scrollFromBottom">
                 <button id="accordion-button-1" aria-expanded="false">

@@ -42,7 +42,8 @@ if (have_rows('pricing')) :
 						</ul>
 					<?php endif; ?>
 				</div>
-				<a href="#" class="pricing-card-header__cta">
+				<!--  -->
+				<a href="/kontakt" class="pricing-card-header__cta">
 					Purchase Plan
 				</a>
 				<span class="light-border"></span>

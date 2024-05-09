@@ -1,6 +1,5 @@
-<footer class="footer">
+<footer class="footer scrollFromBottom">
     <div class="footer__bg">
-        <!-- <img src="/wp-content/uploads/2024/05/footer-glass.svg" alt="footer-bg" srcset="/wp-content/uploads/2024/05/footer-glass.svg"> -->
     </div>
     <div class="footer__content">
         <div class="wrapper">
@@ -70,3 +69,6 @@
         </nav>
     </div>
 </footer>
+<div class="copy-write relative bottom-[-148px]">
+    <p class="text-center !text-xs pb-2 !text-opacity-80">© DONTCLICKHERE • MADE IN AUSTRIA WITH LOVE</p>
+</div>
