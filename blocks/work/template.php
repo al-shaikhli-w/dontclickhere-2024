@@ -23,7 +23,6 @@ if (!$query->have_posts()) {
 
 <article class="work-card <?php echo $workSize ? "big-card" : "small-card"; ?>">
     <?php
-    // Loop through the posts
     while ($query->have_posts()) : $query->the_post();
         $post_id    = get_the_ID();
         $work_title = get_the_title();
@@ -37,18 +36,19 @@ if (!$query->have_posts()) {
         <?php else :
             echo get_the_post_thumbnail($post_id, 'full', array('class' => 'alignleft'));
         endif; ?>
-        <div class="work-card__content">
-            <div class="main">
+        <div class="work-card__content cursor-pointer">
+            <a class="main" href="<?php echo esc_url(get_permalink($post_id)); ?>">
                 <div class="heading">
                     <h2 class="work-card__title"><?php echo esc_html($work_title); ?></h2>
                     <?php if (!empty($underTitle)) : ?>
-                        <h3 class="work-card__under-title"><?php echo esc_html($underTitle); ?></h3>
+                        <p class="work-card__subtitle"><?php echo esc_html($underTitle); ?></p>
                     <?php endif; ?>
+
                 </div>
                 <div class="useCase">
                     <a href="<?php echo esc_url(get_permalink($post_id)); ?>" class="work-card__link btn btn--secondary ">mehr details</a>
                 </div>
-            </div>
+            </a>
         </div>
         <span class="light-border"></span>
     <?php endwhile; ?>

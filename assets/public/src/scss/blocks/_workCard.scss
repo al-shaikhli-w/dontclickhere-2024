@@ -6,7 +6,7 @@
     }
 
     img {
-        @apply w-full h-full rounded-lg object-cover relative z-0 md:rounded-xl transition-transform;
+        @apply w-full h-full rounded-lg object-cover relative z-0 md:rounded-xl transition-all;
     }
 
     &__content {
@@ -41,7 +41,7 @@
         }
 
         img {
-            animation: imageScale 5s ease-out;
+            animation: imageScale 5s ease-out backwards;
         }
 
         .work-card__content {
@@ -54,7 +54,7 @@
         box-shadow: rgb(0 255 194 / 60%) 0px 0px 63px -16px;
 
         img {
-            animation: imageScale 5s ease-out;
+            animation: imageScale 5s ease-out backwards;
         }
 
         .work-card__content {
@@ -70,7 +70,11 @@
         transform: scale(1);
     }
 
-    100% {
+    50% {
+        transform: scale(1.1);
+    }
+
+    75% {
         transform: scale(1.1);
     }
 
