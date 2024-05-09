@@ -88,7 +88,9 @@ window.addEventListener("DOMContentLoaded", () => {
     const windowWidth = window.innerWidth;
     const cardVideo = card.querySelector("video");
     if (windowWidth <= 1024) {
-      cardVideo.setAttribute("autoplay", "");
+      if (cardVideo) {
+        cardVideo.setAttribute("autoplay", "");
+      }
     }
     card.addEventListener("mouseover", () => {
       workCard.forEach((el) => {

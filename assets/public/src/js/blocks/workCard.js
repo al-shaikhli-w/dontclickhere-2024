@@ -7,7 +7,9 @@ window.addEventListener('DOMContentLoaded', () => {
         // get window width
         if (windowWidth <= 1024) {
             // set video play attribute 
-            cardVideo.setAttribute('autoplay', '');
+            if (cardVideo) {
+                cardVideo.setAttribute('autoplay', '');
+            }
         }
         card.addEventListener('mouseover', () => {
             workCard.forEach((el) => {

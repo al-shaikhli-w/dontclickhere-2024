@@ -21,11 +21,6 @@
         @apply relative text-left w-full pt-0 pb-4 text-white font-helvetica border-none bg-none outline-none;
         font-size: calc(8px + 1.5svw);
 
-        // @media screen and (min-width: 1024px) {
-        //     font-size: calc(24px + 1.5svw);
-
-        // }
-
         &:hover,
         &:focus {
             @apply text-primary cursor-pointer;
@@ -40,7 +35,7 @@
         }
 
         .icon {
-            @apply inline-block absolute top-[18px] right-0 w-[22px] h-[22px];
+            @apply inline-block absolute top-0 right-0 w-[22px] h-[22px];
 
             &::before,
             &::after {
