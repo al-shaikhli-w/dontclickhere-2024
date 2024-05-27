@@ -1,3 +1,7 @@
+html, body {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30svh;
+}
 @media screen and (min-width: 2000px) {
     .container {
         width: 1550px;

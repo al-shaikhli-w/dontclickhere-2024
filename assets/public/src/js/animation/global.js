@@ -116,4 +116,54 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     }
     );
+    function cursor() {
+        document.body.addEventListener("mousemove", evt => {
+            const mouseX = evt.clientX;
+            const mouseY = evt.clientY;
+    
+            let tl = gsap.timeline({
+                defaults: {
+                    x: mouseX,
+                    y: mouseY,
+                },
+            });
+            tl.to(".cursor", {
+                duration: 0.3,
+                scale: 1,
+            });
+        })
+        // add class on mouseenter and remove on mouseleave
+        const cursor = document.querySelector(".cursor");
+        const links = document.querySelectorAll("a");
+        const button = document.querySelectorAll("button");
+        const h2 = document.querySelectorAll("h2");
+        const whyUsCards = document.querySelector(".whyUsCards");
+        
+        links.forEach(link => {
+            link.addEventListener("mouseenter", () => {
+                cursor.classList.add("active");
+            });
+            link.addEventListener("mouseleave", () => {
+                cursor.classList.remove("active");
+            });
+        });
+        button.forEach(btn => {
+            btn.addEventListener("mouseenter", () => {
+                cursor.classList.add("active");
+            });
+            btn.addEventListener("mouseleave", () => {
+                cursor.classList.remove("active");
+            });
+        });
+        h2.forEach(h => {
+            h.addEventListener("mouseenter", () => {
+                cursor.classList.add("active");
+            });
+            h.addEventListener("mouseleave", () => {
+                cursor.classList.remove("active");
+            });
+        });
+    }
+        
+    cursor();
 });

@@ -1,5 +1,5 @@
 .pricing-cards {
-    @apply relative px-0 grid gap-6 md:grid-cols-3 items-start container transition-colors;
+    @apply relative px-0 grid gap-6 lg:grid-cols-3 items-start container transition-colors;
 
     .pricing-card {
         @apply relative text-white flex justify-between flex-col p-10 rounded-3xl bg-opacity-40 hover:bg-white hover:bg-opacity-5 hover:cursor-pointer shadow transition-colors;
@@ -9,7 +9,7 @@
             @apply mb-5;
 
             &__heading {
-                @apply font-bold font-BespokeStencil uppercase mb-1 text-center;
+                @apply font-bold font-BespokeStencil uppercase mb-1 text-center text-3xl;
 
                 @media screen and (min-width: 1700px) {
                     @apply text-4xl;
@@ -40,7 +40,7 @@
                     @apply flex items-center gap-6;
 
                     .icon {
-                        @apply flex justify-center items-center w-4 h-4 bg-white rounded-full;
+                        @apply flex justify-center items-center min-w-4 min-h-4 max-w-4 max-h-4 w-full h-full bg-white rounded-full;
 
                         svg {
                             @apply w-2 h-2 fill-black shrink-0;
@@ -107,12 +107,11 @@
     }
 
     & .popular-card {
-        @apply min-h-[600px] mt-2 lg:-mt-7;
+        @apply min-h-[600px] xl:mt-2 lg:-mt-7;
         box-shadow: inset 0px 0px 60px 4px rgba(255, 255, 255, 0.40);
     }
 
     &::before {
-
         content: "";
         top: 50%;
         left: 50%;

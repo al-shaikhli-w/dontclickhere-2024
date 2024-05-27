@@ -1,4 +1,6 @@
-import { gsap } from "gsap";
+import {
+    gsap
+} from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Rellax from 'rellax';
 
@@ -68,8 +70,7 @@ window.addEventListener("DOMContentLoaded", () => {
     burgermenu.addEventListener('click', () => {
         menuItems.forEach((menuItem) => {
             menuItem.style.opacity = 0;
-        }
-        );
+        });
         menuItems.forEach((menuItem, index) => {
             gsap.to(menuItem, {
                 duration: 1,
@@ -77,18 +78,18 @@ window.addEventListener("DOMContentLoaded", () => {
                 opacity: 1,
                 ease: "expo.inOut",
             });
-        }
-        );
+        });
+    });
+
+    new Rellax('body');
+    const mouseyScrollFromTheHeroSectionToTheNextSection = document.querySelector('.scroll-downs .mousey');
+    if (mouseyScrollFromTheHeroSectionToTheNextSection) {
+
+        mouseyScrollFromTheHeroSectionToTheNextSection.addEventListener('click', () => {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
     }
-    );
-
-    // new Rellax('#services-container', {
-    //     speed: -1,
-    //     center: true,
-    //     wrapper: null,
-    //     round: true,
-    //     vertical: true,
-    //     horizontal: false
-    // });
-
 });

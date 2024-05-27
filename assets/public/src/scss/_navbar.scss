@@ -23,14 +23,14 @@
   }
 
   .header-logo {
-    @apply w-7 relative overflow-hidden transition-all duration-1000 ease-linear;
+    @apply w-10 relative overflow-hidden transition-all duration-1000 ease-linear;
 
     &:hover {
-      @apply w-full;
+      //@apply w-full;
     }
 
     svg {
-      @apply w-40 relative;
+      @apply w-72 relative;
     }
   }
 
@@ -191,7 +191,7 @@
 
       &:hover {
         .sub-menu {
-          @apply md:block md:opacity-100 md:visible md:absolute md:top-12;
+          @apply md:block md:opacity-100 md:visible md:absolute md:top-[100%];
         }
       }
     }

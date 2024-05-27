@@ -51,19 +51,29 @@ header('Access-Control-Allow-Origin: *'); ?>
     <meta property="og:image" content="<?php bloginfo('template_url'); ?>/assets/images/icons/fav-light.webp">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EYY5LYN730"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-EYY5LYN730');
+	</script>
     <?php wp_head(); ?>
 </head>
-<!-- <div class="overlay flex items-center">
-    <div class="absolute bg-black first"> Dont</div>
-    <div class="absolute bg-black second">click</div>
-    <div class="absolute bg-black third">here</div>
-</div> -->
-
-<body <?php body_class("bg-black max-w-[100svw] !text-white overflow-x-hidden"); ?>>
+<body <?php body_class("bg-black max-w-[100svw] !text-white overflow-x-hidden rellax"); ?>
+  data-rellax-speed="7"
+  data-rellax-xs-speed="-5"
+  data-rellax-mobile-speed="3"
+  data-rellax-tablet-speed="-8"
+  data-rellax-desktop-speed="1">
+    <div class="cursor"></div>
     <?php wp_body_open(); ?>
     <header class="header absolute w-full z-10">
         <section class="header-container" name="header-container">
-
             <div class="header-logo">
                 <a href="<?php bloginfo('url'); ?>" aria-label="dontclickhere">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 705 150">
@@ -84,6 +94,5 @@ header('Access-Control-Allow-Origin: *'); ?>
                 ]);
                 ?>
             </nav>
-
         </section>
     </header>

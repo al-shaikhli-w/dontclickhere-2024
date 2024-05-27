@@ -42,10 +42,14 @@ if (have_rows('pricing')) :
 						</ul>
 					<?php endif; ?>
 				</div>
-				<!--  -->
-				<a href="/kontakt" class="pricing-card-header__cta">
-					Purchase Plan
-				</a>
+				<?php 
+				$cta = get_sub_field('cta');
+				if ($cta) {
+					$cta_url = $cta['url'];
+					$cta_title = $cta['title'];
+					$cta_target = $cta['target'] ? $cta['target'] : '_self';	
+				}?>
+				<a href="<?php echo $cta_url; ?>" class="pricing-card-header__cta" target="<?php echo $cta_target; ?>"><?php echo $cta_title; ?></a>
 				<span class="light-border"></span>
 				<?php
 				if ($popular) { ?>

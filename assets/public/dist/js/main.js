@@ -12054,6 +12054,9 @@ ScrollTrigger.core = {
 };
 _getGSAP2() && gsap.registerPlugin(ScrollTrigger);
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
+function getDefaultExportFromCjs(x) {
+  return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;
+}
 var rellax = { exports: {} };
 (function(module) {
   (function(root, factory) {
@@ -12063,8 +12066,8 @@ var rellax = { exports: {} };
       root.Rellax = factory();
     }
   })(typeof window !== "undefined" ? window : commonjsGlobal, function() {
-    var Rellax = function(el, options) {
-      var self2 = Object.create(Rellax.prototype);
+    var Rellax2 = function(el, options) {
+      var self2 = Object.create(Rellax2.prototype);
       var posY = 0;
       var screenY = 0;
       var posX = 0;
@@ -12394,9 +12397,11 @@ var rellax = { exports: {} };
       self2.refresh = init4;
       return self2;
     };
-    return Rellax;
+    return Rellax2;
   });
 })(rellax);
+var rellaxExports = rellax.exports;
+const Rellax = /* @__PURE__ */ getDefaultExportFromCjs(rellaxExports);
 gsapWithCSS.registerPlugin(ScrollTrigger);
 window.addEventListener("DOMContentLoaded", () => {
   const scrollFromLeft = document.querySelectorAll(".scrollFromLeft");
@@ -12511,6 +12516,52 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     }
   );
+  function cursor() {
+    document.body.addEventListener("mousemove", (evt) => {
+      const mouseX = evt.clientX;
+      const mouseY = evt.clientY;
+      let tl = gsapWithCSS.timeline({
+        defaults: {
+          x: mouseX,
+          y: mouseY
+        }
+      });
+      tl.to(".cursor", {
+        duration: 0.3,
+        scale: 1
+      });
+    });
+    const cursor2 = document.querySelector(".cursor");
+    const links = document.querySelectorAll("a");
+    const button = document.querySelectorAll("button");
+    const h2 = document.querySelectorAll("h2");
+    document.querySelector(".whyUsCards");
+    links.forEach((link) => {
+      link.addEventListener("mouseenter", () => {
+        cursor2.classList.add("active");
+      });
+      link.addEventListener("mouseleave", () => {
+        cursor2.classList.remove("active");
+      });
+    });
+    button.forEach((btn) => {
+      btn.addEventListener("mouseenter", () => {
+        cursor2.classList.add("active");
+      });
+      btn.addEventListener("mouseleave", () => {
+        cursor2.classList.remove("active");
+      });
+    });
+    h2.forEach((h) => {
+      h.addEventListener("mouseenter", () => {
+        cursor2.classList.add("active");
+      });
+      h.addEventListener("mouseleave", () => {
+        cursor2.classList.remove("active");
+      });
+    });
+  }
+  cursor();
 });
 gsapWithCSS.registerPlugin(ScrollTrigger);
 window.addEventListener("DOMContentLoaded", () => {
@@ -12573,24 +12624,27 @@ window.addEventListener("DOMContentLoaded", () => {
   }
   const burgermenu2 = document.querySelector(".burgermenu");
   const menuItems = document.querySelectorAll(".menu > li");
-  burgermenu2.addEventListener(
-    "click",
-    () => {
-      menuItems.forEach(
-        (menuItem) => {
-          menuItem.style.opacity = 0;
-        }
-      );
-      menuItems.forEach(
-        (menuItem, index) => {
-          gsapWithCSS.to(menuItem, {
-            duration: 1,
-            delay: 0.5 + index * 0.2,
-            opacity: 1,
-            ease: "expo.inOut"
-          });
-        }
-      );
-    }
-  );
+  burgermenu2.addEventListener("click", () => {
+    menuItems.forEach((menuItem) => {
+      menuItem.style.opacity = 0;
+    });
+    menuItems.forEach((menuItem, index) => {
+      gsapWithCSS.to(menuItem, {
+        duration: 1,
+        delay: 0.5 + index * 0.2,
+        opacity: 1,
+        ease: "expo.inOut"
+      });
+    });
+  });
+  new Rellax("body");
+  const mouseyScrollFromTheHeroSectionToTheNextSection = document.querySelector(".scroll-downs .mousey");
+  if (mouseyScrollFromTheHeroSectionToTheNextSection) {
+    mouseyScrollFromTheHeroSectionToTheNextSection.addEventListener("click", () => {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth"
+      });
+    });
+  }
 });
