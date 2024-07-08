@@ -54,7 +54,6 @@ header('Access-Control-Allow-Origin: *'); ?>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EYY5LYN730"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-
 		function gtag() {
 			dataLayer.push(arguments);
 		}
@@ -62,14 +61,35 @@ header('Access-Control-Allow-Origin: *'); ?>
 
 		gtag('config', 'G-EYY5LYN730');
 	</script>
+            <!-- Matomo -->
+    <script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//www.dontclickhere.at/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+    </script>
+    <!-- End Matomo Code -->
+                <!-- Hotjar Tracking Code for https://dontclickhere.at -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:5041597,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
     <?php wp_head(); ?>
 </head>
-<body <?php body_class("bg-black max-w-[100svw] !text-white overflow-x-hidden rellax"); ?>
-  data-rellax-speed="7"
-  data-rellax-xs-speed="-5"
-  data-rellax-mobile-speed="3"
-  data-rellax-tablet-speed="-8"
-  data-rellax-desktop-speed="1">
+<body <?php body_class("bg-black max-w-[100svw] !text-white overflow-x-hidden"); ?>>
     <div class="cursor"></div>
     <?php wp_body_open(); ?>
     <header class="header absolute w-full z-10">

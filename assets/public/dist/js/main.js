@@ -12535,7 +12535,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const links = document.querySelectorAll("a");
     const button = document.querySelectorAll("button");
     const h2 = document.querySelectorAll("h2");
-    document.querySelector(".whyUsCards");
     links.forEach((link) => {
       link.addEventListener("mouseenter", () => {
         cursor2.classList.add("active");
