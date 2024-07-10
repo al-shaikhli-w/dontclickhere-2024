@@ -32,12 +32,12 @@ const menuhandler = () => {
     selectAll('.header .header-menu .sub-menu.opened').forEach(item => removeClass(item, 'opened'));
 };
 const addClassWhenScrollToHeader = () => {
-    if (window.scrollY > 0) {
-        addClass(header, 'scroll');
-    }
-    else {
-        removeClass(header, 'scroll');
-    }
+    // if (window.scrollY > 0) {
+    //     addClass(header, 'scroll');
+    // }
+    // else {
+    //     removeClass(header, 'scroll');
+    // }
 }
 
 // const addBackLink = () => {

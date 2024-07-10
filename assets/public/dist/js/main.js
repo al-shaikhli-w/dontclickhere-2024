@@ -18,11 +18,6 @@ const menuhandler = () => {
   selectAll(".header .header-menu .sub-menu.opened").forEach((item) => removeClass(item, "opened"));
 };
 const addClassWhenScrollToHeader = () => {
-  if (window.scrollY > 0) {
-    addClass(header, "scroll");
-  } else {
-    removeClass(header, "scroll");
-  }
 };
 const closeSubmenu = (event2) => {
   event2.preventDefault();
@@ -12403,168 +12398,6 @@ var rellax = { exports: {} };
 var rellaxExports = rellax.exports;
 const Rellax = /* @__PURE__ */ getDefaultExportFromCjs(rellaxExports);
 gsapWithCSS.registerPlugin(ScrollTrigger);
-window.addEventListener("DOMContentLoaded", () => {
-  const scrollFromLeft = document.querySelectorAll(".scrollFromLeft");
-  if (scrollFromLeft) {
-    scrollFromLeft.forEach((scroll) => {
-      gsapWithCSS.set(scroll, {
-        opacity: 0,
-        x: -50
-      });
-      ScrollTrigger.create({
-        trigger: scroll,
-        start: "top bottom-=150",
-        onEnter: () => {
-          gsapWithCSS.to(scroll, {
-            duration: 1,
-            delay: 0.2,
-            opacity: 1,
-            x: 0,
-            ease: "expo.inOut"
-          });
-        }
-      });
-    });
-  }
-  const scrollFromRight = document.querySelectorAll(".scrollFromRight");
-  if (scrollFromRight) {
-    scrollFromRight.forEach((scroll) => {
-      gsapWithCSS.set(scroll, {
-        opacity: 0,
-        x: 50
-      });
-      ScrollTrigger.create({
-        trigger: scroll,
-        start: "top bottom-=150",
-        onEnter: () => {
-          gsapWithCSS.to(scroll, {
-            duration: 1,
-            delay: 0.2,
-            opacity: 1,
-            x: 0,
-            ease: "expo.inOut"
-          });
-        }
-      });
-    });
-  }
-  const scrollFromTop = document.querySelectorAll(".scrollFromTop");
-  if (scrollFromTop) {
-    scrollFromTop.forEach((scroll) => {
-      gsapWithCSS.set(scroll, {
-        opacity: 0,
-        y: -50
-      });
-      ScrollTrigger.create({
-        trigger: scroll,
-        start: "top bottom-=150",
-        onEnter: () => {
-          gsapWithCSS.to(scroll, {
-            duration: 1,
-            delay: 0.2,
-            opacity: 1,
-            y: 0,
-            ease: "expo.inOut"
-          });
-        }
-      });
-    });
-  }
-  const scrollFromBottom = document.querySelectorAll(".scrollFromBottom");
-  if (scrollFromBottom) {
-    scrollFromBottom.forEach((scroll) => {
-      gsapWithCSS.set(scroll, {
-        opacity: 0,
-        y: 50
-      });
-      ScrollTrigger.create({
-        trigger: scroll,
-        start: "top bottom-=150",
-        onEnter: () => {
-          gsapWithCSS.to(scroll, {
-            duration: 1,
-            delay: 0.2,
-            opacity: 1,
-            y: 0,
-            ease: "expo.inOut"
-          });
-        }
-      });
-    });
-  }
-  const pricingCards = document.querySelectorAll(".pricing-card");
-  if (!pricingCards)
-    return;
-  pricingCards.forEach(
-    (pricingCard, index) => {
-      gsapWithCSS.set(pricingCard, {
-        opacity: 0,
-        y: 50
-      });
-      ScrollTrigger.create({
-        trigger: pricingCard,
-        start: "top bottom-=150",
-        onEnter: () => {
-          gsapWithCSS.to(pricingCard, {
-            duration: 1,
-            delay: 0.5 + index * 0.2,
-            opacity: 1,
-            y: 0,
-            ease: "expo.inOut"
-          });
-        }
-      });
-    }
-  );
-  function cursor() {
-    document.body.addEventListener("mousemove", (evt) => {
-      const mouseX = evt.clientX;
-      const mouseY = evt.clientY;
-      let tl = gsapWithCSS.timeline({
-        defaults: {
-          x: mouseX,
-          y: mouseY
-        }
-      });
-      tl.to(".cursor", {
-        duration: 0.3,
-        scale: 1
-      });
-    });
-    const cursor2 = document.querySelector(".cursor");
-    const links = document.querySelectorAll("a");
-    const button = document.querySelectorAll("button");
-    const h2 = document.querySelectorAll("h2");
-    links.forEach((link) => {
-      link.addEventListener("mouseenter", () => {
-        cursor2.classList.add("active");
-      });
-      link.addEventListener("mouseleave", () => {
-        cursor2.classList.remove("active");
-      });
-    });
-    button.forEach((btn) => {
-      btn.addEventListener("mouseenter", () => {
-        cursor2.classList.add("active");
-      });
-      btn.addEventListener("mouseleave", () => {
-        cursor2.classList.remove("active");
-      });
-    });
-    h2.forEach((h) => {
-      h.addEventListener("mouseenter", () => {
-        cursor2.classList.add("active");
-      });
-      h.addEventListener("mouseleave", () => {
-        cursor2.classList.remove("active");
-      });
-    });
-  }
-  cursor();
-});
-gsapWithCSS.registerPlugin(ScrollTrigger);
-window.addEventListener("DOMContentLoaded", () => {
-});
 gsapWithCSS.registerPlugin(ScrollTrigger);
 window.addEventListener("DOMContentLoaded", () => {
   const hero = document.querySelector(".hero__subheading");
@@ -12592,22 +12425,6 @@ window.addEventListener("DOMContentLoaded", () => {
       delay: 0.8,
       opacity: "1",
       ease: "expo.inOut"
-    });
-    gsapWithCSS.to(".logo-big", {
-      duration: 1,
-      delay: 1,
-      opacity: "0.7",
-      ease: "expo.inOut"
-    });
-    gsapWithCSS.to(".hero .container", {
-      duration: 1,
-      delay: 1.2,
-      ease: "expo.inOut",
-      onStart: function() {
-        this.targets().forEach(function(target) {
-          target.classList.add("animate");
-        });
-      }
     });
     const clientLogos = document.querySelectorAll(".client-logos .client-logo");
     if (clientLogos) {

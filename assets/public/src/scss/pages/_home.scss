@@ -14,23 +14,6 @@
     }
   }
 
-  .first-columns {
-    &::before {
-      // content: "";
-      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 679 890"><g filter="url(%23a)"><circle cx="252.819" cy="464" r="243" fill="url(%23b)"/></g><path fill="url(%23c)" d="M313.896 188.015c31.701 37.687 53.298 60.059 89.799 124.619 37.622 64.259 88.746 169.955 54.95 231.949-33.796 61.995-153.632 80.588-281.352 69.757-127.7206-10.832-262.7624-48.988-320.586-139.372-58.661-89.034-41.224-229.996 28.673-309.548 69.8975-79.5528 193.0927-99.0465 275.452-82.8184 81.24 16.5282 122.483 67.4274 153.064 105.4134Z"/><defs><radialGradient id="b" cx="0" cy="0" r="1" gradientTransform="matrix(-368.999845 -376.534062 266.330504 -261.001393 490.445 665.336)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><radialGradient id="c" cx="0" cy="0" r="1" gradientTransform="matrix(-1063.222724 -304.87421 215.685404 -752.184393 442.041 511.877)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset=".473934" stop-color="%23D4FFF5" stop-opacity=".168359"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><filter id="a" width="850.481" height="850.481" x="-172.421" y="38.7597" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_319_388" stdDeviation="91.1201"/></filter></defs></svg>');
-      @apply bg-no-repeat absolute top-0 left-0 w-full -z-30 max-w-lg h-full;
-      animation: moveToTopAndDown 20s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
-    }
-  }
-
-  .last-columns {
-    &::before {
-      // content: "";
-      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1008 1102"><g filter="url(%23a)"><circle cx="549.251" cy="552.453" r="250.5" fill="%232FC2B3" fill-opacity=".5" transform="rotate(129.21 549.251 552.453)"/></g><path fill="url(%23b)" d="M1095.88 114.992c209.87 9.38 76.28 321.642 4.72 427.641C946.905 757.461 839.022 761.53 781.824 770.265c-298.095 45.522-602.126-328.246-380.827-356.551 411.458-52.627 484.707-308.117 694.883-298.722Z" opacity=".7"/><defs><radialGradient id="b" cx="0" cy="0" r="1" gradientTransform="matrix(833.999817 40.999945 -29.288986 595.781502 488.298 510)" gradientUnits="userSpaceOnUse"><stop stop-color="%2300FFC2"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient><filter id="a" width="1097.82" height="1097.82" x=".34317" y="3.54532" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_319_773" stdDeviation="149.2"/></filter></defs></svg>');
-      @apply bg-no-repeat absolute -bottom-[780px] -z-30 right-0 w-full max-w-6xl h-full;
-      animation: moveToTopAndDown 10s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
-    }
-  }
 }
 
 .our-services {
@@ -39,29 +22,21 @@
   #services-container {
     @apply relative container p-4 md:p-12 rounded-3xl border border-white border-opacity-60 z-[1] bg-white bg-opacity-5 overflow-hidden;
 
-    backdrop-filter: saturate(180%) blur(20px);
-
-    &::after {
-      content: "";
-      @apply absolute top-1/2 left-1/2 bg-primary;
-      height: 12rem;
-      width: 12rem;
-
-      filter: blur(100px);
-      border-radius: 100px;
-      z-index: 0;
-      position: absolute;
-    }
+    background: rgba(165, 239, 255, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.7px);
+    -webkit-backdrop-filter: blur(13.7px);
 
     .services-cards {
       .service {
-        @apply pb-8;
+        @apply mb-8 pb-6;
         border-bottom: 0.83px solid transparent;
         border-image: linear-gradient(250deg, rgba(255, 231, 231, 0.46), rgba(255, 255, 255, 0.47), rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.3), rgba(115, 129, 255, 0.45), rgba(0, 7, 73, 0.31));
         border-image-slice: 1;
 
         .wp-block-heading {
-          @apply text-2xl uppercase font-helvetica font-bold;
+          @apply text-base uppercase font-helvetica font-bold;
         }
 
         .learn-more-link {
@@ -72,44 +47,14 @@
             @apply inline-block w-2 h-2 border-2 border-primary border-t-0 border-l-0 -rotate-[44deg];
           }
         }
-      }
-    }
-
-    &>div {
-      &:last-child {
-        div {
-          border-bottom: none !important;
-          padding-bottom: 0 !important;
+        &:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
         }
       }
     }
   }
 }
-
-@keyframes moveToTopAndDown {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(100px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes moveFromDownToTop {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-100px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
+.grecaptcha-badge {
+  display: none !important;
 }

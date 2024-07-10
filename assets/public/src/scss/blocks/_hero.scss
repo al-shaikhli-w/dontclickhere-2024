@@ -1,491 +1,81 @@
 .hero {
-    @apply mt-14;
-    .container {
-        @apply flex items-center h-[60svh] pt-16 md:h-[70svh] md:pt-0 overflow-hidden rounded-3xl shadow-lg relative text-gray md:px-12;
+    @apply overflow-hidden relative;
+
+    .wrapper {
+        @apply flex items-center h-full py-44 md:container rounded-b-3xl md:rounded-3xl relative overflow-hidden;
+        background: radial-gradient(circle at top, black 10%, #00ffc266 55%);
 
         .hero__content {
-            @apply  relative px-6 sm:px-12 xl:px-14 2xl:px-48 text-center  z-[1];
-            @media screen and (min-width: 1700px){
-                @apply px-72;
-                
-            }
+            @apply relative text-center px-4 sm:text-left w-full z-[1];
+
             h2 {
                 @apply font-BespokeStencil uppercase text-primary opacity-0;
                 font-size: clamp(1rem, 3.8vw + 1rem, 2rem);
+                @media only screen and (max-width: 768px) {
+                    font-size: 22px;
+                    text-align: center;
+                }
             }
 
             h1 {
-                @apply font-BespokeStencil mb-4 text-black opacity-0;
+                @apply font-BespokeStencil mb-4 text-white opacity-0;
                 font-size: clamp(2rem, 3.8vw + 1rem, 4rem);
                 line-height: 1.2;
-                background: radial-gradient(49% 100% at 50% 50%, #fff 50%, hsla(0, 0%, 100%, 0.55) 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                @media only screen and (max-width: 768px) {
+                    font-size: 30px;
+                    margin-top: 1rem;
+                }
+            }
+            p {
+                @apply text-white opacity-0;
+                font-size: 13px !important;
+                line-height: 1.5;
             }
 
             .hero__cta {
-                @apply flex justify-center items-center gap-6 mt-7 opacity-0;
+                @apply opacity-0 absolute -bottom-[186px] -left-[9px] sm:-left-6 bg-black rounded-full border-[20px] border-black;
+
+                a {
+                    border: 1px solid white;
+                    @apply bg-transparent flex justify-center text-white min-w-80 w-full max-w-sm text-center relative border border-white;
+
+                    span {
+                        @apply absolute bg-primary w-10 h-10 rounded-full top-[6px] right-[6px] flex items-center justify-center;
+                    }
+                }
+
+                a:hover {
+                    span {
+                        @apply bg-white;
+                    }
+                }
+
+                &::after,
+                &::before {
+                    content: "";
+                    @apply absolute bg-transparent w-[48px] h-[50px] -bottom-[14px] -right-[69px] -z-10;
+                    border-bottom-right-radius: 1.25rem;
+                    box-shadow: 1rem 1rem 0 0.313rem #000000;
+                }
+
+                &::before {
+                    @apply -bottom-[14px] -right-[69px];
+                    transform: rotate(88deg);
+                }
+
+                &::after {
+                    @apply -top-[69px] -left-[10px];
+                    transform: rotate(90deg);
+                }
             }
 
             .hero__text {
                 @apply opacity-0;
-                @media screen and (min-width: 768px){
-                    font-size: 1.5rem !important;
-                    line-height: 1.2;
-                }
-                background: radial-gradient(49% 100% at 50% 50%, #fff 50%, hsla(0, 0%, 100%, 0.55) 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
             }
         }
     }
-}
 
-
-
-@keyframes hero-gradient-animation {
-    0% {
-        --c-0: hsla(146, 55%, 52%, 1);
-        --x-0: 27%;
-        --y-0: 41%;
-        --s-start-0: 13%;
-        --s-end-0: 86%;
-        --c-1: hsla(161, 18%, 36%, 1);
-        --x-1: 6%;
-        --y-1: 71%;
-        --s-start-1: 12%;
-        --s-end-1: 72%;
-        --c-2: hsla(139, 17%, 13%, 1);
-        --x-2: 92%;
-        --y-2: 86%;
-        --s-start-2: 4%;
-        --s-end-2: 70%;
-        --c-3: hsla(136, 35%, 41%, 1);
-        --x-3: 36%;
-        --y-3: 96%;
-        --s-start-3: 7%;
-        --s-end-3: 80%;
-        --c-4: hsla(117, 1%, 67%, 1);
-        --x-4: 66%;
-        --y-4: 24%;
-        --s-start-4: 15%;
-        --s-end-4: 50%;
-        --c-5: hsla(159, 5%, 58%, 1);
-        --x-5: 48%;
-        --y-5: 87%;
-        --s-start-5: 13%;
-        --s-end-5: 77%;
-        --c-6: hsla(144, 28%, 81%, 1);
-        --x-6: 24%;
-        --y-6: 65%;
-        --s-start-6: 16%;
-        --s-end-6: 64%;
-        --c-7: hsla(125, 98%, 58%, 1);
-        --x-7: 69%;
-        --y-7: 47%;
-        --s-start-7: 10%;
-        --s-end-7: 63%;
-        --c-8: hsla(159, 74%, 23%, 1);
-        --x-8: 35%;
-        --y-8: 19%;
-        --s-start-8: 7%;
-        --s-end-8: 61%;
-        --c-9: hsla(130, 86%, 72%, 1);
-        --x-9: 59%;
-        --y-9: 20%;
-        --s-start-9: 13%;
-        --s-end-9: 56%;
+    &--image {
+        @apply absolute bottom-0 right-0 md:h-full w-full max-w-[650px] bg-cover bg-center bg-no-repeat opacity-50 z-0;
     }
-
-    100% {
-        --c-0: hsla(138, 20%, 15%, 1);
-        --x-0: 50%;
-        --y-0: 64%;
-        --s-start-0: 9%;
-        --s-end-0: 81%;
-        --c-1: hsla(133, 78%, 81%, 1);
-        --x-1: 99%;
-        --y-1: 59%;
-        --s-start-1: 15%;
-        --s-end-1: 84%;
-        --c-2: hsla(109, 45%, 40%, 1);
-        --x-2: 41%;
-        --y-2: 95%;
-        --s-start-2: 5%;
-        --s-end-2: 59%;
-        --c-3: hsla(124, 59%, 14%, 1);
-        --x-3: 31%;
-        --y-3: 43%;
-        --s-start-3: 11%;
-        --s-end-3: 89%;
-        --c-4: hsla(110, 26%, 47%, 1);
-        --x-4: 85%;
-        --y-4: 62%;
-        --s-start-4: 15%;
-        --s-end-4: 76%;
-        --c-5: hsla(142, 50%, 23%, 1);
-        --x-5: 59%;
-        --y-5: 63%;
-        --s-start-5: 2%;
-        --s-end-5: 77%;
-        --c-6: hsla(161, 90%, 5%, 1);
-        --x-6: 79%;
-        --y-6: 10%;
-        --s-start-6: 19%;
-        --s-end-6: 75%;
-        --c-7: hsla(136, 83%, 36%, 1);
-        --x-7: 48%;
-        --y-7: 28%;
-        --s-start-7: 3%;
-        --s-end-7: 66%;
-        --c-8: hsla(160, 36%, 14%, 1);
-        --x-8: 50%;
-        --y-8: 27%;
-        --s-start-8: 11%;
-        --s-end-8: 69%;
-        --c-9: hsla(126, 16%, 100%, 1);
-        --x-9: 9%;
-        --y-9: 16%;
-        --s-start-9: 2%;
-        --s-end-9: 54%;
-    }
-}
-
-@property --c-0 {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: hsla(146, 55%, 52%, 1)
-}
-
-@property --x-0 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 27%
-}
-
-@property --y-0 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 41%
-}
-
-@property --s-start-0 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 13%
-}
-
-@property --s-end-0 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 86%
-}
-
-@property --c-1 {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: hsla(161, 18%, 36%, 1)
-}
-
-@property --x-1 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 6%
-}
-
-@property --y-1 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 71%
-}
-
-@property --s-start-1 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 12%
-}
-
-@property --s-end-1 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 72%
-}
-
-@property --c-2 {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: hsla(139, 17%, 13%, 1)
-}
-
-@property --x-2 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 92%
-}
-
-@property --y-2 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 86%
-}
-
-@property --s-start-2 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 4%
-}
-
-@property --s-end-2 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 70%
-}
-
-@property --c-3 {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: hsla(136, 35%, 41%, 1)
-}
-
-@property --x-3 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 36%
-}
-
-@property --y-3 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 96%
-}
-
-@property --s-start-3 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 7%
-}
-
-@property --s-end-3 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 80%
-}
-
-@property --c-4 {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: hsla(117, 1%, 67%, 1)
-}
-
-@property --x-4 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 66%
-}
-
-@property --y-4 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 24%
-}
-
-@property --s-start-4 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 15%
-}
-
-@property --s-end-4 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 50%
-}
-
-@property --c-5 {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: hsla(159, 5%, 58%, 1)
-}
-
-@property --x-5 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 48%
-}
-
-@property --y-5 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 87%
-}
-
-@property --s-start-5 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 13%
-}
-
-@property --s-end-5 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 77%
-}
-
-@property --c-6 {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: hsla(144, 28%, 81%, 1)
-}
-
-@property --x-6 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 24%
-}
-
-@property --y-6 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 65%
-}
-
-@property --s-start-6 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 16%
-}
-
-@property --s-end-6 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 64%
-}
-
-@property --c-7 {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: hsla(125, 98%, 58%, 1)
-}
-
-@property --x-7 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 69%
-}
-
-@property --y-7 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 47%
-}
-
-@property --s-start-7 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 10%
-}
-
-@property --s-end-7 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 63%
-}
-
-@property --c-8 {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: hsla(159, 74%, 23%, 1)
-}
-
-@property --x-8 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 35%
-}
-
-@property --y-8 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 19%
-}
-
-@property --s-start-8 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 7%
-}
-
-@property --s-end-8 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 61%
-}
-
-@property --c-9 {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: hsla(130, 86%, 72%, 1)
-}
-
-@property --x-9 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 59%
-}
-
-@property --y-9 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 20%
-}
-
-@property --s-start-9 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 13%
-}
-
-@property --s-end-9 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 56%
-}
-
-.hero .container  {
-    --c-0: hsla(146, 55%, 52%, 1);
-    --x-0: 27%;
-    --y-0: 41%;
-    --c-1: hsla(161, 18%, 36%, 1);
-    --x-1: 6%;
-    --y-1: 71%;
-    --c-2: hsla(139, 17%, 13%, 1);
-    --x-2: 92%;
-    --y-2: 86%;
-    --c-3: hsla(136, 35%, 41%, 1);
-    --x-3: 36%;
-    --y-3: 96%;
-    --c-4: hsla(117, 1%, 67%, 1);
-    --x-4: 66%;
-    --y-4: 24%;
-    --c-5: hsla(159, 5%, 58%, 1);
-    --x-5: 48%;
-    --y-5: 87%;
-    --c-6: hsla(144, 28%, 81%, 1);
-    --x-6: 24%;
-    --y-6: 65%;
-    --c-7: hsla(125, 98%, 58%, 1);
-    --x-7: 69%;
-    --y-7: 47%;
-    --c-8: hsla(159, 74%, 23%, 1);
-    --x-8: 35%;
-    --y-8: 19%;
-    --c-9: hsla(130, 86%, 72%, 1);
-    --x-9: 59%;
-    --y-9: 20%;
-    ;
-    background-color: hsla(210, 69%, 79%, 1);
-    background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3)), radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4), transparent var(--s-end-4)), radial-gradient(circle at var(--x-5) var(--y-5), var(--c-5) var(--s-start-5), transparent var(--s-end-5)), radial-gradient(circle at var(--x-6) var(--y-6), var(--c-6) var(--s-start-6), transparent var(--s-end-6)), radial-gradient(circle at var(--x-7) var(--y-7), var(--c-7) var(--s-start-7), transparent var(--s-end-7)), radial-gradient(circle at var(--x-8) var(--y-8), var(--c-8) var(--s-start-8), transparent var(--s-end-8)), radial-gradient(circle at var(--x-9) var(--y-9), var(--c-9) var(--s-start-9), transparent var(--s-end-9));
-    animation: hero-gradient-animation 5s linear infinite alternate;
-    background-blend-mode: normal, normal, normal, normal, normal, normal, normal, normal, normal, normal;
-    
 }

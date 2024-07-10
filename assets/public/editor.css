@@ -17,6 +17,14 @@
   padding: 2svw;
   text-align: center;
 }
+.hero img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 .hero .logo-big {
   display: none !important;
 }
@@ -104,4 +112,5 @@
     max-width: 90vw;
     margin: 0 auto;
 }
+
 

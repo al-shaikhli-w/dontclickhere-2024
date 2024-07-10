@@ -1,14 +1,14 @@
 @import "./utilities/animation";
 
 .header {
-  @apply h-auto pt-4 transition-all duration-500 text-white top-0;
+  @apply absolute w-full z-10 h-auto text-white top-0;
 
   &.scroll {
     @apply fixed top-0 left-0 w-full bg-black bg-opacity-90 py-3;
   }
 
   .header-container {
-    @apply container flex justify-between items-center px-0;
+    @apply container flex justify-between items-center px-0 md:px-8;
     filter: blur(1);
   }
 
@@ -24,10 +24,6 @@
 
   .header-logo {
     @apply w-10 relative overflow-hidden transition-all duration-1000 ease-linear;
-
-    &:hover {
-      //@apply w-full;
-    }
 
     svg {
       @apply w-72 relative;
@@ -102,7 +98,7 @@
           @apply lg:ml-16;
 
           &>a {
-            @apply lg:bg-white lg:bg-opacity-10 lg:rounded-[30px] lg:px-12 lg:py-2 hover:md:text-black hover:md:shadow-sm hover:md:shadow-primary hover:md:bg-primary;
+            @apply lg:border lg:border-white lg:rounded-[30px] lg:px-12 lg:py-2 hover:md:text-black hover:md:shadow-sm hover:md:shadow-primary hover:md:bg-primary;
 
             &::before {
               @apply hidden;

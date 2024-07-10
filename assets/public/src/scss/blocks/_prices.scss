@@ -2,7 +2,7 @@
     @apply relative px-0 grid gap-6 lg:grid-cols-3 items-start container transition-colors;
 
     .pricing-card {
-        @apply relative text-white flex justify-between flex-col p-10 rounded-3xl bg-opacity-40 hover:bg-white hover:bg-opacity-5 hover:cursor-pointer shadow transition-colors;
+        @apply relative text-white flex justify-between mb-8 md:mb-0 flex-col p-4 md:p-10 rounded-3xl bg-opacity-40 hover:bg-white hover:bg-opacity-5 hover:cursor-pointer shadow transition-colors;
         box-shadow: inset 0px 0px 40px 4px rgba(255, 255, 255, 0.2);
 
         &-header {
@@ -76,14 +76,7 @@
                 .icon {
                     @apply bg-[#dc2626];
 
-                    &::before {
 
-                        //content: "";
-                        background-image: url('data:image/svg+xml,<svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path></svg>');
-                        position: absolute;
-                        filter: invert(1);
-                        @apply text-black text-sm w-3 h-3;
-                    }
                 }
 
             }
@@ -102,27 +95,12 @@
         }
 
         .popular {
-            @apply absolute -top-5 left-[30%] lg:left-[39%] bg-primary text-black px-4 py-2 rounded-full text-xs;
+            @apply absolute -top-6 md:-top-5 left-[30%] lg:left-[39%] bg-primary text-black px-4 py-2 rounded-full text-xs;
         }
     }
 
     & .popular-card {
         @apply min-h-[600px] xl:mt-2 lg:-mt-7;
         box-shadow: inset 0px 0px 60px 4px rgba(255, 255, 255, 0.40);
-    }
-
-    &::before {
-        content: "";
-        top: 50%;
-        left: 50%;
-        --tw-bg-opacity: 1;
-        background-color: rgb(0 255 194 / var(--tw-bg-opacity));
-        height: 12rem;
-        width: 12rem;
-        filter: blur(100px);
-        border-radius: 100px;
-        z-index: 0;
-        position: absolute;
-
     }
 }

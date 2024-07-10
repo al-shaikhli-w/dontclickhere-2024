@@ -36,22 +36,22 @@ window.addEventListener("DOMContentLoaded", () => {
             opacity: "1",
             ease: "expo.inOut",
         });
-        gsap.to(".logo-big", {
-            duration: 1,
-            delay: 1,
-            opacity: "0.7",
-            ease: "expo.inOut",
-        });
-        gsap.to(".hero .container", {
-            duration: 1,
-            delay: 1.2,
-            ease: "expo.inOut",
-            onStart: function () {
-                this.targets().forEach(function (target) {
-                    target.classList.add('animate'); // Add the 'animate' class to start the animation
-                });
-            },
-        });
+        // gsap.to(".logo-big", {
+        //     duration: 1,
+        //     delay: 1,
+        //     opacity: "0.7",
+        //     ease: "expo.inOut",
+        // });
+        // gsap.to(".hero .container", {
+        //     duration: 1,
+        //     delay: 1.2,
+        //     ease: "expo.inOut",
+        //     onStart: function () {
+        //         this.targets().forEach(function (target) {
+        //             target.classList.add('animate'); // Add the 'animate' class to start the animation
+        //         });
+        //     },
+        // });
 
         const clientLogos = document.querySelectorAll(".client-logos .client-logo");
         if (clientLogos) {

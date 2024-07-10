@@ -76,7 +76,6 @@ header('Access-Control-Allow-Origin: *'); ?>
     })();
     </script>
     <!-- End Matomo Code -->
-                <!-- Hotjar Tracking Code for https://dontclickhere.at -->
     <script>
         (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -90,9 +89,8 @@ header('Access-Control-Allow-Origin: *'); ?>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class("bg-black max-w-[100svw] !text-white overflow-x-hidden"); ?>>
-    <div class="cursor"></div>
     <?php wp_body_open(); ?>
-    <header class="header absolute w-full z-10">
+    <header class="header">
         <section class="header-container" name="header-container">
             <div class="header-logo">
                 <a href="<?php bloginfo('url'); ?>" aria-label="dontclickhere">
