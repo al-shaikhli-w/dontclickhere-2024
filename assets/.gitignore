@@ -1,0 +1,20 @@
+# Ignore all files
+*
+
+# Allow specific directories and files
+!.gitignore
+!*.html
+!*.css
+!*.js
+!*.php
+!*.png
+!*.jpg
+!*.jpeg
+!*.gif
+!*.svg
+
+# Ignore specific directories
+node_modules/
+vendor/
+.DS_Store
+Thumbs.db
