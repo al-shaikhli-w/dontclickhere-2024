@@ -1,7 +1,5 @@
 footer {
-    @apply relative mt-40 -top-28;
-
-
+    @apply relative mt-40 -top-28 mb-8;
     .footer {
 
         @apply text-white relative;
@@ -17,6 +15,8 @@ footer {
             @apply relative top-28 left-0 w-full;
 
             .wrapper {
+                max-width: 90%;
+                margin: 0 auto;
                 @apply container flex flex-col md:flex-row justify-between items-start gap-6 text-left;
 
             }
@@ -49,7 +49,8 @@ footer {
     }
 
     .under__footer {
-
+        max-width: 90%;
+        margin: 0 auto;
         @apply py-6 container border-t border-l-0 border-r-0 border-b-0 relative -bottom-[130px] left-0 right-0 w-full flex flex-col md:flex-row justify-between items-start gap-6 text-white;
         border-image-slice: 1;
         border-width: 1px 0 0 0;

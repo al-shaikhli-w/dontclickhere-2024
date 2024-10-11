@@ -3,6 +3,7 @@ import "./blocks";
 import "./animation"
 
 
+
 // // Mouse move effect
 // window.addEventListener(
 //     "mousemove", (e) => {

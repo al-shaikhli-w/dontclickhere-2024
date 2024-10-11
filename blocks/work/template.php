@@ -26,7 +26,7 @@ if (!$query->have_posts()) {
     while ($query->have_posts()) : $query->the_post();
         $post_id    = get_the_ID();
         $work_title = get_the_title();
-        $underTitle = get_field('under_tilte', $post_id);
+        $underTitle = get_field('under_title', $post_id);
         $videoUrl   = get_field('video_url', $post_id);
     ?>
         <?php if (!empty($videoUrl)) : ?>
@@ -41,7 +41,7 @@ if (!$query->have_posts()) {
                 <div class="heading">
                     <h2 class="work-card__title"><?php echo esc_html($work_title); ?></h2>
                     <?php if (!empty($underTitle)) : ?>
-                        <p class="work-card__subtitle"><?php echo esc_html($underTitle); ?></p>
+                        <p class="work-card__subtitle mt-4"><?php echo esc_html($underTitle); ?></p>
                     <?php endif; ?>
 
                 </div>

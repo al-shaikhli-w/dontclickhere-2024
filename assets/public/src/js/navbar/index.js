@@ -26,28 +26,13 @@ const addEventListenerToElements = (elements, event, listener) => {
 };
 
 const menuhandler = () => {
+    if (burgermenu) {
     toggleClass(burgermenu, 'opened');
+    }
     toggleClass(menuHeader, 'opened');
     toggleClass(header, 'opened');
     selectAll('.header .header-menu .sub-menu.opened').forEach(item => removeClass(item, 'opened'));
 };
-const addClassWhenScrollToHeader = () => {
-    // if (window.scrollY > 0) {
-    //     addClass(header, 'scroll');
-    // }
-    // else {
-    //     removeClass(header, 'scroll');
-    // }
-}
-
-// const addBackLink = () => {
-//     itemHasChildren.forEach(item => {
-//         const submenu = item.querySelector('.sub-menu');
-//         if (submenu) {
-//             submenu.insertAdjacentHTML('afterbegin', backLink);
-//         }
-//     });
-// };
 
 const closeSubmenu = (event) => {
     event.preventDefault();
@@ -107,8 +92,9 @@ const addDataValueToLinks = () => {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-    window.addEventListener('scroll', addClassWhenScrollToHeader);
+    if (burgermenu) {
     burgermenu.addEventListener('click', menuhandler);
+    }
     addEventListenerToElements(itemHasChildren, 'click', addClassToHasChildren);
 
     const backLinks = selectAll('.nav-back-link');

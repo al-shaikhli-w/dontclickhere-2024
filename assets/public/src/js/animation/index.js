@@ -36,22 +36,6 @@ window.addEventListener("DOMContentLoaded", () => {
             opacity: "1",
             ease: "expo.inOut",
         });
-        // gsap.to(".logo-big", {
-        //     duration: 1,
-        //     delay: 1,
-        //     opacity: "0.7",
-        //     ease: "expo.inOut",
-        // });
-        // gsap.to(".hero .container", {
-        //     duration: 1,
-        //     delay: 1.2,
-        //     ease: "expo.inOut",
-        //     onStart: function () {
-        //         this.targets().forEach(function (target) {
-        //             target.classList.add('animate'); // Add the 'animate' class to start the animation
-        //         });
-        //     },
-        // });
 
         const clientLogos = document.querySelectorAll(".client-logos .client-logo");
         if (clientLogos) {
@@ -67,19 +51,21 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     const burgermenu = document.querySelector('.burgermenu');
     const menuItems = document.querySelectorAll(".menu > li");
-    burgermenu.addEventListener('click', () => {
-        menuItems.forEach((menuItem) => {
-            menuItem.style.opacity = 0;
-        });
-        menuItems.forEach((menuItem, index) => {
-            gsap.to(menuItem, {
-                duration: 1,
-                delay: 0.5 + index * 0.2,
-                opacity: 1,
-                ease: "expo.inOut",
+    if (burgermenu) {
+        burgermenu.addEventListener('click', () => {
+            menuItems.forEach((menuItem) => {
+                menuItem.style.opacity = 0;
+            });
+            menuItems.forEach((menuItem, index) => {
+                gsap.to(menuItem, {
+                    duration: 1,
+                    delay: 0.5 + index * 0.2,
+                    opacity: 1,
+                    ease: "expo.inOut",
+                });
             });
         });
-    });
+    }
 
     new Rellax('body');
     const mouseyScrollFromTheHeroSectionToTheNextSection = document.querySelector('.scroll-downs .mousey');

@@ -1,4 +1,6 @@
 .accordion {
+    max-width: 90%;
+    margin: 0 auto;
     @apply text-white;
 
     .accordion-item {
@@ -19,7 +21,7 @@
 
     button {
         @apply relative text-left w-full pt-0 pb-4 text-white font-helvetica border-none bg-none outline-none;
-        font-size: calc(8px + 1.5svw);
+        font-size: 1rem;
 
         &:hover,
         &:focus {
@@ -31,7 +33,7 @@
         }
 
         .accordion-title {
-            @apply pt-4 pr-6 pl-0 pb-0 text-xl font-BespokeStencil;
+            @apply pt-4 pr-8 pl-0 pb-0 text-[12px] xl:text-xl font-BespokeStencil;
         }
 
         .icon {

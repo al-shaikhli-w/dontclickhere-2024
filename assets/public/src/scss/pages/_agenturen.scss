@@ -1,0 +1,86 @@
+.menu-item {
+  @apply flex justify-center items-center;
+  a {
+    @apply transition-colors;
+    &:hover {
+      @apply text-red;
+    }
+
+    &.contact {
+      @apply bg-red text-white py-2 px-8 lg:ml-10 flex justify-center items-center w-full rounded-md shadow-lg hover:text-white hover:bg-black transition-colors;
+    }
+  }
+}
+
+
+.hero-agenturen {
+  .hero-image {
+    @apply bg-cover bg-center bg-no-repeat flex justify-end items-center;
+  }
+}
+
+.about-agenturen {
+  @apply container;
+  p {
+    @apply max-w-3xl;
+  }
+}
+
+#services {
+  .services-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+    & > div {
+      @apply rounded-md shadow-sm hover:shadow-lg transition-all;
+      &:hover {
+        border: 1px solid #dc2626 !important;
+      }
+    }
+  }
+}
+
+#agenturen {
+  #burger {
+    &.open {
+      span {
+        @apply bg-red transition-all ease-in-out duration-300;
+        &:nth-child(1) {
+          @apply transform rotate-45 translate-y-[3px] w-full;
+        }
+        &:nth-child(2) {
+          @apply opacity-0;
+        }
+        &:nth-child(3) {
+          @apply transform -rotate-45 -translate-y-[19px] w-full;
+        }
+      }
+    }
+  }
+  nav.menu {
+    &.show {
+        @apply flex flex-col gap-4 absolute top-[1%] right-0 w-full visible opacity-100 bg-white p-4 rounded-md shadow-lg;
+    }
+  }
+  #work {
+    @apply container;
+    p {
+      @apply max-w-3xl;
+    }
+    .work-card {
+      @apply text-white font-orbitron;
+      &__content {
+        @apply top-0 flex flex-col justify-end text-left items-start gap-6 font-orbitron;
+        .work-card__link{
+          @apply font-orbitron hover:bg-red;
+          border-radius: 8px !important;
+        }
+      }
+    }
+  }
+  .social-media {
+      li {
+        a {
+            @apply text-red hover:text-black fill-red hover:fill-black transition-colors;
+        }
+    }
+  }
+}
