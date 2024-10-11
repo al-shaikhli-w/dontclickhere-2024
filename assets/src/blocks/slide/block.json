@@ -1,0 +1,29 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name":"dch-block/slide",
+    "title": "DCH Slide",
+    "category": "dch-blocks",
+    "icon": "slides",
+    "supports": {
+        "align": ["full"]
+    },
+    "attributes": {
+        "align" : {
+            "type": "string",
+            "default": "full"
+        },
+        "imgId": {
+            "type" :"number"
+        },
+        "imgURL":{
+            "type" : "string"
+        },
+        "themeimage": {
+            "type": "string"
+        }
+    },
+    "editorScript": "file:./index.js",
+    "render": "file:./render.php"
+
+}

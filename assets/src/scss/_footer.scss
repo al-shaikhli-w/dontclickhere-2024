@@ -1,0 +1,42 @@
+.footer-section{
+    @apply py-10 mt-[10svh] font-body-text border-t bg-primary text-white;
+    &-wrapper{
+        @apply flex flex-col-reverse md:grid gap-8 md:grid-cols-3 lg:gap-4;
+        h3{
+            @apply text-2xl font-bold uppercase mb-6;
+        }
+        
+        .footer-section-sitemap {
+            .menu{
+                @apply md:grid grid-cols-2 gap-2;
+            }
+        }
+
+        .footer-setion-social ul{
+            @apply flex flex-row gap-4;
+            a {
+                @apply cursor-pointer p-2 rounded-full block border border-white;
+                svg{
+                    @apply hover:opacity-75 transition-colors w-5 h-5 fill-white;
+                }
+            }
+        }
+    }
+    .footer-section-company {
+        @apply flex justify-center items-center gap-4 mt-10 border-t border-b border-white py-4;
+        img{
+            @apply w-10;
+        }
+        .copyright{
+            @apply text-[10px];
+            span {
+                @apply text-red-500;
+            }
+        }
+    }
+
+}
+
+.sbi_header_text {
+    display: none !important;
+}

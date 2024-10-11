@@ -1,0 +1,23 @@
+.page-banner {
+    @apply relative min-h-[100svh] pt-20 pb-10 flex justify-center items-center;
+    &__bg-image {
+        @apply absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-cover bg-center object-cover;
+      }
+    &__content {
+            @apply absolute text-white top-0 left-0 right-0 bottom-0 w-full max-w-full flex items-center justify-center flex-col text-center gap-7;
+        p {
+            @apply md:tracking-[5px] drop-shadow-lg font-body-text text-opacity-80 font-bold uppercase text-center break-words;
+            font-size: clamp(12px, 13px, 16px);
+        }
+        .wp-block-heading{
+            @apply mt-0 leading-normal drop-shadow-lg font-body-heading font-bold text-center break-words;
+            font-size: clamp(7vw, 5vw, 9vw);
+        }
+        .wp-block-button a {
+            @apply btn btn-primary;
+        }
+    }
+    .section-link {
+        @apply absolute bottom-[10svh] z-2 w-full max-w-6 h-6 animate-bounce cursor-pointer fill-white text-white;
+    }
+}

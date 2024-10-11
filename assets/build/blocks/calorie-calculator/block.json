@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dch-block/calorie-calculator",
+  "title": "Calorie Calculator",
+  "description": "A block to calculate the calories",
+  "category": "dch-blocks",
+  "icon": "chart-pie",
+  "keywords": [
+    "calorie",
+    "calculator",
+    "dch"
+  ],
+  "attributes": {
+    "gender": {
+      "type": "string",
+      "default": "male"
+    },
+    "age": {
+      "type": "number",
+      "default": 25
+    },
+    "weight": {
+      "type": "number",
+      "default": 70
+    },
+    "height": {
+      "type": "number",
+      "default": 170
+    },
+    "bodyFat": {
+      "type": "number",
+      "default": 20
+    },
+    "activity": {
+      "type": "number",
+      "default": 1.55
+    },
+    "sportPerWeek": {
+      "type": "number",
+      "default": 3
+    },
+    "goal": {
+      "type": "string",
+      "default": "maintain"
+    },
+    "result": {
+      "type": "string",
+      "default": " "
+    }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

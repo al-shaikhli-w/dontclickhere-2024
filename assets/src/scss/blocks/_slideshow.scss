@@ -1,0 +1,78 @@
+.slideshow-section {
+    @apply p-0 overflow-clip relative;
+    .slideshow {
+        height: calc(100svh - 20svh);
+        
+        @media screen and (min-width: 1024px) {
+            height: 100vh;
+        }
+        .swiper-wrapper {
+            @apply h-full w-full relative z-1 break-words flex;
+            
+            .swiper-slide {
+                @apply block h-full w-full flex-shrink-0 relative;
+                
+                .image-container {
+                    @apply absolute left-0 top-0 w-full h-full block cover-background bg-center bg-no-repeat bg-cover;
+                }
+                
+                .bg-gradient-nero-grey-brown {
+                    @apply absolute top-0 left-0 right-0 w-full h-full opacity-30 z-0;
+                    background-image: linear-gradient(to right, #191919, #1c1a1d, #211b20, #261c21, #2c1d20);
+                }
+                .content {
+                    @apply absolute top-0 left-0 right-0 bottom-0 w-full max-w-full flex items-center justify-center flex-col text-center gap-7 z-10;
+                    p {
+                        @apply mb-6 md:tracking-[5px] drop-shadow-lg font-body-text text-opacity-80 font-bold  uppercase text-center break-words;
+                        font-size: clamp(12px, 13px, 16px);
+                    }
+                    .wp-block-heading{
+                        @apply  mt-0 mb-6 leading-normal drop-shadow-lg font-body-heading font-bold text-center break-words;
+                        font-size: clamp(7vw, 5vw, 9vw);
+                    }
+                    .wp-block-button a {
+                        @apply btn btn-primary ;
+                    }
+                    .wp-block-buttons{
+                        @apply flex mt-16 gap-4 justify-center items-center;
+                    }
+                }
+            }
+        }
+    }
+    
+    .swiper-number-pagination {
+        .swiper-number {
+            @apply container absolute left-0 right-0 bottom-[70px] text-white cursor-pointer text-center z-10;
+            
+            .swiper-pagination-bullet {
+                @apply relative pr-2 m-0 text-white font-classic opacity-70 text-xl w-auto bg-transparent border-none outline-none duration-500;
+                
+                &.swiper-pagination-bullet-active {
+                    @apply opacity-100;
+                    .zero{
+                        @apply text-lg;
+                    }
+                    &::after {
+                        @apply w-16 text-primary inline-block align-middle duration-500;
+                    }
+                }
+                
+                &::after {
+                    @apply w-0 ml-3 h-[1px] bg-white inline-block align-middle duration-500;
+                    content: "";
+                }
+            }
+        }
+    }
+   
+    .slider-navigations {
+        @apply hidden sm:block bg-primary bg-opacity-50 p-4 rounded-full cursor-pointer left-5 transform -translate-y-1/2 z-10 absolute top-1/2 w-auto h-auto;
+        svg {
+           filter: invert(1);
+        }
+        &.swiper-button-next { 
+            @apply right-5 left-[inherit];
+        }
+    }
+}

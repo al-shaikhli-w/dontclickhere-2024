@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dch-block/menu-item-for-pricing",
+  "title": "Menu Item for Pricing Or Menu",
+  "description": "A block to display a menu item for pricing or menu.",
+  "category": "dch-blocks",
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Traditional hair styling"
+    },
+    "description": {
+      "type": "string",
+      "default": "Lorem ipsum has been the industry."
+    },
+    "price": {
+      "type": "string",
+      "default": "50"
+    },
+    "imgId": {
+      "type": "number"
+    },
+    "imgURL": {
+      "type": "string"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

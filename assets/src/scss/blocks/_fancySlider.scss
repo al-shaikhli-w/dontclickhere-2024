@@ -1,0 +1,116 @@
+.slider-section {
+    @apply relative bg-white;
+
+    .fancy-slides {
+        @apply w-full h-svh overflow-hidden grid place-items-center;
+        grid-template-rows: 100%;
+        grid-template-columns: 100%;
+
+        .slide {
+            @apply w-full h-full relative opacity-0 overflow-hidden grid place-items-center;
+            grid-area: 1 / 1;
+            will-change: transform, opacity;
+
+            &__img {
+                @apply w-full h-full bg-cover bg-center bg-no-repeat transition-all cursor-pointer absolute top-0 left-0;
+            }
+
+            &-content {
+                @apply absolute left-0 top-0 text-center text-white z-1 bg-opacity-40 w-full h-full break-words flex flex-col justify-center items-center gap-4 md:gap-8 xl:gap-12;
+
+                & > * {
+                    @apply relative z-1 font-body-text;
+                }
+
+                .wp-block-heading {
+                    @apply text-[8svw] xl:text-[70px] xl:mb-6 leading-[1] font-body-heading;
+                    letter-spacing: 4px;
+                    word-spacing: 2px;
+                }
+
+                .wp-block-buttons {
+                    @apply flex justify-center gap-4 items-center;
+
+                    .wp-block-button a {
+                        @apply btn btn-primary;
+                    }
+                }
+            }
+        }
+
+        .slide--current {
+            @apply opacity-100 cursor-pointer;
+        }
+
+        .slide-wrapper {
+            @apply  container;
+        }
+    }
+
+    .slides-nav {
+        @apply flex justify-center gap-6 px-4 items-center absolute bottom-12 z-10 w-full;
+
+        .slides-nav__item {
+            @apply border-0 bg-primary text-black w-12 h-12 grid place-items-center rounded-full cursor-pointer transition-all;
+        }
+
+        .slides-nav__item:hover {
+            @apply bg-opacity-40;
+        }
+    }
+
+    &.slider-has-product {
+        .fancy-slides {
+            background-image: conic-gradient(from 55deg, var(--wp--preset--color--secondary), var(--wp--preset--color--primary));
+
+            .slide {
+                &-wrapper {
+                    @apply relative flex flex-col-reverse lg:grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 w-full h-full place-items-center;
+
+                    .slide-content {
+                        @apply relative top-0 left-0 flex justify-center flex-col items-center gap-4 lg:gap-8 translate-x-0 translate-y-0 bg-transparent;
+                    }
+                }
+
+                &__img {
+                    @apply relative -top-28 sm:top-0;
+                    background-size: contain;
+                    max-width: 700px;
+                    max-height: 700px;
+                }
+            }
+        }
+        .slide-wrapper {
+            @apply relative container;
+        }
+    }
+
+.deco--1 {
+	background: #d4503e;
+}
+
+.deco--2 {
+	background: #1c1a1a;
+}
+
+.deco--3 {
+	background: #4e4141;
+}
+
+.deco--4 {
+	background: #000;
+}
+
+.deco--5 {
+	background: #060b17;
+}
+
+.deco--6 {
+	background: #34365c;
+}
+
+.deco--7 {
+	background: #9f6794;
+}
+
+}

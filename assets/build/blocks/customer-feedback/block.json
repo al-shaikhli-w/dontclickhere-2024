@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dch-block/customer-feedback",
+  "title": "DCH Customer Feedback",
+  "category": "dch-blocks",
+  "keywords": [
+    "dch",
+    "customer",
+    "feedback"
+  ],
+  "attributes": {
+    "postsToShow": {
+      "type": "number",
+      "default": -1
+    },
+    "order": {
+      "type": "string",
+      "default": "DESC"
+    },
+    "orderBy": {
+      "type": "string",
+      "default": "title"
+    },
+    "layoutStyle": {
+      "type": "string",
+      "default": "style-1"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

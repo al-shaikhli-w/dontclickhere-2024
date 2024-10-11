@@ -1,0 +1,86 @@
+.calorie-calculator {
+  @apply relative max-w-3xl rounded-md shadow-md bg-gray-100 p-8;
+  .calorie-calculator-form {
+    @apply flex flex-col gap-6 font-body-text;
+    .radio-group-section {
+      @apply flex flex-col gap-4;
+      .box-input {
+        @apply relative w-full rounded-md;
+        input[type="radio"] {
+          @apply absolute opacity-0;
+        }
+
+        label {
+          @apply bg-white shadow-lg rounded-md cursor-pointer grid place-items-center p-4 w-full;
+        }
+
+        &.active {
+          label {
+            @apply bg-gray-300 font-bold;
+          }
+        }
+      }
+
+      p {
+        @apply font-body-text font-bold text-sm uppercase;
+      }
+    }
+
+    .form-groups {
+      @apply grid grid-cols-2 md:grid-cols-4 gap-6;
+    }
+
+    .form-group {
+      @apply flex flex-col gap-4;
+      label {
+        @apply text-sm font-bold w-full uppercase;
+      }
+
+      input {
+        @apply h-12 p-4 border border-gray-300 w-full;
+        &:focus {
+          @apply border-primary;
+        }
+      }
+    }
+  .select-group {
+    @apply relative;
+    .trigger {
+      @apply absolute right-4 top-4;
+      svg {
+        @apply fill-black font-bold;
+      }
+    }
+  }
+    select {
+      @apply border-none p-4 w-full whitespace-nowrap bg-white text-black rounded-md shadow-md bg-no-repeat appearance-none font-bold;
+      /*background-clip: padding-box;
+      background-position: right 10px center;*/
+    }
+
+  }
+
+  .calorie-calculator-result-container {
+    @apply absolute top-0 right-0 bottom-0 left-0  grid place-items-center bg-white p-6 rounded-lg shadow-lg opacity-0 invisible z-[-11111];
+    &.active {
+      @apply container rounded-lg text-black bg-gray-300 opacity-100 visible z-10;
+    }
+
+    .go-back-button {
+      @apply btn bg-primary mt-6 text-white;
+    }
+
+    h3 {
+      @apply mb-4;
+    }
+
+    .calorie-calculator-result {
+      .result-list {
+        @apply grid grid-cols-2 gap-4;
+        li {
+          @apply flex flex-col gap-1 p-2 bg-white rounded-md shadow-md;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+import './component/navbar';
+import './component/preloader';
+import './component/sliderAndGallery';
+import './component/banner';
+import './component/calorie-calculator';
+import './component/forms';
+import './slider/slider';
+import './component/wishlist';
+import './rellaxJs';
+import './animation';
+import './split-animation';

@@ -1,0 +1,55 @@
+.customer_feedback-section{
+    @apply relative overflow-hidden;
+    .customer_feedbacks {
+        @apply w-full h-full relative flex z-1;
+        .customer_feedback {
+            @apply flex-shrink-0 h-full relative flex flex-col gap-4 text-center justify-center items-center;
+            &-wrapper {
+                @apply flex flex-col sm:flex-row items-center justify-center gap-4;
+            }
+            h3 {
+                @apply text-lg text-primary uppercase font-body-heading relative;
+            }
+            p {
+                @apply text-2xl max-w-[600px] font-body-heading;
+            }
+        }
+    }
+    .navigation{
+        @apply flex container relative z-1 xl:max-w-[70%] top-4 xl:-top-36 justify-center gap-4 xl:justify-between;
+        div {
+            @apply text-lg  text-black uppercase font-body-heading transition-colors cursor-pointer p-4 xl:p-6;
+            &:hover {
+                @apply text-primary;
+            }
+            &.customer_feedback-button-prev{
+                @apply border-r-2 border-black;
+            }
+            &.customer_feedback-button-next{
+                @apply border-l-2 border-black;
+            }
+        }
+        
+    }
+}
+
+
+.customer_feedback-section-three-items{
+    @apply relative overflow-hidden;
+    .customer_feedbacks{
+        @apply w-full h-full relative flex z-1;
+        .customer_feedback{
+            @apply flex-shrink-0 flex flex-col gap-4 p-4 border border-gray-300 rounded-md overflow-hidden;
+        }
+    }
+    .navigation {
+        @apply flex mt-6 justify-end gap-4 items-center;
+        svg {
+            @apply cursor-pointer transition-all duration-300 ease-linear;
+            fill: var(--wp--preset--color--primary);
+            &:hover {
+                @apply opacity-70;
+            }
+        }
+    }
+}

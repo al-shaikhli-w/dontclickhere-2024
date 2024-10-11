@@ -1,0 +1,171 @@
+
+.woocommerce-shop {
+    .products {
+        @apply container mt-28 mb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6;
+        &:before {
+            @apply hidden;
+            content: none !important;
+        }
+        .product {
+            @include product-styles;
+        }
+    }
+}
+
+
+.products {
+    @apply pt-6 pb-10;
+
+    h2 {
+        @apply text-2xl font-semibold my-8;
+    }
+
+    ul.products {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6;
+
+        .product {
+            @include product-styles;
+        }
+    }
+}
+
+.woocommerce-pagination {
+    @apply flex justify-center items-center gap-4 my-6;
+
+    .page-numbers {
+        @apply py-2 px-4 rounded flex justify-center items-center;
+    }
+
+    .page-numbers.current {
+        @apply bg-primary py-2 px-4 rounded;
+    }
+}
+
+
+.hero-products {
+    @apply hero text-white mb-8;
+    background-image: conic-gradient(from 55deg, var(--wp--preset--color--secondary), var(--wp--preset--color--primary));
+}
+.dch-products-archive-header {
+    @apply relative flex items-center justify-between w-full h-full mb-8 min-h-[60svh] md:min-h-[50svh]  font-oswald overflow-hidden;
+    background-image: conic-gradient(from 55deg, var(--wp--preset--color--secondary), var(--wp--preset--color--primary));
+    &-background-wrapper {
+        @apply absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat flex justify-between items-center;
+        img {
+            @apply w-full h-auto max-w-[50%] sm:max-w-[20vw] bg-cover bg-center bg-no-repeat flex justify-between items-center;
+        }
+        .rellax-archive-header-image {
+            &.image-first {
+                @apply absolute left-0 bottom-0;
+            }
+            &.image-second {
+                @apply absolute right-0 bottom-5;
+            }
+        }
+
+    }
+    .dch-layout-content{
+        @apply relative container z-10 flex flex-col items-center justify-center w-full h-full text-center;
+        h1 {
+            @apply text-5xl md:text-9xl text-white font-bold mb-8 uppercase;
+        }
+        p {
+            @apply text-xs md:text-lg text-white mb-8 font-roboto;
+        }
+        .dch-category-navigation {
+            @apply flex items-center justify-center gap-4 flex-wrap;
+            .dch-product-category-link {
+                @apply inline-block text-secondary text-center text-sm md:text-lg px-3 py-1 transition-all;
+                &:hover, &:focus {
+                    @apply bg-white text-black;
+                }
+                &.dch-active {
+                    @apply bg-white text-black;
+                }
+            }
+        }
+    }
+}
+
+
+// block styles for product on block 
+// TODO: please add the same style to the shop page. and product related pages also ---> i thing will be enghouh to add this to the product-shop class 
+
+body {
+    .wc-block-grid{
+        @apply font-body-text;
+        .wc-block-grid__products {
+            @apply container mt-16 mb-16 gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+            gap: 1rem !important;
+            display: grid !important;
+            .wc-block-grid__product {
+                @apply max-w-full border border-solid border-gray-200 rounded-md transition-all hover:rounded-2xl bg-gray-100 text-black overflow-hidden relative flex flex-col justify-between items-center gap-4 pb-4;
+                
+                .wc-block-grid__product-title {
+                    @apply text-xl font-bold pt-4 uppercase transition-colors;
+                    &:hover {
+                        @apply text-primary;
+                    }
+                }
+                .wp-block-button.wc-block-grid__product-add-to-cart a {
+                    @apply btn bg-black text-white;
+                    line-height: 1.9;
+                }
+                .wc-block-grid__product-image {
+                    background-image: conic-gradient(from 55deg, var(--wp--preset--color--secondary), var(--wp--preset--color--primary));
+                    @apply p-2;
+                }
+                .wc-block-grid__product-image,.wc-block-grid__product-title, .wc-block-grid__product-price.price, .wp-block-button.wc-block-grid__product-add-to-cart,.wc-block-grid__product-rating{
+                    @apply mb-0 font-body-heading;
+                }
+                .wc-block-grid__product-rating {
+                    @apply flex items-center gap-2;
+                    .star-rating {
+                        @apply text-gray-600 w-full font-body-text text-xs;
+                        &:before {
+                            content: none;
+                        }
+                    }
+                    span {
+                        @apply relative p-0;
+                        &:before {
+                            content: none;
+                        }
+                    }
+                }
+                .wc-block-grid__product-price {
+                    @apply text-xl text-primary font-bold;
+                }
+                .wc-block-grid__product-onsale{
+                    @apply btn bg-red-500 btn-sm rounded-full m-2 p-0 min-h-5 min-w-16 text-white;
+                    border-radius: 9999px !important;
+                    span {
+                        @apply flex justify-center items-center w-full;
+                    }
+                }
+
+            }
+        }
+    }
+    .wc-block-featured-product {
+        @apply font-body-text;
+        min-height: 100svh !important;
+        .wc-block-featured-product__wrapper{
+            .wc-block-featured-product__title{
+                @apply text-[5svw] font-bold font-body-heading text-center mb-4 uppercase;
+            }
+            .wc-block-featured-product__description{
+                @apply text-center text-lg font-body-text mb-4;
+            }
+            .wc-block-featured-product__price{
+                @apply text-center text-2xl font-bold font-body-heading mb-4;
+            }
+            .wc-block-featured-product__link{
+                a {
+                    @apply btn bg-black text-white;
+                    line-height: 1.9;
+                }
+            }
+        }
+    }
+}

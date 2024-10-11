@@ -1,0 +1,33 @@
+.galleryshow {
+    @apply relative block py-14 mx-auto overflow-clip;
+    .swiper-wrapper {
+        @apply flex flex-nowrap transition-transform duration-300 ease-in-out;
+        
+        .swiper-slide{
+            img {
+                @apply transition-all duration-300 ease-in-out;
+            }
+            &.swiper-slide-active {
+                @media screen and (min-width: 768px) {
+                    width: 40svw !important;
+                    transition: width 0.3s ease;
+                }
+            }
+            &:hover {
+                img{
+                    @apply transform scale-110;
+                }
+                .gallery-hover{
+                    @apply opacity-100;
+                }
+            }
+        }
+        .gallery-hover{
+            @apply absolute inset-0 bg-primary bg-opacity-50 flex items-center justify-center text-2xl font-bold opacity-0 transition-opacity;
+            div {
+                @apply bg-white bg-opacity-30;
+            }
+        }
+    }
+    
+}

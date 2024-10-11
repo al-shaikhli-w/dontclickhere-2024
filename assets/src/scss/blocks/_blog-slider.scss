@@ -1,0 +1,76 @@
+.blog-slider {
+@apply container relative overflow-hidden;
+        .swiper-wrapper {
+            @apply h-full w-full relative z-1 break-words flex;
+            .swiper-slide {
+                @apply flex flex-col justify-center items-center h-full w-full flex-shrink-0 relative cursor-pointer bg-gray-100 rounded-md shadow-md overflow-hidden;
+                .blog-image {
+                    @apply relative pb-[450px] overflow-hidden w-full;
+                    img {
+                        @apply object-cover object-center h-full w-full absolute transition-all duration-500 ease-linear;
+                    }
+                }
+                .blog-content{
+                    @apply flex flex-col px-4 pb-4 gap-2;
+                    .title {
+                        @apply font-body-heading text-lg font-bold;
+                    }
+                }
+                &:hover {
+                    img {
+                        @apply scale-110;
+                    }
+                }
+            }
+        
+    }
+    .blog-pagination{
+        @apply flex justify-center items-center gap-4 p-2 mt-4;
+        .swiper-pagination-bullet {
+            @apply w-2 h-2 rounded-full border border-primary opacity-70 cursor-pointer transition-all duration-500 ease-linear;
+            &:hover {
+                @apply bg-primary opacity-100;
+            }
+        }
+        .swiper-pagination-bullet-active {
+            @apply bg-primary opacity-100;
+        }
+    }
+    &.style-2 {
+        .swiper-wrapper {
+            .blog-slider .swiper-wrapper .swiper-slide{
+                @apply flex-row;
+            }
+            .blog-image{
+                @apply pb-[300px]
+            }
+        }
+    }
+    &.style-products {       
+        .blog-image {
+            background-image: conic-gradient(from 55deg, var(--wp--preset--color--secondary), var(--wp--preset--color--primary));
+            img {
+                @apply p-4;
+            }
+        }
+        .shop-info {
+            @apply md:absolute bottom-0 p-4 md:opacity-0 md:invisible rounded-b-md bg-white text-black font-body-text w-full transition-all duration-500 ease-linear;
+            .shop-title {
+                @apply font-body-heading;
+            }
+            .price {
+                @apply font-body-heading text-xl font-bold;
+            }
+        }
+        .slide-item {
+            @apply relative;
+            &:hover {
+                .shop-info {
+                    @apply md:opacity-100 md:visible;
+                }
+            }
+        }
+    }
+}
+
+

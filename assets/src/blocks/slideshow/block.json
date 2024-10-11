@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dch-block/slideshow",
+  "title": "DCH Slideshow",
+  "icon": "images-alt2",
+  "category": "dch-blocks",
+  "supports": {
+    "align": ["full"]
+  },
+  "attributes": {
+    "align": { "type": "string", "default": "full" }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

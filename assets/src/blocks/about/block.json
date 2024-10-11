@@ -1,0 +1,54 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name":"dch-block/about",
+    "title": "DCH About",
+    "category": "dch-blocks",
+    "supports": {
+        "align": ["full"]
+    },
+    "attributes": {
+        "align" : {
+            "type": "string",
+            "default": "full"
+        },
+        "headingField": {
+            "type": "string",
+            "default": "Award winning barber studio."
+        },
+        "contentField": {
+            "type": "string",
+            "default": "Our barbers are carefully hand-picked to ensure the finest service in our barbershops around London the UK and the world. We’re well trusted to deliver excellence with over 5000+ customer reviews."
+        },
+        "buttonLinkPrimary": {
+            "type": "string",
+            "default": "https://www.google.com"
+        },
+        "buttonLinkSecondary": {
+            "type": "string",
+            "default": "https://www.google.com"
+        },
+        "buttonTextSecondary":{
+            "type": "string",
+            "default": "Contact Us"
+        },
+        "buttonText":{
+            "type": "string",
+            "default": "Book Now"
+        },
+        "imgIdLeft": {
+            "type" :"number"
+        },
+        "imgURLLeft":{
+            "type" : "string"
+        },
+        "imgIdRight": {
+            "type" :"number"
+        },
+        "imgURLRight":{
+            "type" : "string"
+        }
+    },
+    "editorScript": "file:./index.js",
+    "render": "file:./render.php"
+}

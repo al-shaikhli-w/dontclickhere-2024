@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './animations';
+
+// import the custom styles
+@import './settings';
+@import './preloader';
+@import './nav';
+@import './footer';
+@import './blocks/blocks';
+@import './pages/pages';
+@import './woocommerce/style';
+@import './blocks/fancySlider';
+@import './blocks/calorie-calculator';
+
+
+.cursor1,
+.cursor2 {
+    @apply fixed rounded-full pointer-events-none translate-x-1/2 translate-y-1/2 transition duration-150 z-50 mix-blend-difference;
+
+    @media (max-width: 1000px) {
+        display: none;
+        @apply hidden;
+    }
+}
+
+.cursor1 {
+    @apply w-8 h-8 -left-[17px] -top-[15px] border-primary border border-solid;
+}
+
+.cursor2 {
+    @apply w-2 h-2 -top-[3px] -left-[5px] bg-primary;
+}
+
+// splitting text animation
+.splitting .char {
+    animation: slide-in .7s cubic-bezier(.3, 0, .7, 1) both;
+    animation-delay: calc(50ms * var(--char-index));
+}
+
+@keyframes slide-in {
+    from {
+        transform: scale(0.4) translateY(80%);
+        opacity: 0;
+    }
+}
+
+
+article.swiper-slide.blog.swiper-slide-active.active-waleed {
+    background-color: red !important;
+}

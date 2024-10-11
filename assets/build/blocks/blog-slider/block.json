@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dch-block/blog-slider",
+  "title": "DCH Blog Slider",
+  "category": "dch-blocks",
+  "supports": {
+    "align": [
+      "full"
+    ]
+  },
+  "icon": "admin-post",
+  "keywords": [
+    "blog",
+    "slider",
+    "dch"
+  ],
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "style": {
+      "type": "string",
+      "default": "style-1"
+    },
+    "isShop": {
+      "type": "boolean",
+      "default": false
+    },
+    "postType": {
+      "type": "string",
+      "default": "post"
+    },
+    "postCount": {
+      "type": "number",
+      "default": -1
+    },
+    "postCategory": {
+      "type": "string"
+    },
+    "orderBY": {
+      "type": "string",
+      "default": "date"
+    },
+    "order": {
+      "type": "string",
+      "default": "DESC"
+    },
+    "webshopCategory": {
+      "type": "string"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

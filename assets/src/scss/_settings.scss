@@ -1,0 +1,217 @@
+body {
+    @apply relative min-h-screen font-body-text overflow-x-hidden bg-white text-black;
+
+    .mouse {
+        @apply hidden lg:flex fixed z-[9999] w-4 h-4 bg-white right-0 bottom-0 translate-y-1/2 translate-x-1/2 rounded-full pointer-events-none transition-all duration-500 ease-in-out;
+        top: var(--y);
+        left: var(--x);
+        mix-blend-mode: difference;
+    }
+    .img-hovered::after {
+        @apply w-28 h-28 text-black text-center flex justify-center items-center font-bold;
+        content: "CLICK";
+        animation: spin 4s infinite forwards cubic-bezier(1, 1, 1, 1);
+    }
+    .is-layout-flex{
+        @apply flex-wrap lg:flex-nowrap;
+    }
+    :where(.is-layout-flex){
+        @apply gap-8 md:gap-4;
+    }
+}
+html.lenis, html.lenis body {
+    @apply h-auto;
+}
+  
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+  
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+  
+  .lenis.lenis-stopped {
+    @apply overflow-hidden;
+  }
+  
+  .lenis.lenis-smooth iframe {
+    @apply pointer-events-none;
+  }
+
+
+@keyframes spin {
+    0% {
+        @apply rotate-0;
+    }
+
+    100% {
+        @apply rotate-[360deg];
+    }
+}
+
+.btn {
+    @apply text-[14px] px-4 py-[6px] font-body-text w-fit inline-flex justify-between items-center border-none outline-none shadow-sm rounded-sm transition-all duration-500 ease-linear;
+    text-decoration: none !important;
+    &:hover {
+        @apply bg-primary text-white;
+    }
+    &-primary {
+        @apply bg-primary text-white;
+        &:hover {
+            @apply bg-secondary text-white;
+        }
+    }
+    &-secondary {
+        @apply bg-secondary text-black hover:bg-primary;
+    }
+    &-info {
+        @apply bg-yellow-500 text-white;
+    }
+
+    &-outline {
+        @apply bg-transparent text-primary border border-primary;
+    }
+
+    &-error {
+        @apply bg-red-500 text-white;
+    }
+
+    &-link {
+        @apply border-none font-bold shadow-none;
+        color: inherit;
+        &:hover {
+            @apply underline;
+        }
+        &--post {
+            @apply bg-primary text-white;
+            &:hover {
+                color: black !important;
+                background-color: transparent !important;
+            }
+        }
+    }
+    &-black {
+        @apply bg-black text-white transition-colors duration-300 ease-linear;
+        &:hover, &:focus {
+            @apply bg-white text-black;
+        }
+    }
+
+    &-large {
+        @apply font-bold uppercase px-8 py-4 text-lg;
+    }
+
+
+    &-smaill, &-sm {
+        @apply px-2 py-1 capitalize;
+        &:hover {
+            @apply -translate-y-1;
+        }
+    }
+
+    &-xs {
+        @apply rounded-full px-2 py-[2px] capitalize shadow-sm transition-colors;
+    }
+
+   
+}
+
+.metallic-button {
+    @apply btn text-black;
+    background: linear-gradient(
+        45deg,
+        #999 5%,
+        #fff 10%,
+        #ccc 30%,
+        #ddd 50%,
+        #ccc 70%,
+        #fff 80%,
+        #999 95%
+    );
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    }
+
+
+.goltlic-button{
+    @apply btn text-black;
+    background: linear-gradient(45deg, #d4af37 5%, #debc5b 10%, #e7c97c 30%, #efd69d 50%, #e7c97c 70%, #debc5b 80%, #d4af37 95%);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, .5);
+}
+
+.checkbox {
+    @apply relative inline-flex items-center;
+    input[type="checkbox"] {
+        @apply w-5 h-5 mr-2 rounded-sm;
+    }
+
+    label {
+        @apply text-sm;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn {
+        @apply transition-none;
+    }
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="tel"], input[type="url"], input[type="number"], input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="color"], input[type="file"], input[type="range"], input[type="submit"], input[type="reset"], textarea {
+    @apply w-full px-8 py-2 border border-solid rounded-md shadow-sm;
+}
+
+
+.h1, h1 {
+    font-size: 4.375rem;
+    line-height: 1;
+}
+.h2, h2 {
+    font-size: 3.438rem;
+
+}
+.h3, h3 {
+    font-size: 3.125rem;
+}
+.h4, h4 {
+    font-size: 2.813rem;
+}
+.h5, h5 {
+    font-size: 2.5rem;
+}
+.h6, h6 {
+    font-size: 2.188rem;
+}
+
+@media screen and (max-width:600px) {
+    .h1, h1 {
+        font-size: 3.75rem;
+        line-height: 3.75rem;
+        word-wrap: break-word;
+    }
+    .h2, h2 {
+        font-size: 2.813rem;
+        line-height: 2.813rem;
+        word-wrap: break-word;
+    }
+    .h3, h3 {
+        font-size: 2.5rem;
+        word-wrap: break-word;
+    }
+    .h4, h4 {
+        font-size: 2.188rem;
+        word-wrap: break-word;
+    }
+    .h5, h5 {
+        font-size: 2rem;
+        word-wrap: break-word;
+    }
+    .h6, h6 {
+        font-size: 1.875rem;
+        word-wrap: break-word;
+    }
+    p {
+        font-size: 1rem;
+        word-wrap: break-word;
+    }
+    
+}

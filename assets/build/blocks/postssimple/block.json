@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dch-block/postssimple",
+  "title": "DCH Posts",
+  "category": "widgets",
+  "icon": "admin-post",
+  "keywords": [
+    "dch",
+    "posts",
+    "simple"
+  ],
+  "attributes": {
+    "postsideimage": {
+      "type": "boolean",
+      "default": false
+    },
+    "postType": {
+      "type": "string",
+      "default": "post"
+    },
+    "postsToShow": {
+      "type": "number",
+      "default": -1
+    },
+    "order": {
+      "type": "string",
+      "default": "DESC"
+    },
+    "orderBy": {
+      "type": "string",
+      "default": "title"
+    },
+    "category": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

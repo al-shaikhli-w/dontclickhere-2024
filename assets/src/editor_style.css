@@ -1,0 +1,136 @@
+
+
+.galleryshow {
+    background: var(--wp--preset--color--black);
+    padding: 40px;
+    
+}
+.galleryshow .block-editor-block-list__layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+
+}
+.galleryshow .block-editor-block-list__layout img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+}
+.wp-block-dch-block-slideshow .block-editor-inner-blocks .block-editor-block-list__layout {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+
+}
+.wp-block-dch-block-slideshow .block-editor-inner-blocks .block-editor-block-list__layout .wp-block-dch-block-slide {
+    width: 100%;
+}
+.wp-block-dch-block-slideshow .block-editor-inner-blocks .block-editor-block-list__layout .hero-slider__slide {
+    width: 100%;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    background-position: center center;
+    object-fit: cover;
+    background-size: cover;
+
+}
+.page-banner{
+    position: relative;
+    overflow: hidden;
+}
+.page-banner .page-banner__bg-image {
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.wp-block-heading {
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+/* .fancy-slider-show .block-editor-block-list__layout {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    color: white;
+    min-height: 500px;
+    padding: 20px;
+}
+.fancy-slider-show .block-editor-block-list__layout .wp-block-dch-block-fancy-slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    background-color: rgba(101, 93, 191, 0.528);
+}
+.fancy-slider-show .block-editor-block-list__layout .wp-block-dch-block-fancy-slider .wp-block-dch-block-fancy-slider {
+   min-height: 100%;
+} */
+
+.wp-block-dch-block-fancy-slider-show .fancy-slider-show {
+    background-color: black;
+    padding: 2rem;
+}
+.wp-block-dch-block-fancy-slider-show .fancy-slider-show > p{
+    color: white;
+    font-size: 4rem;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+.wp-block-dch-block-fancy-slider-show .fancy-slider-show .block-editor-block-list__layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.wp-block-dch-block-fancy-slider {
+    flex: 1; 
+    max-width: 50%;
+    border: 2px solid white;  
+}
+
+.page-fancySlider {
+    padding: 2rem;
+    background: white;
+}
+.page-fancySlider > * {
+    color: black !important;
+}
+.page-fancySlider__image {
+    width: 100%;
+    height: 300px;
+    background-size: contain;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.wp-block-dch-block-fancy-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: white;
+}

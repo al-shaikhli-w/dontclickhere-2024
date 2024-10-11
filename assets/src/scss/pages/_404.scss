@@ -1,0 +1,18 @@
+.error404-section {
+    @apply min-h-screen h-full w-full bg-cover bg-center overflow-hidden flex items-center justify-center relative;
+    .conatiner {
+        @apply text-center;
+    }
+    .error404-wrapper {
+        @apply flex justify-center flex-col items-center gap-5;
+        h1 {
+            @apply text-9xl font-bold font-classic mb-2;
+        }
+        p{
+            @apply text-lg text-center;
+        }
+        .btn {
+            @apply mt-5 flex justify-between items-center gap-4 hover:gap-5 transition-all;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.service {
+    @apply relative text-center gap-4 m-0 p-0 cursor-pointer;
+    margin: 0 !important;
+
+    figure{
+        @apply relative w-[100px] h-[100px] flex justify-center items-center rounded-full overflow-hidden;
+        &::after {
+            //@apply block absolute top-0 left-0 right-0 -z-1 w-full h-full max-h-16 max-w-16 rounded-full bg-secondary;
+            @apply  w-full h-1/2 opacity-15 absolute left-0 top-0 -z-1 rotate-[-15deg];
+            content: '';
+            transform-origin: bottom center;
+            transition: .4s cubic-bezier(.12,0,.39,0);
+            background-color: var(--wp--preset--color--primary);
+        }
+        img {
+            @apply h-auto max-h-14 max-w-14;
+        }
+    }
+    // select the odd children
+    &:nth-child(odd) {
+        figure{
+            &::after {
+                @apply  rotate-[160deg];
+            }
+        }
+    }
+    .wp-block-heading {
+        @apply text-3xl font-bold;
+    }
+    
+    p {
+        @apply text-lg mt-4;
+    }
+    &:hover {
+        figure {
+            img {
+                filter: brightness(0) invert(1);
+            }
+            &::after {
+                @apply rotate-0 h-full w-full opacity-100;
+            }
+        }
+    }
+}

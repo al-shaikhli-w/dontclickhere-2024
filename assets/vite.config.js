@@ -1,34 +1,30 @@
-import { resolve } from "path";
-import { defineConfig } from "vite";
-import liveReload from "vite-plugin-live-reload";
+import {resolve} from "path";
+import {defineConfig} from "vite";
+import obfuscator from 'rollup-plugin-obfuscator';
+
 
 export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                main: resolve(__dirname, "src/entry.js"),
+                mainJS: resolve(__dirname, "src/js/main.js"),
                 mainStyle: resolve(__dirname, "src/scss/main.scss"),
             },
-            //external: ["jQuery"],
             output: {
-                entryFileNames: "js/[name].js",
-                assetFileNames: "css/[name].css", // Fixed the assetFileNames configuration
+                entryFileNames: "[name].js",
+                assetFileNames: "[name].css", // Fixed the assetFileNames configuration
                 sourcemap: false,
-                globals: {
-                    //jQuery: "jQuery",
-                },
             },
         },
-    },
-    // root: "assets",
-    server: {
-        cors: true,
-        strictPort: true,
-        port: 8080,
-        https: false,
-        hmr: {
-            host: "thermelaa.local", // Removed "http://" from the host
-        },
-    },
-    plugins: [liveReload(__dirname + "/**/*.php")], // Fixed the path to the PHP files
+        plugins: [
+            obfuscator({
+                transformObjectKeys: true,
+                unicodeEscapeSequence: true,
+                numbersToExpressions: true,
+                shuffleStringArray: true,
+                splitStrings: true,
+                identifierNamesGenerator: 'hexadecimal'
+            })
+        ]
+    }
 });

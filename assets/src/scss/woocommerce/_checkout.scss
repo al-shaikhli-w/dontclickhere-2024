@@ -1,0 +1,23 @@
+.woocommerce-checkout {
+    @apply font-body-text;
+    .wp-block-woocommerce-checkout {
+        @apply mt-28 container;
+        .wc-block-components-button.wp-element-button.wc-block-components-checkout-place-order-button {
+            @apply btn btn-primary;
+        }
+        .wc-block-components-checkout-return-to-cart-button {
+            @apply transition-all;
+            &:hover {
+                padding-left: calc(24px + .4em);
+            }
+        }
+        .is-large .wc-block-checkout__sidebar {
+            @apply top-20;
+            form {
+                button{
+                    @apply btn btn-primary;
+                }
+            }
+        }
+    }
+}

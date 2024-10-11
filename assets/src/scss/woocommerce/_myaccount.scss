@@ -1,0 +1,177 @@
+.dch-wc-account-area.dch-layout-content {
+    @apply mt-20 container font-body-text;
+    .woocommerce-MyAccount-content {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6;
+        .woocommerce-MyAccount-content--information {
+            @apply shadow-sm rounded-sm p-6;
+            h2 {
+                @apply text-2xl font-semibold my-8;
+            }
+            .woocommerce-MyAccount-content--information-inner {
+                @apply grid grid-cols-1 gap-4;
+                .woocommerce-MyAccount-content--information-item {
+                    @apply  p-4 rounded-sm;
+                    h3 {
+                        @apply text-lg font-semibold;
+                    }
+                    p {
+                        @apply text-base;
+                    }
+                }
+            }
+        }
+        .woocommerce-MyAccount-content--orders {
+            @apply shadow-sm rounded-sm p-6;
+            h2 {
+                @apply text-2xl font-semibold my-8;
+            }
+            .woocommerce-MyAccount-content--orders-inner {
+                @apply grid grid-cols-1 gap-4;
+                .woocommerce-MyAccount-content--orders-item {
+                    @apply p-4 rounded-sm;
+                    h3 {
+                        @apply text-lg font-semibold;
+                    }
+                    p {
+                        @apply text-base;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+
+// Login page 
+.woocommerce-account{
+    @apply font-body-text;
+    .dch-layout-content {
+        @apply mt-28 relative;
+        h2 {
+            @apply text-center text-5xl uppercase;
+        }
+        .woocommerce-form.woocommerce-form-login {
+            @apply container min-h-svh flex justify-center -mt-[20vh] flex-col max-w-xl;
+            p {
+                @apply flex flex-col gap-2 mb-4;
+                input:not([type="checkbox"]) {
+                    @apply w-full h-10 border-2 rounded-sm px-4 py-2 text-base;
+                    &:focus {
+                        @apply border-primary;
+                    }
+                    &::placeholder {
+                        @apply text-gray-400;
+                    }
+                }
+            }
+            .button.woocommerce-form-login__submit {
+                @apply btn btn-primary justify-center px-4 py-2;
+                padding: 7px 12px !important;
+            }
+            .woocommerce-LostPassword.lost_password {
+                a {
+                    @apply text-blue-400 underline;
+                }
+            }
+        }
+    }
+}
+
+// woocommerce account page
+
+.woocommerce-account {
+    @apply font-body-text;
+    .dch-wc-account-area.dch-layout-content {
+        @apply min-h-svh flex flex-col xl:flex-row xl:items-center container relative;
+        .woocommerce-MyAccount-content {
+            @apply grid-cols-1 items-start;
+        }
+    .woocommerce-MyAccount-navigation {
+        @apply xl:p-6 xl:mr-8 mb-10 min-w-fit rounded-md shadow-sm;
+        ul {
+            @apply flex flex-col gap-4;
+            li {
+                @apply text-lg font-semibold;
+                a {
+                    @apply text-primary;
+                }
+            }
+        }
+    }
+    }
+    .woocommerce-MyAccount-content {
+        @apply w-full;
+        .woocommerce-address-fields {
+            @apply w-full max-w-2xl;
+            .woocommerce-address-fields__field-wrapper {
+                p {
+                    @apply flex flex-col gap-2 mb-4;
+                    abbr.required{
+                        @apply text-red-500;
+                    }
+                }
+
+            }
+            button{
+                @apply btn btn-primary;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    // addresses page my account
+    .woocommerce-MyAccount-content {
+        .addresses {
+            @apply flex flex-col gap-4;
+            .woocommerce-Address-title {
+                @apply flex items-center gap-6;
+            }
+            a.edit{
+                @apply text-blue-500;
+                text-decoration: underline !important;
+            }
+        }
+    }
+    .edit-account {
+        p {
+            @apply flex flex-col gap-2 mb-4;
+            input:not([type="checkbox"]) {
+                @apply w-full h-10 border-2 rounded-sm px-4 py-2 text-base;
+                &:focus {
+                    @apply border-primary;
+                }
+            }
+            abbr.required{
+                @apply text-red-500;
+            }
+        }
+        legend {
+            @apply text-lg font-bold mb-8;
+        }
+        .woocommerce-Button {
+            @apply btn btn-primary max-w-sm justify-center mt-8;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        .dch-wc-account-password-change {
+            text-decoration: underline !important;
+        }
+    }
+    .woocommerce-ResetPassword {
+        @apply container min-h-svh flex justify-center -mt-[20vh] flex-col max-w-xl;
+        p {
+            @apply flex flex-col gap-2 mb-4;
+        }
+        .woocommerce-Button {
+            @apply btn btn-primary max-w-sm justify-center mt-8;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+

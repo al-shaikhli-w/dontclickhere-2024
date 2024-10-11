@@ -1,0 +1,28 @@
+.tax-product_cat{
+    @apply font-body-text;
+    .woocommerce-products-header__title{
+        @apply mt-28 uppercase text-center;
+    }
+    .dch-products-archive-loop-container {
+        &.dch-layout-content{
+            @apply container;
+            .products {
+                @apply grid gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4;
+                .product-category{
+                    a{
+                        @apply shadow-sm shadow-primary rounded-sm overflow-hidden inline-block hover:shadow-md transition-all duration-300 ease-in-out;
+                        .woocommerce-loop-category__title{
+                            @apply p-4 m-0 text-3xl text-primary;
+                            mark {
+                                @apply bg-transparent text-primary;
+                            }
+                        }
+                    }
+                }
+                .product:not(.product-category) {
+                    @include product-styles;
+                }
+            }
+        }
+    }
+}

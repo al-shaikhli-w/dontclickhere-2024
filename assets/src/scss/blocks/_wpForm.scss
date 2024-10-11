@@ -1,0 +1,141 @@
+body .wpforms-form {
+    @apply font-body-text;
+    margin: 4rem auto !important;
+
+    textarea {
+        max-width: 700px !important;
+    }
+
+    button[type=submit] {
+        @apply btn max-w-60 uppercase;
+        background-color: var(--wp--preset--color--primary) !important;
+        justify-content: center !important;
+        width: 100% !important;
+        text-align: center !important;
+
+        &:hover {
+            background-color: var(--wp--preset--color--secondary) !important;
+        }
+    }
+}
+
+// lead form
+form .lead-genrater {
+    @apply relative container;
+
+    .tab {
+        @apply hidden p-6 bg-white rounded-lg shadow-lg min-h-[300px] items-center;
+    }
+
+    .selection-group {
+        @apply flex flex-col gap-6;
+
+        span[data-name] {
+            @apply m-0 mb-6;
+
+            .selection {
+                @apply grid grid-cols-1 sm:grid-cols-2 gap-4;
+
+                span {
+                    @apply m-0;
+                }
+            }
+
+            input[value="blue"] + span {
+                @apply bg-blue-500;
+            }
+        }
+
+        input[type="radio"] {
+            @apply opacity-0 absolute;
+
+            &:checked + span {
+                @apply bg-black text-white font-bold;
+            }
+
+            & + span {
+                @apply cursor-pointer font-body-heading flex justify-center text-center bg-gray-100 p-4 rounded-md min-w-[150px];
+            }
+        }
+    }
+
+    .group-form {
+        @apply flex flex-col gap-4;
+
+        .form-group {
+            @apply flex flex-col gap-4;
+
+            label {
+                @apply font-body-heading;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"] {
+                @apply p-4 rounded-md;
+            }
+        }
+
+        input[type="submit"] {
+            @apply btn bg-primary text-white p-4 rounded-md w-full;
+        }
+    }
+
+    input[type="file"] {
+        @apply relative outline-0 opacity-0 pointer-events-none;
+        user-select: none;
+    }
+
+    .customer-has-logo {
+        label {
+            @apply cursor-pointer inline-flex justify-center items-center border border-dashed border-primary rounded-md shadow-md p-4 sm:max-w-[50%] w-full flex-col gap-4 text-2xl;
+        }
+    }
+
+    .hid {
+        @apply hidden;
+    }
+
+    .form-container {
+        .pagination {
+            @apply flex justify-center items-center gap-4 mt-8;
+
+            button {
+                @apply btn bg-primary text-white p-4 rounded-md;
+            }
+
+            button[disabled] {
+                @apply bg-gray-100 text-black cursor-not-allowed;
+            }
+        }
+
+        #steps {
+            @apply flex justify-center items-center gap-4 mt-8;
+
+            span {
+                @apply grid place-self-center text-center w-6 h-6 rounded-full bg-gray-300;
+
+                &.active {
+                    @apply bg-primary text-white;
+                }
+            }
+        }
+    }
+
+    .wpcf7-response-output {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(3 126 0);
+        color: white;
+        top: 50%;
+        width: 100%;
+        height: 79px;
+        outline: none;
+        border: 1px solid #ff000000 !important;
+        font-size: 1.5rem;
+        margin: -54px auto !important;
+        z-index: 4;
+        position: relative;
+    }
+}

@@ -1,0 +1,154 @@
+.blog-simple {
+    .blog-wrapper {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6;
+    }
+    .grid-item {
+        @apply relative cursor-pointer overflow-clip;
+        .blog-hover-icon {
+            @apply my-auto h-full w-full invisible lg:visible flex justify-center items-center text-center;
+            svg {
+                @apply w-5 h-5 fill-white;
+            }
+        }
+        img {
+            @apply transition-all duration-300 ease-in-out;
+        }
+        figcaption {
+            @apply transition-all duration-300 ease-in-out flex flex-col h-full w-full absolute top-0 opacity-100 lg:opacity-0 bg-opacity-20 overflow-clip;
+
+            @media screen and (max-width: 1024px) {
+                .post-content {
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(244, 244, 244, 0.02) 11%, rgb(77 77 77) 46%, rgb(73 73 73) 78%, rgb(72 72 72) 100%)
+                }
+                
+            }
+            .card-time {
+                @apply inline-block text-white mb-1 uppercase font-bold text-xs;
+            }
+            .card-title {
+                @apply text-xl font-body-heading text-white mb-0 block uppercase;
+            }
+        }
+        &:hover {
+            figcaption{
+                @apply opacity-100;
+            }
+            img {
+                @apply filter blur-lg;
+            }
+        }
+    }
+}
+.blog-side-image {
+    .blog-wrapper {
+        @apply grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6;
+    }
+    .grid-item {
+        @apply relative cursor-pointer overflow-clip rounded-lg shadow-lg bg-gray-100 text-black;
+        .blog-box {
+            @apply flex flex-col md:items-center gap-4 md:grid md:grid-cols-2;
+            .cover-background {
+                @apply bg-cover bg-center bg-no-repeat h-72 md:h-96 w-full;
+                min-height: 320px;
+            }
+            img {
+                @apply transition-all duration-500 ease-in-out;
+            }
+            &:hover {
+                img{
+                    @apply scale-110;
+                }
+            }
+        }
+        .blog-content {
+            @apply flex flex-col p-4 gap-2 h-full justify-between;
+            .category-and-time-wrapper {
+                @apply flex items-center flex-wrap gap-3 ;
+                .card-time {
+                    @apply inline-block text-black uppercase font-bold text-xs;
+                }
+                .categories-btn {
+                    @apply btn bg-primary text-black  uppercase text-xs;
+                }
+            }
+            h3 {
+                @apply text-2xl font-bold font-body-heading;
+            }
+            p {
+                @apply text-base font-body-text;
+            }
+            .read-more{
+                a {
+                    @apply btn bg-primary text-black;
+                }
+            }
+        }
+    }
+}
+
+.pagination {
+    @apply flex justify-center items-center gap-4;
+    .page-item {
+        .page-link {
+            @apply border-0 p-2 mx-2 my-0 min-w-11 min-h-11;
+            &:hover {
+                @apply bg-primary shadow-2xl p-2 rounded-full;
+            }
+            &:focus {
+                @apply shadow-none;
+            }
+        }
+        &.active {
+            .page-link {
+                @apply bg-primary shadow-2xl p-2 rounded-full;
+            }
+        }
+        &:first-child,
+            &:last-child {
+            .page-link {
+                @apply bg-transparent shadow-none;
+
+            }
+        }
+    }
+    &.light {
+        .page-item { 
+            &:first-child,
+                &:last-child {
+                .page-link {
+                    @apply shadow-none;
+                    &:hover {
+                        @apply bg-primary;
+                    }
+                }
+            }
+        }
+    }
+
+    /*
+    
+    <!-- <div class="pagination-container">
+		<ul class="pagination">
+			<li class="page-item">
+				<a class="page-link" href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+					</svg>
+				</a>
+			</li>
+			<li class="page-item"><a class="page-link" href="#">01</a></li>
+			<li class="page-item active"><a class="page-link" href="#">02</a></li>
+			<li class="page-item"><a class="page-link" href="#">03</a></li>
+			<li class="page-item"><a class="page-link" href="#">04</a></li>
+			<li class="page-item">
+				<a class="page-link" href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+					</svg>
+				</a>
+			</li>
+		</ul>
+	</div> -->
+    
+    */
+}

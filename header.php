@@ -105,7 +105,7 @@ header('Access-Control-Allow-Origin: *'); ?>
     <!-- End Meta Pixel Code -->
     <?php wp_head(); ?>
 </head>
-<body <?php body_class("bg-black max-w-[100svw] !text-white overflow-x-hidden"); ?>>
+<body <?php body_class("overflow-x-hidden"); ?>>
     <?php wp_body_open(); ?>
     <header class="header">
         <section class="header-container" name="header-container">

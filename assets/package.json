@@ -1,0 +1,44 @@
+{
+  "name": "dch",
+  "version": "01.00.001",
+  "description": "dch wordpress theme",
+  "scripts": {
+    "dev": "vite build --sourcemap -d -m development --minify=false",
+    "watch": "vite build --sourcemap -d -w -m development --minify=false",
+    "build": "vite build -m production",
+    "block": "wp-scripts start  --experimental-modules",
+    "block-build": "wp-scripts build  --experimental-modules",
+    "all": "npm-run-all --parallel watch block",
+    "build-all": "npm-run-all --parallel build block-build"
+  },
+  "author": "Waleed Al-Shaikhli",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.14",
+    "@wordpress/icons": "^10.4.0",
+    "@wordpress/scripts": "*",
+    "animate.css": "^4.1.1",
+    "autoprefixer": "^10.4.19",
+    "daisyui": "^4.12.10",
+    "fslightbox": "^3.4.1",
+    "gsap": "^3.12.5",
+    "imagesloaded": "^5.0.0",
+    "lenis": "^1.1.9",
+    "litepicker": "^2.0.12",
+    "npm-run-all": "^4.1.5",
+    "observer": "^0.0.2",
+    "postcss": "^8.4.39",
+    "rellax": "^1.12.1",
+    "rollup-plugin-obfuscator": "^1.1.0",
+    "sass": "^1.77.8",
+    "scss": "^0.2.4",
+    "split-type": "^0.3.4",
+    "splitting": "^1.1.0",
+    "swiper": "^11.1.9",
+    "tailwindcss": "^3.4.6",
+    "vite": "^4.5.3"
+  },
+  "devDependencies": {
+    "@types/splitting": "^1.0.6"
+  }
+}

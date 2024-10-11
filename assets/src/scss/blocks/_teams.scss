@@ -1,0 +1,24 @@
+.teams {
+    @apply w-full h-full relative flex z-1;
+    .team {
+        @apply flex-shrink-0 h-full relative text-center justify-center items-center;
+        &-wrapper {
+            @apply flex flex-col items-center justify-center;
+        }
+        &-image {
+            @apply w-full h-auto max-h-96 relative overflow-hidden;
+            img {
+                @apply  w-full h-full bg-cover bg-center object-cover;
+            }
+        }
+        hr{
+            @apply w-full;
+        }
+        h3 {
+            @apply text-xl font-bold px-4 sm:px-0 pt-2 relative;
+        }
+        p {
+            @apply text-base px-4 sm:px-0 font-body-text;
+        }
+    }
+}

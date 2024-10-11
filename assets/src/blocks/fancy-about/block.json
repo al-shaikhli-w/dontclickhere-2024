@@ -1,0 +1,34 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name":"dch-block/fancy-about",
+    "title": "DCH Fancy About",
+    "category": "dch-blocks",
+    "supports": {
+        "align": ["full"]
+    },
+    "attributes": {
+		"layout_variant": {
+			"enum": ["text-left", "text-right"],
+			"default": "text-right"
+		},
+		"image_id": {
+			"type": "number"
+		},
+		"image_url": {
+			"type": "string"
+		},
+		"heading": {
+			"type": "string"
+		},
+		"body": {
+			"type": "string"
+		},
+        "button": {
+            "type": "string",
+            "default": "Read More"
+        }
+	},
+    "editorScript": "file:./index.js",
+    "render": "file:./render.php"
+}
